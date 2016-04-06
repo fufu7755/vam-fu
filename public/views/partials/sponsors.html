@@ -1,0 +1,53 @@
+<div class="section-wide">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <h2>合作伙伴</h2>
+                </div>
+                <ul id="sponsors" class="tooltip-hover">
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/1.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/2.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/3.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/4.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/5.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/3.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/4.png" alt="Image"></a>
+                    </li>
+                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
+                        <a href="#"><img src="/assets/img/sponsors/3.png" alt="Image"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/js/carousel/carousel.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function($) {
+        $("#sponsors").owlCarousel({
+            autoPlay: 3200,
+            items : 6,
+            navigation: false,
+            itemsDesktop : [1199,5],
+            itemsDesktopSmall : [1024,4],
+            itemsTablet : [768,3],
+            itemsMobile : [500,2],
+            pagination: true
+        });
+    });
+</script>

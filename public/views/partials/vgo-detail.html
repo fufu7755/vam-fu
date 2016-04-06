@@ -1,0 +1,28 @@
+<div class="">
+    <div class="panel-box">
+        <div class="titles">
+            <h4>{{vgo.name}}</h4>
+        </div>
+        <img src="" alt="">
+        <p>联系方式：{{vgo.mobile}}</p>
+    </div>
+
+    <div class="panel-box">
+        <div class="titles">
+            <h4>装备</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-sm-4" dir-paginate="equipment in equipments | itemsPerPage: 6">
+                <div class="equipment-item">
+                    <img class="img-responsive" src="{{equipment.image}}" alt="">
+                    <h5>{{equipment.name}}</h5>
+                </div>
+            </div>
+        </div>
+        <dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+        </dir-pagination-controls>
+        
+    </div>
+</div>
+
+

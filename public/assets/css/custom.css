@@ -1,0 +1,198 @@
+.style-caption h1 {
+    border-left: none;
+    top: 40%;
+    max-width: 100%;
+}
+
+.style-caption h1:before {
+    border: none;
+}
+
+.img-hover {
+    margin-bottom: 30px;
+}
+
+.dis-radius {
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+}
+
+#tab2 {
+    margin-top: -50px;
+}
+
+#tab2-content {
+    margin-left: 0;
+}
+
+#tab2 li a {
+    background: transparent;
+    color: #0088cc;
+}
+
+#tab2 > li > a {
+    margin-right: 0;
+    border: none;
+    text-align: center;
+    border-radius: 0;
+}
+
+#tab2 li {
+    margin-right: 0;
+    width: 50%;
+}
+
+#tab2 li.active a {
+    background: #0088cc;
+    color: #fff;
+    border: none;
+}
+
+#tab2 li.active:after {
+    border: none;
+}
+
+.games-info {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.games-info li {
+    border-bottom: 1px solid #727272;
+    padding-top: 10px;
+}
+
+.games-info li:last-child {
+    border-bottom: none;
+}
+
+.form-select .btn {
+    background: #0088cc;
+    color: #fff;
+}
+
+.sf-menu .separator {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ot-menu {
+    position: relative;
+    margin: 0;
+    margin-left: -9px;
+    padding: 0;
+    list-style: none;
+    z-index: 999;
+}
+
+.ot-menu > li {
+    float: left;
+}
+
+.ot-menu > li > a {
+    display: block;
+    position: relative;
+}
+
+.ot-menu > li > a {
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    color: #232323;
+}
+
+.ot-menu > li {
+    margin: 0 15px 0 0;
+    padding: 20px 10px 18px 10px;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    -ms-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+}
+
+.sf-menu > li {
+	margin: 0 5px;
+    padding: 20px 0 18px 0;
+}
+.sf-menu > li > a {
+    display: inline-block;
+}
+.sf-menu > li.active > a {
+    color: #0088C8;
+}
+
+.sf-menu > li:before {
+    content: " | ";
+    margin-right: 10px;
+}
+
+.sf-menu > li:first-child:before {
+    content: none;
+    margin-right: 0;
+}
+
+.is-sticky .ot-menu > li {
+  	margin:0 15px 0 0;
+ 	padding: 10px 10px 8px 10px;
+}
+
+ul.nav-club {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.nav-club li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+ul.nav-club li:before {
+    content: '|';
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul.nav-club li:first-child:before {
+    content: none;
+}
+
+.m-t-5 {
+    margin-top: 5px;
+}
+
+.equipment-item {
+    height: 200px;
+}
+
+.new-item {
+    height: 240px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.new-item .header-post {
+    position: relative;
+}
+
+.new-item .header-post > a{
+    display: block;
+}
+
+.new-item .header-post .new-date {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: #428bca;
+    opacity: .6;
+    padding: 5px;
+    color: #fff;
+}

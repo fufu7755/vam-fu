@@ -1,0 +1,13 @@
+<div class="panel-box pdding-bottom padding-top">
+    <ul id="tab2" class="nav nav-tabs">
+        <li class="active"><a href="#feature-club" data-toggle="tab">俱乐部</a></li>
+        <li><a href="#players-staff" data-toggle="tab">VGO</a></li>
+    </ul>
+    <div id="tab2-content" class="tab-content">
+        <div class="tab-pane active" id="feature-club" ng-include="'views/partials/club-range-list.html'"></div>
+        <div class="tab-pane" id="players-staff" ng-include="'views/partials/vgo-list-block.html'"></div>
+    </div>
+</div>
+<!-- Widget Text-->
+<div class="panel-box padding-bottom" ng-include="'views/partials/alliance-application.html'"></div>
+<!-- End Widget Text-->

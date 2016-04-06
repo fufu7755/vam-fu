@@ -1,0 +1,28 @@
+<div class="panel-box">
+    <div class="titles">
+        <div class="pull-right m-t-5">
+            <input ng-model="query.name">搜索
+        </div>
+        <h4 class="">俱乐部列表</h4>
+    </div>
+    <!-- Post Item -->
+    <div class="post-item" dir-paginate="club in clubs | filter: query | itemsPerPage: 5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="img-hover">
+                    <img src="{{club.logo}}" alt="" class="img-responsive">
+                    <div class="overlay"><a href="/alliances/{{allianceId}}/clubs/{{club.id}}">+</a></div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h4><a href="/alliances/{{allianceId}}/clubs/{{club.id}}">{{club.name}}</a></h4>
+                <p class="data-info">发布时间：{{club.joinDate}}</p>
+                <p>简介
+                    <br>{{club.description}}</p>
+                <a href="/alliances/{{allianceId}}/clubs/{{club.id}}">点击查看 >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+</dir-pagination-controls>

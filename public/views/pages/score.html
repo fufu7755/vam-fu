@@ -1,0 +1,66 @@
+<div id="layout" class="layout-semiboxed" ng-controller="clubController">
+    <header ng-include="'views/partials/header.html'"></header>
+    <section class="section-title img-feature">
+        <div>
+            <div class="overlay-bg"></div>
+            <div class="container">
+                <h1>{{clubDetail.name}}</h1>
+            </div>
+        </div>
+    </section>
+    <section class="content-info">
+        <div ng-include="'views/partials/crumb.html'"></div>
+        <section class="container">
+            <div class="padding-top-mini" ng-include="'views/partials/nav-club.html'"></div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            名次
+                        </th>
+                        <th>
+                            赛事名称
+                        </th>
+                        <th>
+                            比赛地点
+                        </th>
+                        <th>
+                            比赛时间
+                        </th>
+                        <th>
+                            奖金
+                        </th>
+                        <th>
+                            装备（总数）
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="score in Scores">
+                        <td>
+                            {{score.ranking}}
+                        </td>
+                        <td>
+                            {{score.eventName}}
+                        </td>
+                        <td>
+                            {{score.cityName}}
+                        </td>
+                        <td>
+                            {{score.eventDate}}
+                        </td>
+                        <td>
+                            {{score.prize}}
+                        </td>
+                        <td>
+                            {{score.equTotal}}
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <footer id="footer" ng-include="'views/partials/footer.html'"></footer>
+    <div class="footer-down" ng-include="'views/partials/footer-down.html'"></div>
+</div>
