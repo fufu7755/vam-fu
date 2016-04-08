@@ -7,6 +7,7 @@ angular
         clubId = parseInt($routeParams.clubId);
         $scope.clubId = clubId;
         clubService.getVgos(clubId).then(function(data) {
+            console.log(data.data.result);
             $scope.vgos = data.data.result;
         });
         clubService.getDetail(clubId).then(function(data) {

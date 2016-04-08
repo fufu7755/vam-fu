@@ -8,19 +8,10 @@
                     <h4>俱乐部新闻</h4>
                 </div>
                 <div class="row">
-                	<div class="col-md-3 new-item">
-                		<div class="header-post">
-                			<a href="#"><img src="/assets/img/blog/1.jpg" alt="" class="img-responsive"></a>
-	                		
-	                		<div class="new-date">2015/10/13</div>
-                		</div>
-                		<div class="info-new">
-                        	<h4><a href="#">天马</a></h4>
-                        </div>
-                	</div>
+                	
                     <div class="col-md-3 new-item" dir-paginate="new in News | itemsPerPage: 16">
                         <div class="header-post">
-                        	<a href="/alliances/{{allianceId}}/clubs/{{clubId}}/news/{{new.id}}"><img src="{{new.image}}" alt="" class="img-responsive"></a>
+                        	<a href="/alliances/{{allianceId}}/clubs/{{clubId}}/news/{{new.id}}"><img src="http://222.240.208.174:8083/vma/download/img?url={{new.image}}" alt="" class="img-responsive"></a>
                         	<div class="new-date">{{new.createdAt}}</div>
                         </div>
                         <div class="info-new">

@@ -3,7 +3,7 @@
         <div class="titles">
             <h4>{{vgo.name}}</h4>
         </div>
-        <img src="" alt="">
+        <img src="http://222.240.208.174:8083/vma/download/img?url={{vgo.image}}" alt="">
         <p>联系方式：{{vgo.mobile}}</p>
     </div>
 
@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-4" dir-paginate="equipment in equipments | itemsPerPage: 6">
                 <div class="equipment-item">
-                    <img class="img-responsive" src="{{equipment.image}}" alt="">
+                    <img class="img-responsive" src="http://222.240.208.174:8083/vma/download/img?url={{equipment.image}}" alt="">
                     <h5>{{equipment.name}}</h5>
                 </div>
             </div>
