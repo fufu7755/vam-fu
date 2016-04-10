@@ -86,6 +86,30 @@ angular
                   console.log(status);
               });
               return promise;
+          },
+          getActivities: function (clubId) {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'activity/list',
+                  params: { clubId: clubId }
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
+          },
+          getActivity: function (activityId) {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'activity/detail',
+                  params: { id: activityId }
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
           }
       };
 

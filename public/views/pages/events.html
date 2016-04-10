@@ -1,0 +1,28 @@
+<div id="layout" class="layout-semiboxed" ng-controller="eventsController" ng-show="ready">
+    <header ng-include="'views/partials/header.html'"></header>
+    <section class="section-title img-feature">
+        <div>
+            <div class="overlay-bg"></div>
+            <div class="container">
+                <h1>VMA赛事</h1>
+            </div>
+        </div>
+    </section>
+    <section class="content-info">
+        <div ng-include="'views/partials/crumb.html'"></div>
+        
+        <section class="container">
+            <div class="row padding-top">
+                <div class="col-xs-12 col-md-6 col-lg-9">
+                    <div ng-include="'views/partials/event-album.html'"></div>
+                    <div ng-include="'views/partials/event-list.html'"></div>
+                </div>
+                <aside class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                    <div ng-include="'views/partials/events-search.html'"></div>
+                </aside>
+            </div>
+        </section>
+    </section>
+    <footer id="footer" ng-include="'views/partials/footer.html'"></footer>
+    <div class="footer-down" ng-include="'views/partials/footer-down.html'"></div>
+</div>

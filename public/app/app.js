@@ -23,6 +23,11 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
       .when('/alliances/:allianceId/clubs/:clubId/score', { templateUrl: 'views/pages/score.html' })
       .when('/alliances/:allianceId/clubs/:clubId/news', { templateUrl: 'views/pages/news.html' })
       .when('/alliances/:allianceId/clubs/:clubId/news/:newsId', { templateUrl: 'views/pages/news-detail.html' })
+      .when('/alliances/:allianceId/clubs/:clubId/activities', { templateUrl: 'views/pages/activities.html' })
+      .when('/alliances/:allianceId/clubs/:clubId/activities/:activityId', { templateUrl: 'views/pages/activity.html' })
+
+      .when('/events', { templateUrl: 'views/pages/events.html' })
+      .when('/events/:eventId/event', { templateUrl: 'views/pages/event.html' })
       .otherwise({ redirectTo: '/' });
 }]).run([
     '$rootScope',

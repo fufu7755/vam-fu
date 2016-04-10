@@ -5,6 +5,7 @@ angular
     allianceId = parseInt($routeParams.allianceId);
     clubId = parseInt($routeParams.clubId);
     newsId = parseInt($routeParams.newsId);
+    activityId = parseInt($routeParams.activityId);
     $scope.allianceId = allianceId;
     $scope.clubId = clubId;
     $scope.newsId = newsId;
@@ -42,9 +43,20 @@ angular
         
       });
       clubService.getNewsdetail(newsId).then(function(data) {
-        console.log(data.data);
+        
         $scope.Newsdeatil = data.data;
         $scope.newsDescription = $sce.trustAsHtml(data.data.content);
+      });
+
+      clubService.getActivities(clubId).then(function(data) {
+        
+        $scope.activities = data.data.result;
+      });
+
+      clubService.getActivity(activityId).then(function(data) {
+        console.log(data.data);  
+        $scope.activity = data.data;
+        $scope.activityDescription = $sce.trustAsHtml(data.data.spec);
       });
     }
 

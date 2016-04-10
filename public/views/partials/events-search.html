@@ -1,0 +1,49 @@
+<div class="panel-box">
+    <div class="titles">
+        <h4>赛事搜索</h4>
+    </div>
+    <form action="#" class="form-theme">
+        <div class="text-center">
+            <select name="" id="" class="form-select">
+                <option value="All" selected="selected">赛事状态</option>
+                <option value="1">正在进行</option>
+                <option value="2">比赛结束</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <select name="" id="" class="form-select">
+                <option value="All" selected="selected">比赛地点</option>
+                <option value="1">长沙</option>
+                <option value="2">北京</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <input type="submit" value="确定" class="btn btn-lg btn-primary">
+        </div>
+    </form>
+</div>
+<div class="panel-box padding-bottom">
+    <div class="titles">
+        <h4>最近赛事讯息更新</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="games-info">
+                <li dir-paginate="news in newsAll | itemsPerPage: 8">
+                    <div class="row">
+                        <div class="col-xs-6">{{news.createdAt}}</div>
+                        <div class="col-xs-6"><a href="#">进入 ></a></div>
+                    </div>
+                    <h6>{{news.title}}</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+jQuery(document).ready(function($) {
+    $('.form-theme .form-select').selectpicker({
+        'class': 'btn-primary'
+    });
+});
+</script>

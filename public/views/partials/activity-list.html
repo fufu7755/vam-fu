@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <!-- content Players -->
+        <div class="col-md-12">
+            <!-- Panel Box -->
+            <div class="panel-box">
+                <div class="titles">
+                    <h4>俱乐部活动</h4>
+                </div>
+                <div class="row">
+                	
+                    <div class="col-md-3 new-item" dir-paginate="activity in activities | itemsPerPage: 16">
+                        <div class="header-post">
+                        	<a href="/alliances/{{allianceId}}/clubs/{{clubId}}/activities/{{activity.id}}"><img src="http://222.240.208.174:8083/vma/download/img?url={{activity.image}}" alt="" class="img-responsive"></a>
+                        	<div class="new-date">{{activity.createdAt}}</div>
+                        </div>
+                        <div class="info-new">
+                        	<h4><a href="/alliances/{{allianceId}}/clubs/{{clubId}}/activities/{{activity.id}}">{{activity.title}}</a></h4>
+                            
+                        </div>
+                    </div>
+                </div>
+                <dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+                </dir-pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

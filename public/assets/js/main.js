@@ -85,9 +85,7 @@ $(document).ready(function($) {
     longitude: initLongitude,
     zoom: 5
   };
-  
-  $("#map").gMap(mapSettings);
- 
+   
 	//=================================== Nav Responsive =============================//
 
   $('#menu').tinyNav({

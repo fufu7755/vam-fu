@@ -1,9 +1,727 @@
-<div id="layout" class="">
+<div id="layout">
     <header ng-include="'views/partials/header.html'"></header>
-    <section class="section-title img-feature" ng-include="'views/partials/page-title.html'"></section>
-    <div>
-        Home
-    </div>
+    <div ng-include="'views/partials/home-slide.html'"></div>
+    
+    <!-- Section Area - Content Central -->
+    <section class="content-info">
+        <div class="semiboxshadow text-center">
+            <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+        </div>
+        <!-- Dark Home -->
+        <div class="bg-dark dark-home">
+            <div class="row">
+                <!-- Left Content - Tabs and Carousel -->
+                <div class="col-md-9">
+                    <!-- Nav Tabs -->
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active">
+                            <a href="#feature-news" data-toggle="tab">
+                                <i class="fa fa-star"></i>&nbsp;最新比赛
+                            </a>
+                        </li>
+                        <li><a href="#players-staff" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;明星VGO</a></li>
+                        <li><a href="#club-news" data-toggle="tab"><i class="fa fa-thumbs-up"></i>&nbsp;优秀小联盟</a></li>
+                    </ul>
+                    <!-- End Nav Tabs -->
+                    <!-- Content Tabs -->
+                    <div class="tab-content">
+                        <!-- Tab One - Feature News -->
+                        <div class="tab-pane active" id="feature-news">
+                            <!-- blog post-->
+                            <ul id="events-carousel" class="events-carousel padding-top">
+                                <!-- Item blog post -->
+                                <li>
+                                    <div class="header-post">
+                                        <div class="date">
+                                            比赛 时间
+                                        </div>
+                                        <a href="single-news.html"><img src="img/blog/1.jpg" alt=""></a>
+                                        <div class="meta-tag">
+                                            当前报名人数：200
+                                        </div>
+                                    </div>
+                                    <div class="info-post">
+                                        <h4><a href="#">比赛名称</a></h4>
+                                        <p>比赛信息</p>
+                                    </div>
+                                </li>
+                                <!-- End Item blog post -->
+                                <!-- Item blog post -->
+                                <li>
+                                    <div class="header-post">
+                                        <div class="date">
+                                            比赛 时间
+                                        </div>
+                                        <a href="single-news.html"><img src="img/blog/1.jpg" alt=""></a>
+                                        <div class="meta-tag">
+                                            当前报名人数：200
+                                        </div>
+                                    </div>
+                                    <div class="info-post">
+                                        <h4><a href="#">比赛名称</a></h4>
+                                        <p>比赛信息</p>
+                                    </div>
+                                </li>
+                                <!-- End Item blog post -->
+                                <!-- Item blog post -->
+                                <li>
+                                    <div class="header-post">
+                                        <div class="date">
+                                            比赛 时间
+                                        </div>
+                                        <a href="single-news.html"><img src="img/blog/1.jpg" alt=""></a>
+                                        <div class="meta-tag">
+                                            当前报名人数：200
+                                        </div>
+                                    </div>
+                                    <div class="info-post">
+                                        <h4><a href="#">比赛名称</a></h4>
+                                        <p>比赛信息</p>
+                                    </div>
+                                </li>
+                                <!-- End Item blog post -->
+                                <!-- Item blog post -->
+                                <li>
+                                    <div class="header-post">
+                                        <div class="date">
+                                            比赛 时间
+                                        </div>
+                                        <a href="single-news.html"><img src="img/blog/1.jpg" alt=""></a>
+                                        <div class="meta-tag">
+                                            当前报名人数：200
+                                        </div>
+                                    </div>
+                                    <div class="info-post">
+                                        <h4><a href="#">比赛名称</a></h4>
+                                        <p>比赛信息</p>
+                                    </div>
+                                </li>
+                                <!-- End Item blog post -->
+                                <!-- Item blog post -->
+                                <li>
+                                    <div class="header-post">
+                                        <div class="date">
+                                            比赛 时间
+                                        </div>
+                                        <a href="single-news.html"><img src="img/blog/1.jpg" alt=""></a>
+                                        <div class="meta-tag">
+                                            当前报名人数：200
+                                        </div>
+                                    </div>
+                                    <div class="info-post">
+                                        <h4><a href="#">比赛名称</a></h4>
+                                        <p>比赛信息</p>
+                                    </div>
+                                </li>
+                                <!-- End Item blog post -->
+                            </ul>
+                            <!-- End blog post-->
+                        </div>
+                        <!-- Tab One - Feature News -->
+                        <!-- Tab Two - Players Staff -->
+                        <div class="tab-pane" id="players-staff">
+                            <h3>明星</h3>
+                            <!-- Item Players-->
+                            <ul id="players-carousel" class="players ">
+                                <!-- Item Player -->
+                                <li class="item-player">
+                                    <img src="img/players/1.jpg" alt="" class="img-responsive">
+                                    <div class="info-player">
+                                        <h4><a href="#">姓名</a></h4>
+                                        <h5><span>称号</span></h5>
+                                        <div class="overlay-player">
+                                            <p>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Player post -->
+                                <!-- Item Player -->
+                                <li class="item-player">
+                                    <img src="img/players/2.jpg" alt="" class="img-responsive">
+                                    <div class="info-player">
+                                        <h4><a href="#">姓名</a></h4>
+                                        <h5><span>称号</span></h5>
+                                        <div class="overlay-player">
+                                            <p>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Player post -->
+                                <!-- Item Player -->
+                                <li class="item-player">
+                                    <img src="img/players/3.jpg" alt="" class="img-responsive">
+                                    <div class="info-player">
+                                        <h4><a href="#">姓名</a></h4>
+                                        <h5><span>称号</span></h5>
+                                        <div class="overlay-player">
+                                            <p>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Player post -->
+                                <!-- Item Player -->
+                                <li class="item-player">
+                                    <img src="img/players/4.jpg" alt="" class="img-responsive">
+                                    <div class="info-player">
+                                        <h4><a href="#">姓名</a></h4>
+                                        <h5><span>称号</span></h5>
+                                        <div class="overlay-player">
+                                            <p>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Player post -->
+                                <!-- Item Player -->
+                                <li class="item-player">
+                                    <img src="img/players/5.jpg" alt="" class="img-responsive">
+                                    <div class="info-player">
+                                        <h4><a href="#">姓名</a></h4>
+                                        <h5><span>称号</span></h5>
+                                        <div class="overlay-player">
+                                            <p>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Player post -->
+                                <!-- Item Player -->
+                                <li class="item-player">
+                                    <img src="img/players/6.jpg" alt="" class="img-responsive">
+                                    <div class="info-player">
+                                        <h4><a href="#">姓名</a></h4>
+                                        <h5><span>称号</span></h5>
+                                        <div class="overlay-player">
+                                            <p>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介
+                                                <br>简介</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- End Player post -->
+                            </ul>
+                            <!-- End Item Players-->
+                        </div>
+                        <!-- Tab Two - Players Staff -->
+                        <!-- Tab Theree - Club Teams -->
+                        <div class="tab-pane" id="club-news">
+                            <h3>俱乐部</h3>
+                            <!-- Clubs Carousel-->
+                            <ul id="clubs-carousel" class="clubs-teams">
+                                <!-- Item carousel club -->
+                                <li class="row">
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/1.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/2.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/3.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/4.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                </li>
+                                <!-- End Item carousel club -->
+                                <!-- Item carousel club -->
+                                <li class="row">
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/5.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/6.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/1.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                    <!-- Item clubs -->
+                                    <div class="col-sx-12 col-sm-6 col-md-6">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/4.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">俱乐部名称</a></h4>
+                                                <p>简介
+                                                    <br>简介</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs -->
+                                </li>
+                                <!-- End Item carousel club -->
+                            </ul>
+                            <!-- End Clubs Carousel-->
+                        </div>
+                        <!-- Tab Theree - Club Teams -->
+                    </div>
+                    <!-- Content Tabs -->
+                </div>
+                <!-- Left Content - Tabs and Carousel -->
+                <!-- Right Content - Content Counter -->
+                <div class="col-md-3">
+                    <aside>
+                        <div class="title-color text-center">
+                            <h4>近期最重要的一场比赛</h4>
+                        </div>
+                        <div class="content-counter content-counter-home">
+                            <p class="text-center">
+                                <i class="fa fa-clock-o"></i> 比赛倒计时
+                            </p>
+                            <div id="event-one" class="counter"></div>
+                            <ul class="post-options">
+                                <li><i class="fa fa-calendar"></i>3/12/2015</li>
+                                <li><i class="fa fa-clock-o"></i>开场时间: 12:00 PM</li>
+                            </ul>
+                            <p>比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明 比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明比赛说明
+                            </p>
+                            <a class="btn btn-primary" href="#">
+                                        查看本场比赛细节
+                                        <i class="fa fa-trophy"></i>
+                                    </a>
+                        </div>
+                    </aside>
+                    <!-- Content Counter -->
+                </div>
+                <!-- End Right Content - Content Counter -->
+            </div>
+        </div>
+        <!-- Dark Home -->
+        <!-- Content Central -->
+        <div class="container padding-top">
+            <div class="row">
+                <!-- content Column Left -->
+                <div class="col-xs-12 col-md-6 col-lg-7">
+                    <!-- Recent Post -->
+                    <div class="panel-box">
+                        <div class="titles">
+                            <h4>联盟最新消息</h4>
+                        </div>
+                        <!-- Post Item -->
+                        <div class="post-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img-hover">
+                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="single-news.html">+</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4><a href="single-news.html">这里可以发真正的标题党</a></h4>
+                                    <p class="data-info">3月9日, 2015 / <i class="fa fa-comments"></i><a href="#">0</a></p>
+                                    <p>新闻内容
+                                        <br>... </p>
+                                    <a href="single-news.html">更多 +</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Post Item -->
+                        <!-- Post Item -->
+                        <div class="post-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img-hover">
+                                        <img src="img/blog/2.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="single-news.html">+</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4><a href="single-news.html">这里可以发真正的标题党</a></h4>
+                                    <p class="data-info">3月9日, 2015 / <i class="fa fa-comments"></i><a href="#">0</a></p>
+                                    <p>新闻内容
+                                        <br>... </p>
+                                    <a href="single-news.html">更多 +</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Post Item -->
+                        <!-- Post Item -->
+                        <div class="post-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img-hover">
+                                        <img src="img/blog/3.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="single-news.html">+</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4><a href="single-news.html">这里可以发真正的标题党</a></h4>
+                                    <p class="data-info">3月9日, 2015 / <i class="fa fa-comments"></i><a href="#">0</a></p>
+                                    <p>新闻内容
+                                        <br>... </p>
+                                    <a href="single-news.html">更多 +</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Post Item -->
+                        <!-- Post Item -->
+                        <div class="post-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img-hover">
+                                        <img src="img/blog/4.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="single-news.html">+</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4><a href="single-news.html">这里可以发真正的标题党</a></h4>
+                                    <p class="data-info">3月9日, 2015 / <i class="fa fa-comments"></i><a href="#">0</a></p>
+                                    <p>新闻内容
+                                        <br>... </p>
+                                    <a href="single-news.html">更多 +</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Post Item -->
+                    </div>
+                    <!-- End Recent Post -->
+                    <!-- Experts -->
+                    <div class="panel-box">
+                        <div class="titles">
+                            <h4>资深经理人</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+                                <div class="box-info">
+                                    <img src="img/experts/1.png" alt="" class="img-responsive">
+                                    <h5 class="entry-title"><a href="#">姓名</a></h5>
+                                    <p class="date-box">所在俱乐部</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Experts -->
+                </div>
+                <!-- End content Left -->
+                <!-- content Sidebar Center -->
+                <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <!-- Locations -->
+                    <div class="panel-box">
+                        <div class="titles">
+                            <h4>新比赛场地</h4>
+                        </div>
+                        <!-- Locations Carousel -->
+                        <ul class="single-carousel">
+                            <li>
+                                <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                <div class="info-single-carousel">
+                                    <h4>标题</h4>
+                                    <p>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/blog/2.jpg" alt="" class="img-responsive">
+                                <div class="info-single-carousel">
+                                    <h4>标题</h4>
+                                    <p>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/blog/3.jpg" alt="" class="img-responsive">
+                                <div class="info-single-carousel">
+                                    <h4>标题</h4>
+                                    <p>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字
+                                        <br>文字</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Locations Carousel -->
+                    </div>
+                    <!-- End Locations -->
+                    <!-- Video presentation -->
+                    <div class="panel-box">
+                        <div class="titles">
+                            <h4>申请联盟表格下载</h4>
+                        </div>
+                        <!-- Locations Video -->
+                        <div class="row">
+                            <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                            <div class="col-md-12">
+                                <h4>标题</h4>
+                                <p>文字
+                                    <br>文字
+                                    <br>文字
+                                    <br>文字
+                                    <br>文字
+                                    <br>文字
+                                    <br>文字</p>
+                            </div>
+                        </div>
+                        <!-- End Locations Video -->
+                    </div>
+                    <!-- End Video presentation-->
+                    <!-- Widget Text-->
+                    <div class="panel-box">
+                        <div class="titles">
+                            <h4>标题</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>文字
+                                    <br>文字
+                                    <br>文字
+                                    <br>文字</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Widget Text-->
+                </aside>
+                <!-- End content Sidebar Center -->
+                <!-- content Sidebar Right -->
+                <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                    <!-- Diary -->
+                    <div class="panel-box">
+                        <div class="titles">
+                            <h4>新赞助商</h4>
+                        </div>
+                        <!-- List Diary -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>赞助商比赛清单</p>
+                                <ul class="list-diary">
+                                    <!-- Item List Diary -->
+                                    <li>
+                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                    </li>
+                                    <!-- End Item List Diary -->
+                                    <!-- Item List Diary -->
+                                    <li>
+                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                    </li>
+                                    <!-- End Item List Diary -->
+                                    <!-- Item List Diary -->
+                                    <li>
+                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                    </li>
+                                    <!-- End Item List Diary -->
+                                    <!-- Item List Diary -->
+                                    <li>
+                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                    </li>
+                                    <!-- End Item List Diary -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End List Diary -->
+                    </div>
+                    <!-- End Diary -->
+                    <!-- Adds Sidebar -->
+                    <div class="panel-box">
+                        <a href="#" target="_blank">
+                            <img src="img/adds/ads1.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <!-- End Adds Sidebar -->
+                </aside>
+                <!-- End content Sidebar Right -->
+            </div>
+        </div>
+        <!-- End Content Central -->
+        <!-- Newsletter -->
+        <div class="section-wide">
+            <div class="container">
+                <div class="row newsletter">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h2>请留下您的<span class="text-resalt">大名</span>和<span class="text-resalt">Email</span>，紧跟我们<span class="text-resalt">垂马大联盟</span>的步伐。 </h2>
+                            <p>您的邮箱联系方式，将有助于我们垂马大联盟团队紧密的保持联系，让您更及时的了解我们的最新咨询</p>
+                        </div>
+                        <form id="newsletterForm" action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                        <input class="form-control" placeholder="姓名" name="name" type="text" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                        <input class="form-control" placeholder="Email" name="email" type="email" required="required">
+                                        <span class="input-group-btn">
+                                                    <button class="btn btn-primary" type="submit" name="subscribe" >提交</button>
+                                                 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="result-newsletter"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Newsletter -->
+    </section>
+    <!-- End Section Area -  Content Central -->
     <footer id="footer" ng-include="'views/partials/footer.html'"></footer>
     <div class="footer-down" ng-include="'views/partials/footer-down.html'"></div>
 </div>
+<!-- End layout-->

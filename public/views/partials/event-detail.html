@@ -1,0 +1,44 @@
+<div class="padding-top-mini">
+    <div class="panel-box">
+        <div class="titles">
+            <h4><a href="/events">返回上一级</a></h4>
+        </div>
+        <div class="">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt="" class="img-responsive">
+                    <div ng-bind-html="eventDescription"></div>
+                    <hr>
+                    <div>
+                        赛事奖金：{{event.awardTotal}}
+                    </div>
+                    <hr>
+                    <div>
+                        赛事装备：
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-2 col-xs-3" ng-repeat="equipment in event.equipments">
+                    		<img src="http://222.240.208.174:8083/vma/download/img?url={{equipment.image}}" alt="" class="img-responsive">
+                    		<h6>{{equipment.name}}</h6>
+                    		<p>数量:{{equipment.count}}</p>
+                    	</div>
+                    </div>
+                    <hr>
+                    <div>
+                        当前报名人数：{{event.registerNumber}} | 人数限制: {{event.registerLimit}}
+                    </div>
+                    <hr>
+                    <div>
+                        本赛事合作伙伴:
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-3" ng-repeat="sponsor in event.sponsors">
+                    		<img src="http://222.240.208.174:8083/vma/download/img?url={{sponsor.logo}}" alt="" class="img-responsive">
+                    		<p>{{sponsor.name}}</p>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

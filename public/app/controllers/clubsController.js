@@ -11,6 +11,7 @@ angular
       $localStorage.vmaAllianceName = $scope.allianceName;
 
       clubService.getAll(allianceId).then(function(data) {
+        console.log(data.data.result);
         $scope.clubs = data.data.result;
 
         cityService.get(allianceId).then(function(data) {
@@ -21,8 +22,4 @@ angular
         $scope.ready = true;
       });
     });
-
-
-
-
   }]);
