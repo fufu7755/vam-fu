@@ -14,6 +14,66 @@ angular
           console.log(status);
         });
         return promise;
+      },
+      getStars: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'vgo/starlist',
+          params: {pageSize: 8},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getAlliances: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'alliance/goodlist',
+          params: {pageSize: 4},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getImport: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'event/import',
+          params: {},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getSponsors: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'sponsor/latestlist',
+          params: {pageSize: 6},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getSlides: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'ad/latestlist',
+          params: {pageSize: 3},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
       }
     };
 

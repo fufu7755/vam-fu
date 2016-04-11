@@ -197,7 +197,17 @@ ul.nav-club li:first-child:before {
     color: #fff;
 }
 
-.form-theme select {
-    width: 100%;
-    margin: 5px 10px;
+#event-search select {
+    width:200px;
+    height:30px;
+    margin-bottom: 10px;
+    vertical-align:top;
+    border : 1px #ccc solid;
+}
+#event-search select option {
+    font-size: 14px;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
 }

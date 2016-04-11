@@ -1,0 +1,17 @@
+<div class="panel-box">
+    <div class="titles">
+        <h4>新赞助商</h4>
+    </div>
+    <!-- List Diary -->
+    <div class="row">
+        <div class="col-md-12">
+            <p>赞助商比赛清单</p>
+            <ul class="list-diary">
+                <li ng-repeat="sponsor in Sponsors">
+                    <a href="{{sponsor.link}}" title="{{sponsor.name}}" target="_blank"><img src="http://222.240.208.174:8083/vma/download/img?url={{sponsor.logo}}" alt="" class="img-responsive"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End List Diary -->
+</div>

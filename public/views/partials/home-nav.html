@@ -1,4 +1,3 @@
-
 <ul class="nav nav-tabs" id="myTab">
     <li class="active">
         <a href="#feature-news" data-toggle="tab">
@@ -8,17 +7,14 @@
     <li><a href="#players-staff" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;明星VGO</a></li>
     <li><a href="#club-news" data-toggle="tab"><i class="fa fa-thumbs-up"></i>&nbsp;优秀小联盟</a></li>
 </ul>
-
 <div class="tab-content">
-    
     <div class="tab-pane active" id="feature-news">
-       
+        <!-- Carousel -->
         <ul id="events-carousel" class="events-carousel padding-top">
-            
             <li ng-repeat="event in newEvents">
                 <div class="header-post">
                     <div class="date">
-                        比赛 时间
+                        {{event.raceDate}}
                     </div>
                     <a href="single-news.html"><img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt=""></a>
                     <div class="meta-tag">
@@ -30,244 +26,40 @@
                     <p>{{event.description}}</p>
                 </div>
             </li>
-            
         </ul>
-        <!-- End blog post-->
+        <!-- Carousel -->
     </div>
-    <!-- Tab One - Feature News -->
-    <!-- Tab Two - Players Staff -->
     <div class="tab-pane" id="players-staff">
         <h3>明星</h3>
-        <!-- Item Players-->
+        <!-- Carousel -->
         <ul id="players-carousel" class="players ">
-            <!-- Item Player -->
-            <li class="item-player">
-                <img src="img/players/1.jpg" alt="" class="img-responsive">
+            <li class="item-player" ng-repeat="star in Stars">
+                <img src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt="" class="img-responsive">
                 <div class="info-player">
-                    <h4><a href="#">姓名</a></h4>
-                    <h5><span>称号</span></h5>
+                    <h4><a href="#">{{star.name}}</a></h4>
+                    <h5><span>{{star.vgo.No}}</span></h5>
                     <div class="overlay-player">
-                        <p>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介</p>
+                        <p>{{star.address}}</p>
                     </div>
                 </div>
             </li>
-            <!-- End Player post -->
-            <!-- Item Player -->
-            <li class="item-player">
-                <img src="img/players/2.jpg" alt="" class="img-responsive">
-                <div class="info-player">
-                    <h4><a href="#">姓名</a></h4>
-                    <h5><span>称号</span></h5>
-                    <div class="overlay-player">
-                        <p>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介</p>
-                    </div>
-                </div>
-            </li>
-            <!-- End Player post -->
-            <!-- Item Player -->
-            <li class="item-player">
-                <img src="img/players/3.jpg" alt="" class="img-responsive">
-                <div class="info-player">
-                    <h4><a href="#">姓名</a></h4>
-                    <h5><span>称号</span></h5>
-                    <div class="overlay-player">
-                        <p>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介</p>
-                    </div>
-                </div>
-            </li>
-            <!-- End Player post -->
-            <!-- Item Player -->
-            <li class="item-player">
-                <img src="img/players/4.jpg" alt="" class="img-responsive">
-                <div class="info-player">
-                    <h4><a href="#">姓名</a></h4>
-                    <h5><span>称号</span></h5>
-                    <div class="overlay-player">
-                        <p>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介</p>
-                    </div>
-                </div>
-            </li>
-            <!-- End Player post -->
-            <!-- Item Player -->
-            <li class="item-player">
-                <img src="img/players/5.jpg" alt="" class="img-responsive">
-                <div class="info-player">
-                    <h4><a href="#">姓名</a></h4>
-                    <h5><span>称号</span></h5>
-                    <div class="overlay-player">
-                        <p>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介</p>
-                    </div>
-                </div>
-            </li>
-            <!-- End Player post -->
-            <!-- Item Player -->
-            <li class="item-player">
-                <img src="img/players/6.jpg" alt="" class="img-responsive">
-                <div class="info-player">
-                    <h4><a href="#">姓名</a></h4>
-                    <h5><span>称号</span></h5>
-                    <div class="overlay-player">
-                        <p>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介
-                            <br>简介</p>
-                    </div>
-                </div>
-            </li>
-            <!-- End Player post -->
         </ul>
-        <!-- End Item Players-->
+        <!-- Carousel -->
     </div>
-    <!-- Tab Two - Players Staff -->
-    <!-- Tab Theree - Club Teams -->
     <div class="tab-pane" id="club-news">
-        <h3>俱乐部</h3>
-        <!-- Clubs Carousel-->
-        <ul id="clubs-carousel" class="clubs-teams">
-            <!-- Item carousel club -->
-            <li class="row">
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/1.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
+        <h3>联盟</h3>
+        <div class="row">
+            <div class="col-sx-12 col-sm-6 col-md-6" ng-repeat="alliance in Alliances">
+                <div class="item-clubs">
+                    <div class="img-clubs">
+                        <img src="http://222.240.208.174:8083/vma/download/img?url={{alliance.logo}}" alt="" class="img-responsive">
+                    </div>
+                    <div class="info-clubs">
+                        <h4><a target="_blank" href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
+                        <p>{{alliance.description}}</p>
                     </div>
                 </div>
-                <!-- End Item clubs -->
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/2.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/3.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/4.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-            </li>
-            <!-- End Item carousel club -->
-            <!-- Item carousel club -->
-            <li class="row">
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/5.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/6.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/1.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-                <!-- Item clubs -->
-                <div class="col-sx-12 col-sm-6 col-md-6">
-                    <div class="item-clubs">
-                        <div class="img-clubs">
-                            <img src="img/clubs-team/4.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="info-clubs">
-                            <h4><a href="#">俱乐部名称</a></h4>
-                            <p>简介
-                                <br>简介</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Item clubs -->
-            </li>
-            <!-- End Item carousel club -->
-        </ul>
-        <!-- End Clubs Carousel-->
+            </div>
+        </div>
     </div>
-    <!-- Tab Theree - Club Teams -->
 </div>
-<!-- Content Tabs -->

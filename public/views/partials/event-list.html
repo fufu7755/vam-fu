@@ -1,25 +1,23 @@
 <div class="panel-box">
     <div class="titles">
-    	<div class="pull-right m-t-5 m-r-20"><input ng-model="query.name">
-    	搜索</div>
         <h4 class="">赛事列表</h4>
     </div>
     <!-- Post Item -->
     <div ng-controller="allianceController">
-        <div class="post-item" dir-paginate="event in events | filter: query | itemsPerPage: 10">
+        <div class="post-item"dir-paginate="match in matches | itemsPerPage: 6">
             <div class="row">
                 <div class="col-md-4">
                     <div class="img-hover">
-                        <img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt="" class="img-responsive">
-                        <div class="overlay"><a href="/events/{{event.id}}/event">+</a></div>
+                        <img src="http://222.240.208.174:8083/vma/download/img?url={{match.cover}}" alt="" class="img-responsive">
+                        <div class="overlay"><a href="/events/{{match.id}}/event">+</a></div>
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h4><a href="/events/{{event.id}}/event">{{event.name}}</a></h4>
+                    <h4><a href="/events/{{match.id}}/event">{{match.name}}</a></h4>
                     <p class="data-info">赛事地点：{{event.city}}</p>
                     <p>简介
-                        <br>{{event.description}}</p>
-                    <a href="/events/{{event.id}}/event">点击查看 >></a>
+                        <br>{{match.description}}</p>
+                    <a href="/events/{{match.id}}/event">点击查看 >></a>
                 </div>
             </div>
         </div>
