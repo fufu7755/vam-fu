@@ -196,3 +196,8 @@ ul.nav-club li:first-child:before {
     padding: 5px;
     color: #fff;
 }
+
+.form-theme select {
+    width: 100%;
+    margin: 5px 10px;
+}

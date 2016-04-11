@@ -2,24 +2,24 @@
     <div class="titles">
         <h4>赛事搜索</h4>
     </div>
-    <form action="#" class="form-theme">
+    <form class="form-theme" name="matchSearchForm">
         <div class="text-center">
-            <select name="" id="" class="form-select">
-                <option value="All" selected="selected">赛事状态</option>
-                <option value="1">正在进行</option>
-                <option value="2">比赛结束</option>
+            <select name="status" ng-model="matchSearchSelected.status" ng-change="matchCitiesRender()">
+                <option value="">选择状态</option>
+                <option value="0">过去的</option>
+                <option value="1">现在的</option>
+                <option value="2">未来的</option>
             </select>
         </div>
         <div class="text-center">
-            <select name="" id="" class="form-select">
-                <option value="All" selected="selected">比赛地点</option>
-                <option value="1">长沙</option>
-                <option value="2">北京</option>
+            <select name="city" ng-model="matchSearchSelected.city" ng-change="matchCitiesRender()">
+                <option value="">选择城市</option>
+                <option ng-repeat="city in cities" value="{{city.id}}">
+                    {{city.name}}
+                </option>
             </select>
         </div>
-        <div class="text-center">
-            <input type="submit" value="确定" class="btn btn-lg btn-primary">
-        </div>
+        
     </form>
 </div>
 <div class="panel-box padding-bottom">
