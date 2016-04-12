@@ -12,6 +12,7 @@ angular
     eventsService.getEvent(eventId).then(function(data) {
       $scope.event = data.data;
       $scope.eventDescription = $sce.trustAsHtml(data.data.description);
+      $scope.eventVideo = $sce.trustAsHtml(data.data.vedio);
       console.log(data.data);
     });
 

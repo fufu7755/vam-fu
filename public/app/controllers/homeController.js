@@ -21,6 +21,10 @@ angular
         });
         homeService.getSlides().then(function(data) {
             $scope.Slides = data.data;
-           	console.log($scope.Slides);
+           	
+        });
+        homeService.getClubs().then(function(data) {
+            $scope.Clubs = data.data;
+            console.log($scope.Clubs);
         });
     }]);

@@ -1,62 +1,12 @@
 <div class="panel-box">
     <div class="titles">
-        <h4>资深经理人</h4>
+        <h4>推崇俱乐部</h4>
     </div>
     <div class="row">
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
+        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3" ng-repeat="club in Clubs">
             <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-            <div class="box-info">
-                <img src="/assets/img/experts/1.png" alt="" class="img-responsive">
-                <h5 class="entry-title"><a href="#">姓名</a></h5>
-                <p class="date-box">所在俱乐部</p>
+                <img src="http://222.240.208.174:8083/vma/download/img?url={{club.logo}}" alt="" class="img-responsive">
+                <h5 class="entry-title"><a href="#">{{club.name}}</a></h5>
             </div>
         </div>
     </div>

@@ -6,7 +6,9 @@
         <div class="">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt="" class="img-responsive">
+                    <div>
+                        <div ng-bind-html="eventVideo"></div>
+                    </div>
                     <div ng-bind-html="eventDescription"></div>
                     <hr>
                     <div>

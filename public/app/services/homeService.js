@@ -74,6 +74,18 @@ angular
           console.log(status);
         });
         return promise;
+      },
+      getClubs: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'club/goodlist',
+          params: {pageSize: 8},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
       }
     };
 
