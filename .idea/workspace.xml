@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a309a89-8faf-4fb0-bf2a-0f3aae565ace" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public.zip" afterPath="$PROJECT_DIR$/public.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/home-nav.html" afterPath="$PROJECT_DIR$/public/views/partials/home-nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/home.html" afterPath="$PROJECT_DIR$/public/views/pages/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/homeController.js" afterPath="$PROJECT_DIR$/public/app/controllers/homeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/homeService.js" afterPath="$PROJECT_DIR$/public/app/services/homeService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/home-slide.html" afterPath="$PROJECT_DIR$/public/views/partials/home-slide.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
     </list>
     <ignored path="alt-en.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -191,8 +188,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="346" />
-    <option name="y" value="157" />
+    <option name="y" value="23" />
     <option name="width" value="1199" />
     <option name="height" value="658" />
   </component>
@@ -1675,7 +1671,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="346" y="157" width="1199" height="658" extended-state="0" />
+    <frame x="0" y="23" width="1199" height="658" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />

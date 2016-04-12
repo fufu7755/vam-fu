@@ -10,8 +10,8 @@
 <div class="tab-content">
     <div class="tab-pane active" id="feature-news">
         <!-- Carousel -->
-        <ul id="events-carousel" class="events-carousel padding-top">
-            <li ng-repeat="event in newEvents">
+        <ul data-owl-carousel id="events-carousel" class="events-carousel padding-top" data-options="{items : 3}">
+            <li owl-carousel-item ng-repeat="event in newEvents">
                 <div class="header-post">
                     <div class="date">
                         {{event.raceDate}}
@@ -32,8 +32,8 @@
     <div class="tab-pane" id="players-staff">
         <h3>明星</h3>
         <!-- Carousel -->
-        <ul id="players-carousel" class="players ">
-            <li class="item-player" ng-repeat="star in Stars">
+        <ul data-owl-carousel id="players-carousel" class="players" data-options="{items : 4}">
+            <li owl-carousel-item class="item-player" ng-repeat="star in Stars">
                 <img src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt="" class="img-responsive">
                 <div class="info-player">
                     <h4><a href="#">{{star.name}}</a></h4>

@@ -211,3 +211,11 @@ ul.nav-club li:first-child:before {
     -moz-box-sizing: border-box;
     box-sizing: border-box;  
 }
+
+.carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 20%;
+    font-size: 48px;
+    font-weight: bold;
+}
