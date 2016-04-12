@@ -219,3 +219,8 @@ ul.nav-club li:first-child:before {
     font-size: 48px;
     font-weight: bold;
 }
+
+.events-carousel li .info-post p {
+    height: 70px;
+    overflow: hidden;
+}

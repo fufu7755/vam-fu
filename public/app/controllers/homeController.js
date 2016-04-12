@@ -25,6 +25,14 @@ angular
         });
         homeService.getClubs().then(function(data) {
             $scope.Clubs = data.data;
-            console.log($scope.Clubs);
+            
+        });
+        homeService.getAlliannews().then(function(data) {
+            $scope.Alliannews = data.data;
+            
+        });
+        homeService.getEventnews().then(function(data) {
+            $scope.Eventnews = data.data;
+            console.log(data.data);
         });
     }]);

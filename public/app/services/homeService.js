@@ -86,6 +86,30 @@ angular
           console.log(status);
         });
         return promise;
+      },
+      getAlliannews: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'news/latestlist',
+          params: {pageSize: 4, type: 1},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getEventnews: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'news/latestlist',
+          params: {pageSize: 3, type: 2},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
       }
     };
 

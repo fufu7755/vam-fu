@@ -1,4 +1,4 @@
-<div class="section-wide">
+<div class="section-wide" ng-controller="partnerController">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -6,50 +6,14 @@
                     <h2>合作伙伴</h2>
                 </div>
                 <!-- Carousel -->
-                <ul carousel id="sponsors" class="tooltip-hover">
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/1.png" alt="Image"></a>
+                <ul data-owl-carousel id="sponsors" class="tooltip-hover" data-options="{items: 6}">
+                    <li owl-carousel-item data-toggle="tooltip" title data-original-title="" ng-repeat="partner in Partners">
+                        <img src="http://222.240.208.174:8083/vma/download/img?url={{partner.image}}" alt="Image">
                     </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/2.png" alt="Image"></a>
-                    </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/3.png" alt="Image"></a>
-                    </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/4.png" alt="Image"></a>
-                    </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/5.png" alt="Image"></a>
-                    </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/3.png" alt="Image"></a>
-                    </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/4.png" alt="Image"></a>
-                    </li>
-                    <li data-toggle="tooltip" title data-original-title="Name Sponsor">
-                        <a href="#"><img src="/assets/img/sponsors/3.png" alt="Image"></a>
-                    </li>
+                    
                 </ul>
                 <!-- Carousel -->
             </div>
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-    $(document).ready(function($) {
-        $("#sponsors").owlCarousel({
-            autoPlay: 3200,
-            items : 6,
-            navigation: false,
-            itemsDesktop : [1199,5],
-            itemsDesktopSmall : [1024,4],
-            itemsTablet : [768,3],
-            itemsMobile : [500,2],
-            pagination: true
-        });
-    });
-</script>
