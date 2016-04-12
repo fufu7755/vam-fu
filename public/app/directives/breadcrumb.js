@@ -34,6 +34,9 @@ angular
                     }
                     
                 }
+                if (currentRoutes[0] == 'about') {
+                    $scope.breadcrumb[0] = { "link": "/about", "name": "关于VMA"};
+                }
             }
         }
     }]);

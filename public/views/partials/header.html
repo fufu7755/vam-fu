@@ -26,8 +26,8 @@
         <div class="row">
             <div class="col-md-7 col-sm-12">
                 <ul class="sf-menu" id="menu" ng-controller="headerController">
-                    <li class="">
-                        <a href="#">关于VMA</a>
+                    <li ng-class="setActive('about')">
+                        <a href="/about">关于VMA</a>
                     </li>
                     <li ng-class="setActive('alliances')">
                         <a href="/alliances">VMA联盟</a>
