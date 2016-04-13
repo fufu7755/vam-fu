@@ -43,6 +43,12 @@ angular
                         $scope.breadcrumb[1] = { "link": "/vgo/allstars", "name": "全明星VGO"};
                     }
                 }
+                if (currentRoutes[0] == 'train') {
+                    $scope.breadcrumb[0] = { "link": "/train", "name": "培训与学院"};
+                    if (currentRoutes[1] == 'allstars') {
+                        $scope.breadcrumb[1] = { "link": "/vgo/allstars", "name": "全明星VGO"};
+                    }
+                }
             }
         }
     }]);
