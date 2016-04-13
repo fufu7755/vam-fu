@@ -29,6 +29,7 @@ angular.module('hshs', [
             .when('/about', {templateUrl: 'views/pages/about.html'})
             .when('/vgo', {templateUrl: 'views/pages/vgo-home.html'})
                 .when('/vgo/allstars', {templateUrl: 'views/pages/vgo-allstars.html'})
+            .when('/train', {templateUrl: 'views/pages/train.html'})
                     .when('/events', {templateUrl: 'views/pages/events.html'})
                     .when('/events/:eventId/event', {templateUrl: 'views/pages/event.html'})
                     .otherwise({redirectTo: '/'});
