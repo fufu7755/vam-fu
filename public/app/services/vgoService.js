@@ -38,6 +38,30 @@ angular
                   console.log(status);
               });
               return promise;
+          },
+          getVgohome: function () {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'vgo/background',
+                  params: {}
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
+          },
+          getStars: function () {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'vgo/starlist',
+                  params: {pageSize: 999},
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
           }
       };
 

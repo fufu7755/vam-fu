@@ -224,3 +224,32 @@ ul.nav-club li:first-child:before {
     height: 70px;
     overflow: hidden;
 }
+
+.vgoHome-title {
+    position: relative;
+}
+
+.vgoHome-title h2 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.8;
+    color: #0088C8;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.stars-item {
+    margin-bottom: 15px;
+}
+
+.vgo-name {
+    position: absolute;
+    width: 80px;
+    background-color: #0088C8;
+    color: #fff;
+    opacity: 0.8;
+    bottom: 20px;
+    padding: 5px 10px;
+}
