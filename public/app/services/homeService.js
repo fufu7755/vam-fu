@@ -54,8 +54,8 @@ angular
       getSponsors: function () {
         promise = $http({
           method: 'GET',
-          url: baseUrl + 'sponsor/latestlist',
-          params: {pageSize: 6},
+          url: baseUrl + 'ad/latestlist',
+          params: {pageSize: 6, metaAdPositionId: 2},
         }).success(function (response) {
           return response.result;
         }).error(function (data, status) {
@@ -67,7 +67,7 @@ angular
         promise = $http({
           method: 'GET',
           url: baseUrl + 'ad/latestlist',
-          params: {pageSize: 3},
+          params: {pageSize: 3, metaAdPositionId: 1},
         }).success(function (response) {
           return response.result;
         }).error(function (data, status) {

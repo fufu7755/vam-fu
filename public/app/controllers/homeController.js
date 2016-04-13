@@ -17,7 +17,7 @@ angular
         });
         homeService.getSponsors().then(function(data) {
             $scope.Sponsors = data.data;
-           
+            console.log(data.data);
         });
         homeService.getSlides().then(function(data) {
             $scope.Slides = data.data;
