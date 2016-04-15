@@ -15,6 +15,9 @@ angular
                             $scope.breadcrumb[1] = { "link": "/alliances/" + allianceId + "/clubs", "name": allianceService.getName(data.data.result, allianceId) };
                         })
                     }
+                    if (currentRoutes[1] == 'news') {
+                        $scope.breadcrumb[1] = { "link": "/news", "name": "联盟新闻" };
+                    }
                     if (currentRoutes[2] == 'clubs' && currentRoutes[3] != undefined) {
                         var clubId = parseInt(currentRoutes[3]);
                         clubService.getDetail(clubId).then(function(data) {

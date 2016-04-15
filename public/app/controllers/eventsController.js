@@ -42,7 +42,9 @@ angular
     cityService.getAll().then(function(data) {
       $scope.cities = data.data;
     });
-
+    cityService.getEventcities().then(function(data) {
+      $scope.eventcities = data.data;
+    });
     $scope.matchCitiesRender = function() {
       status = $scope.matchSearchSelected.status;
       city = $scope.matchSearchSelected.city;

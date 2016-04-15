@@ -15,6 +15,7 @@ angular
               });
               return promise;
           },
+
           getDetail: function (clubId) {
               promise = $http({
                   method: 'GET',

@@ -6,6 +6,7 @@ angular
         });
         homeService.getStars().then(function(data) {
             $scope.Stars = data.data;
+
         });
         homeService.getAlliances().then(function(data) {
             $scope.Alliances = data.data;
@@ -17,7 +18,7 @@ angular
         });
         homeService.getSponsors().then(function(data) {
             $scope.Sponsors = data.data;
-            console.log(data.data);
+
         });
         homeService.getSlides().then(function(data) {
             $scope.Slides = data.data;
@@ -25,7 +26,7 @@ angular
         });
         homeService.getClubs().then(function(data) {
             $scope.Clubs = data.data;
-            
+            console.log(data.data);
         });
         homeService.getAlliannews().then(function(data) {
             $scope.Alliannews = data.data;
@@ -33,6 +34,6 @@ angular
         });
         homeService.getEventnews().then(function(data) {
             $scope.Eventnews = data.data;
-            console.log(data.data);
+
         });
     }]);

@@ -16,7 +16,7 @@
                     <div class="date">
                         {{event.raceDate}}
                     </div>
-                    <a href="single-news.html"><img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt=""></a>
+                    <a href="/events/{{event.id}}/event"><img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt=""></a>
                     <div class="meta-tag">
                         当前报名人数：{{event.registerNumber}}
                     </div>
@@ -37,7 +37,7 @@
                 <img src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt="" class="img-responsive">
                 <div class="info-player">
                     <h4><a target="_blank" href="/alliances/{{star.allianceId}}/clubs/{{star.clubId}}/vgos/{{star.id}}">{{star.name}}</a></h4>
-                    <h5><span>{{star.vgo.No}}</span></h5>
+                    <h5><span>{{star.clubName}}</span></h5>
                     <div class="overlay-player">
                         <p>{{star.address}}</p>
                     </div>

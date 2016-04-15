@@ -253,3 +253,9 @@ ul.nav-club li:first-child:before {
     bottom: 20px;
     padding: 5px 10px;
 }
+#events-carousel .owl-buttons {
+    display: none;
+}
+.owl-buttons {
+    display: none;
+}

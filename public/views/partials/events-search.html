@@ -14,7 +14,7 @@
         <div class="text-center">
             <select name="city" ng-model="matchSearchSelected.city" ng-change="matchCitiesRender()">
                 <option value="">选择城市</option>
-                <option ng-repeat="city in cities" value="{{city.id}}">
+                <option ng-repeat="city in eventcities" value="{{city.id}}">
                     {{city.name}}
                 </option>
             </select>

@@ -28,6 +28,19 @@ angular
         });
         return promise;
       },
+      getEventcities: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'regions/list',
+          params: { 'hasEvent':1 },
+        }).success(function (response) {
+          $localStorage.vmaCity = response;
+          return response;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
       getName: function (cities, cityId) {
         var city = _.find(cities, {"id": cityId});
         return city.name;

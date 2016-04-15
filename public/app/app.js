@@ -17,6 +17,8 @@ angular.module('hshs', [
             .when('/', {templateUrl: 'views/pages/home.html'})
             .when('/alliances', {templateUrl: 'views/pages/alliances.html'})
             .when('/alliances/:allianceId/clubs', {templateUrl: 'views/pages/clubs.html'})
+            .when('/alliances/news', {templateUrl: 'views/pages/alliancenews.html'})
+            .when('/alliances/news/:newsId', {templateUrl: 'views/pages/alliancenews-detail.html'})
             .when('/alliances/:allianceId/clubs/:clubId', {templateUrl: 'views/pages/club.html'})
             .when('/alliances/:allianceId/clubs/:clubId/vgos', {templateUrl: 'views/pages/vgos.html'})
             .when('/alliances/:allianceId/clubs/:clubId/vgos/:vgoId', {templateUrl: 'views/pages/vgo.html'})

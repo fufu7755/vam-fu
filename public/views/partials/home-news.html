@@ -1,5 +1,6 @@
 <div class="panel-box">
     <div class="titles">
+        <div class="pull-right m-t-5 m-r-20"><a target="_blank" href="/alliances/news">更多...</a></div>
         <h4>联盟最新消息</h4>
     </div>
     <div class="post-item" ng-repeat="news in Alliannews">
@@ -7,14 +8,14 @@
             <div class="col-md-4">
                 <div class="img-hover">
                     <img src="http://222.240.208.174:8083/vma/download/img?url={{news.image}}" alt="" class="img-responsive">
-                    <div class="overlay"><a href="#">+</a></div>
+                    <div class="overlay"><a target="_blank" href="/alliances/news/{{news.id}}">+</a></div>
                 </div>
             </div>
             <div class="col-md-8">
-                <h4><a href="#">{{news.title}}</a></h4>
+                <h4><a href="/alliances/news/{{news.id}}">{{news.title}}</a></h4>
                 <p class="data-info">{{news.createdAt}}</p>
                 <p>{{news.content}}</p>
-                <a href="#">更多 +</a>
+                <a href="/alliances/news/{{news.id}}">更多 +</a>
             </div>
         </div>
     </div>
