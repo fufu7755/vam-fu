@@ -5,22 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a309a89-8faf-4fb0-bf2a-0f3aae565ace" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/allianceService.js" afterPath="$PROJECT_DIR$/public/app/services/allianceService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/alliancesController.js" afterPath="$PROJECT_DIR$/public/app/controllers/alliancesController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/app.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/directives/breadcrumb.js" afterPath="$PROJECT_DIR$/public/app/directives/breadcrumb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/cityService.js" afterPath="$PROJECT_DIR$/public/app/services/cityService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/club-range-list.html" afterPath="$PROJECT_DIR$/public/views/partials/club-range-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/clubService.js" afterPath="$PROJECT_DIR$/public/app/services/clubService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/clubsController.js" afterPath="$PROJECT_DIR$/public/app/controllers/clubsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/custom.css" afterPath="$PROJECT_DIR$/public/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/events-search.html" afterPath="$PROJECT_DIR$/public/views/partials/events-search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/eventsController.js" afterPath="$PROJECT_DIR$/public/app/controllers/eventsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/footer.html" afterPath="$PROJECT_DIR$/public/views/partials/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/home-nav.html" afterPath="$PROJECT_DIR$/public/views/partials/home-nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/home-news.html" afterPath="$PROJECT_DIR$/public/views/partials/home-news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/home.html" afterPath="$PROJECT_DIR$/public/views/pages/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/homeController.js" afterPath="$PROJECT_DIR$/public/app/controllers/homeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alt-en.iws" />
@@ -43,61 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="homeController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homeController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/app/controllers/homeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.7795786">
               <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alliancenews.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/pages/alliancenews.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="matchService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/services/matchService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eventsController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/controllers/eventsController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cityService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/services/cityService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.037037">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="events-search.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/views/partials/events-search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46023688">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -189,7 +123,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="306" />
+    <option name="y" value="149" />
     <option name="width" value="1280" />
     <option name="height" value="714" />
   </component>
@@ -2161,13 +2096,20 @@
       <option name="project" value="LOCAL" />
       <updated>1460534615935</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="4.15">
+      <created>1460763863845</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1460763863845</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="714" extended-state="0" />
+    <frame x="306" y="149" width="1280" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45762712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2183,7 +2125,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41233373" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2208,7 +2149,8 @@
     <MESSAGE value="background img" />
     <MESSAGE value="train" />
     <MESSAGE value="ad" />
-    <option name="LAST_COMMIT_MESSAGE" value="ad" />
+    <MESSAGE value="4.15" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2388,6 +2330,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.192308">
           <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2395,6 +2338,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.615385">
           <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2463,14 +2409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
           <caret line="19" column="14" selection-start-line="6" selection-start-column="8" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/controllers/homeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -2563,25 +2501,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/controllers/eventsController.js">
+    <entry file="file://$PROJECT_DIR$/public/views/partials/events-search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.46023688">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/services/cityService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.037037">
+        <state vertical-scroll-proportion="0.5966102">
           <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/controllers/eventsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5786062">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/services/matchService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.49594814">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
@@ -2589,16 +2535,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/views/pages/alliancenews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.46023688">
           <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/events-search.html">
+    <entry file="file://$PROJECT_DIR$/public/app/controllers/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46023688">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.7795786">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
           <folding />
         </state>
       </provider>
