@@ -23,7 +23,7 @@ angular
 
     eventsService.getNews().then(function(data){
       $scope.newsAll = data.data.result;
-      
+      console.log(data.data.result);
     });
 
     $scope.matchSearchSelected = {
