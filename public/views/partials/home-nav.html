@@ -52,7 +52,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6" ng-repeat="alliance in Alliances">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="http://222.240.208.174:8083/vma/download/img?url={{alliance.logo}}" alt="" class="img-responsive">
+                        <a href="/alliances/{{alliance.id}}/clubs"><img src="http://222.240.208.174:8083/vma/download/img?url={{alliance.logo}}" alt="" class="img-responsive"></a>
                     </div>
                     <div class="info-clubs">
                         <h4><a target="_blank" href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>

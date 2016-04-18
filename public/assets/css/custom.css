@@ -259,3 +259,8 @@ ul.nav-club li:first-child:before {
 .owl-buttons {
     display: none;
 }
+
+.more-links {
+    margin-top: 10px;
+    padding-right: 20px;
+}

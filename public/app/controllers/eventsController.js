@@ -35,7 +35,7 @@ angular
     var city = $scope.matchSearchSelected.city;
 
     matchService.getAll(status, city).then(function(data) {
-      console.log(data);
+
       $scope.matches = data.data.result;
     });
 
@@ -50,6 +50,7 @@ angular
       city = $scope.matchSearchSelected.city;
       matchService.getAll(status, city).then(function(data) {
         $scope.matches = data.data.result;
+
         /*$scope.cities = _.map(data.data.result, 'city');*/
       });
     };

@@ -43,7 +43,7 @@ angular
         
       });
       clubService.getNewsdetail(newsId).then(function(data) {
-        
+        console.log(data.data);
         $scope.Newsdeatil = data.data;
         $scope.newsDescription = $sce.trustAsHtml(data.data.content);
       });
@@ -54,7 +54,7 @@ angular
       });
 
       clubService.getActivity(activityId).then(function(data) {
-        console.log(data.data);  
+
         $scope.activity = data.data;
         $scope.activityDescription = $sce.trustAsHtml(data.data.spec);
       });

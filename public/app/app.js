@@ -18,6 +18,8 @@ angular.module('hshs', [
             .when('/alliances', {templateUrl: 'views/pages/alliances.html'})
             .when('/alliances/:allianceId/clubs', {templateUrl: 'views/pages/clubs.html'})
             .when('/alliances/news', {templateUrl: 'views/pages/alliancenews.html'})
+            .when('/alliances/clubs-rank', {templateUrl: 'views/pages/clubsrank.html'})
+            .when('/alliances/vgos-rank', {templateUrl: 'views/pages/vgosrank.html'})
             .when('/alliances/news/:newsId', {templateUrl: 'views/pages/alliancenews-detail.html'})
             .when('/alliances/:allianceId/clubs/:clubId', {templateUrl: 'views/pages/club.html'})
             .when('/alliances/:allianceId/clubs/:clubId/vgos', {templateUrl: 'views/pages/vgos.html'})

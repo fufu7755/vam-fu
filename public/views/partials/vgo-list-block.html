@@ -1,38 +1,18 @@
+
+
 <table class="table table-striped table-bordered">
     <tbody>
-    <tr>
+    <tr dir-paginate="vgo in vgos | filter: query | itemsPerPage: 10">
         <td>
-            1
+            {{vgo.id}}
         </td>
         <td>
-            姓名
+            {{vgo.name}}
         </td>
         <td>
-            长沙
-        </td>
-    </tr>
-    <tr>
-        <td>
-            2
-        </td>
-        <td>
-            姓名
-        </td>
-        <td>
-            长沙
-        </td>
-    </tr>
-    <tr>
-        <td>
-            3
-        </td>
-        <td>
-            姓名
-        </td>
-        <td>
-            长沙
+            {{vgo.city}}
         </td>
     </tr>
     </tbody>
 </table>
-<p class="text-center"><a href="#">点击进入查看更多排名</a></p>
+<p class="text-center"><a href="/alliances/vgos-rank">点击进入查看更多排名</a></p>

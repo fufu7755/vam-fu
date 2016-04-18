@@ -22,5 +22,9 @@ angular
                 $scope.ready = true;
             });
         });
+        clubService.getVgos().then(function(data) {
+            console.log(data.data.result);
+            $scope.vgos = data.data.result;
+        });
 
     }]);

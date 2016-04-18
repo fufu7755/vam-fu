@@ -1,0 +1,18 @@
+<div class="panel-box padding-bottom">
+    <div class="titles">
+        <h4>最近赛事讯息更新</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="games-info">
+                <li dir-paginate="news in newsAll | itemsPerPage: 8">
+                    <div class="row">
+                        <div class="col-xs-6">{{news.createdAt}}</div>
+                        <div class="col-xs-6"><a href="#">进入 ></a></div>
+                    </div>
+                    <h6>{{news.title}}</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

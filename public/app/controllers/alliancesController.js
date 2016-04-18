@@ -11,10 +11,14 @@ angular
         allianceService.getAlliancenews(newsId).then(function(data) {
             $scope.News = data.data;
             $scope.Description = $sce.trustAsHtml(data.data.content);
-            console.log(data.data);
+
         });
         allianceService.getAllclubs().then(function (data) {
-            console.log(data.data.result);
+
             $scope.Allclubs = data.data.result;
+        });
+        clubService.getVgos().then(function(data) {
+            console.log(data.data.result);
+            $scope.vgos = data.data.result;
         });
     }]);

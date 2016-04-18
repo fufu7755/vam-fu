@@ -16,7 +16,13 @@ angular
                         })
                     }
                     if (currentRoutes[1] == 'news') {
-                        $scope.breadcrumb[1] = { "link": "/news", "name": "联盟新闻" };
+                        $scope.breadcrumb[1] = { "link": "/alliances/news", "name": "联盟新闻" };
+                    }
+                    if (currentRoutes[1] == 'clubs-rank') {
+                        $scope.breadcrumb[1] = { "link": "/alliances/clubsrank", "name": "俱乐部排名" };
+                    }
+                    if (currentRoutes[1] == 'vgos-rank') {
+                        $scope.breadcrumb[1] = { "link": "/alliances/vgosrank", "name": "Vgo排名" };
                     }
                     if (currentRoutes[2] == 'clubs' && currentRoutes[3] != undefined) {
                         var clubId = parseInt(currentRoutes[3]);
