@@ -1,7 +1,7 @@
 angular
   .module('hshs').controller('clubController', ['$rootScope', '$scope', '$routeParams', '$sce', '$localStorage', 'allianceService', 'clubService', 'cityService', function ($rootScope, $scope, $routeParams, $sce, $localStorage, allianceService, clubService, cityService) {
 
-    var allianceId, clubId, cities;
+      var allianceId, clubId, cities, newsId, activityId;
     allianceId = parseInt($routeParams.allianceId);
     clubId = parseInt($routeParams.clubId);
     newsId = parseInt($routeParams.newsId);

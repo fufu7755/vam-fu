@@ -42,8 +42,20 @@ angular
       getNews: function () {
         promise = $http({
           method: 'GET',
+          url: baseUrl + 'news/latestlist',
+          params: {type: 2},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getEventnews: function (eventId) {
+        promise = $http({
+          method: 'GET',
           url: baseUrl + 'news/list',
-          params: {},
+          params: {eventId: eventId},
         }).success(function (response) {
           return response.result;
         }).error(function (data, status) {

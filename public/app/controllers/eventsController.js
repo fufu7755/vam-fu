@@ -13,7 +13,7 @@ angular
       $scope.event = data.data;
       $scope.eventDescription = $sce.trustAsHtml(data.data.description);
       $scope.eventVideo = $sce.trustAsHtml(data.data.vedio);
-      console.log(data.data);
+
     });
 
     eventsService.getAlbum().then(function(data){
@@ -22,9 +22,14 @@ angular
     });
 
     eventsService.getNews().then(function(data){
-      $scope.newsAll = data.data.result;
-      console.log(data.data.result);
+      $scope.newsAll = data.data;
+
     });
+
+      eventsService.getEventnews(eventId).then(function (data) {
+        $scope.eventNews = data.data.result;
+        console.log(data.data.result);
+      });
 
     $scope.matchSearchSelected = {
       status: null,

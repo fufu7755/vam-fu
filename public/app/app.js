@@ -32,12 +32,13 @@ angular.module('hshs', [
 
             .when('/about', {templateUrl: 'views/pages/about.html'})
             .when('/vgo', {templateUrl: 'views/pages/vgo-home.html'})
-                .when('/vgo/allstars', {templateUrl: 'views/pages/vgo-allstars.html'})
+            .when('/vgo/allstars', {templateUrl: 'views/pages/vgo-allstars.html'})
             .when('/train', {templateUrl: 'views/pages/train.html'})
             .when('/train/:trainId', {templateUrl: 'views/pages/train-detail.html'})
-                    .when('/events', {templateUrl: 'views/pages/events.html'})
-                    .when('/events/:eventId/event', {templateUrl: 'views/pages/event.html'})
-                    .otherwise({redirectTo: '/'});
+            .when('/events', {templateUrl: 'views/pages/events.html'})
+            .when('/events/:eventId/event', {templateUrl: 'views/pages/event.html'})
+            .when('/news/:newsId', {templateUrl: 'views/pages/news-detail.html'})
+            .otherwise({redirectTo: '/'});
     }]).run([
         '$rootScope',
         '$location',

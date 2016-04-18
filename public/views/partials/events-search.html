@@ -32,7 +32,7 @@
                 <li dir-paginate="news in newsAll | itemsPerPage: 8">
                     <div class="row">
                         <div class="col-xs-6">{{news.createdAt}}</div>
-                        <div class="col-xs-6"><a href="#">进入 ></a></div>
+                        <div class="col-xs-6"><a target="_blank" href="/news/{{news.id}}">进入 ></a></div>
                     </div>
                     <h6>{{news.title}}</h6>
                 </li>

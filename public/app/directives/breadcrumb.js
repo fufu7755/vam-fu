@@ -46,6 +46,7 @@ angular
                 if (currentRoutes[0] == 'about') {
                     $scope.breadcrumb[0] = { "link": "/about", "name": "关于VMA"};
                 }
+
                 if (currentRoutes[0] == 'vgo') {
                     $scope.breadcrumb[0] = { "link": "/vgo", "name": "VGO"};
                     if (currentRoutes[1] == 'allstars') {
