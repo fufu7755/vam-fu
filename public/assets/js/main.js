@@ -276,7 +276,3 @@ $(document).ready(function($) {
    });
  
 });	
-
-$('#slide').camera({
-        height: 'auto'
-    });
