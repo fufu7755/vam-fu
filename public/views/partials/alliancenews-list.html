@@ -1,0 +1,27 @@
+<div class="panel-box">
+    <div class="titles">
+        <h4 class="">联盟新闻</h4>
+    </div>
+    <!-- Post Item -->
+    <div>
+
+        <div class="post-item" dir-paginate="news in Alliannews | itemsPerPage: 10">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-hover">
+                        <img src="http://222.240.208.174:8083/vma/download/img?url={{news.image}}" alt="" class="img-responsive">
+                        <div class="overlay"><a target="_blank" href="/alliances/news/{{news.id}}">+</a></div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h4><a href="/alliances/news/{{news.id}}">{{news.title}}</a></h4>
+                    <p class="data-info">{{news.createdAt}}</p>
+                    <p>{{news.content}}</p>
+                    <a href="/alliances/news/{{news.id}}">更多 +</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+</dir-pagination-controls>

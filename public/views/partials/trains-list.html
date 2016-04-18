@@ -1,0 +1,26 @@
+<div class="panel-box">
+    <div class="titles">
+        <h4 class="">经理人相关资讯信息</h4>
+    </div>
+    <!-- Post Item -->
+    <div>
+
+        <div class="post-item" dir-paginate="match in matches | itemsPerPage: 6">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-hover">
+                        <img src="http://222.240.208.174:8083/vma/download/img?url={{match.img}}" alt="" class="img-responsive">
+                        <div class="overlay"><a href="/train/{{match.id}}">+</a></div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h><a href="/train/{{match.id}}">{{match.title}}</a></h>
+                    <p>{{match.specification}}</p>
+                    <a href="/train/{{match.id}}">点击查看 >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+</dir-pagination-controls>

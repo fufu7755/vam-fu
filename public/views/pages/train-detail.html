@@ -1,0 +1,33 @@
+<div id="layout" class="layout-semiboxed" ng-controller="trainController">
+    <header ng-include="'views/partials/header.html'"></header>
+    <section class="section-title img-feature">
+        <div>
+            <div class="overlay-bg"></div>
+            <div class="container">
+                <h1>培训/学院</h1>
+            </div>
+        </div>
+    </section>
+    <section class="content-info">
+        <div ng-include="'views/partials/crumb.html'"></div>
+        <section class="container">
+
+            <div class="container padding-top-mini">
+                <div class="panel-box">
+                    <div class="titles">
+                        <h4>{{Train.title}}</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div ng-bind-html="video"></div>
+                            <div ng-bind-html="specification"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div ng-include="'views/partials/sponsors.html'"></div>
+    </section>
+    <footer id="footer" ng-include="'views/partials/footer.html'"></footer>
+    <div class="footer-down" ng-include="'views/partials/footer-down.html'"></div>
+</div>
