@@ -1,7 +1,7 @@
 <div class="panel-box">
     <div class="titles">
-        <div class="pull-right m-t-5">
-            <input ng-model="query.name">搜索
+        <div class="pull-right search-query">
+            <input ng-model="query.name" placeholder="俱乐部关键词查询"> <i class="fa fa-search"></i>
         </div>
         <h4 class="">俱乐部列表</h4>
     </div>
@@ -16,9 +16,13 @@
             </div>
             <div class="col-md-8">
                 <h4><a href="/alliances/{{allianceId}}/clubs/{{club.id}}">{{club.name}}</a></h4>
-                <p class="data-info">发布时间：{{club.joinDate}}</p>
-                <p>简介
-                    <br>{{club.description}}</p>
+
+                <p class="data-info">加盟时间：{{club.joinDate}}</p>
+
+                <p class="data-info"><span>积分：{{club.point}}</span>&nbsp;&nbsp;<span>排名：{{club.ranking}}</span></p>
+
+                <p>{{club.description}}</p>
+
                 <a href="/alliances/{{allianceId}}/clubs/{{club.id}}">点击查看 >></a>
             </div>
         </div>

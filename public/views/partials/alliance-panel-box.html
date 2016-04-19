@@ -5,7 +5,24 @@
     </ul>
     <div id="tab2-content" class="tab-content">
         <div class="tab-pane active" id="feature-club" ng-include="'views/partials/club-range-list.html'"></div>
-        <div class="tab-pane" id="players-staff" ng-include="'views/partials/vgo-list-block.html'"></div>
+        <div class="tab-pane" id="players-staff">
+            <table class="table table-striped table-bordered">
+                <tbody>
+                <tr dir-paginate="vgo in vgos | filter: query | itemsPerPage: 10">
+                    <td>
+                        {{vgo.id}}
+                    </td>
+                    <td>
+                        {{vgo.name}}
+                    </td>
+                    <td>
+                        {{vgo.city}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="text-center"><a href="/alliances/vgos-rank">点击进入查看更多排名</a></p>
+        </div>
     </div>
 </div>
 <!-- Widget Text-->

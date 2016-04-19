@@ -9,7 +9,7 @@ angular
         vgoId = parseInt($routeParams.vgoId);
         $scope.vgoId = vgoId;
         vgoService.getVgo(vgoId).then(function(data) {
-
+            console.log(data.data);
             $scope.vgo = data.data;
         });
         vgoService.getEquipment(vgoId).then(function(data) {
@@ -17,7 +17,7 @@ angular
             $scope.equipments = data.data.result;
         });
         vgoService.getScore(vgoId).then(function(data) {
-
+            console.log(data.data.result);
             $scope.scores = data.data.result;
         });
         vgoService.getVgohome().then(function(data) {
@@ -26,6 +26,6 @@ angular
         });
         vgoService.getStars().then(function(data) {
             $scope.Stars = data.data;
-            console.log(data.data);
+
         });
     }]);

@@ -3,21 +3,22 @@
         <!-- content Players -->
         <div class="col-md-12">
             <!-- Panel Box -->
-            <div class="panel-box">
+            <div class="panel-box padding-bottom">
                 <div class="titles">
                     <h4>俱乐部队员</h4>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <ul class="players">
-                            <li class="item-player" dir-paginate="vgo in vgos | itemsPerPage: 4">
+                        <div class="vgos row">
+                            <div class="vgo-player col-sm-2" dir-paginate="vgo in vgos | itemsPerPage: 24">
                                 <img src="http://222.240.208.174:8083/vma/download/img?url={{vgo.avatar}}" alt="" class="img-responsive">
-                                <div class="info-player">
+
+                                <div class="info-vgo">
                                     <h4><a href="/alliances/{{allianceId}}/clubs/{{clubId}}/vgos/{{vgo.id}}">{{vgo.name}}</a></h4>
-                                    <h5><span>{{vgo.city}}</span></h5>
+
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">

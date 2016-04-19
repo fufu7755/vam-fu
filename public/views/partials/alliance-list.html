@@ -1,11 +1,30 @@
 <div class="panel-box">
     <div class="titles">
-    	<div class="pull-right m-t-5 m-r-20"><input ng-model="query.name">
-    	搜索</div>
+        <div class="pull-right search-query"><input ng-model="query.name" placeholder="联盟关键词搜索">
+            <i class="fa fa-search"></i></div>
         <h4 class="">联盟列表</h4>
     </div>
     <!-- Post Item -->
     <div ng-controller="allianceController">
+        <div class="post-item">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-hover">
+                        <img src="/assets/img/blog/3.jpg" alt="" class="img-responsive">
+
+                        <div class="overlay"><a href="/alliances/{{alliance.id}}/clubs">+</a></div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h4><a href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
+
+                    <p class="data-info">发布时间：{{alliance.joinDate}}</p>
+
+                    <p>{{alliance.description}}</p>
+                    <a href="/alliances/{{alliance.id}}/clubs">点击查看 >></a>
+                </div>
+            </div>
+        </div>
         <div class="post-item" dir-paginate="alliance in alliances | filter: query | itemsPerPage: 5">
             <div class="row">
                 <div class="col-md-4">
@@ -17,8 +36,8 @@
                 <div class="col-md-8">
                     <h4><a href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
                     <p class="data-info">发布时间：{{alliance.joinDate}}</p>
-                    <p>简介
-                        <br>{{alliance.description}}</p>
+
+                    <p>{{alliance.description}}</p>
                     <a href="/alliances/{{alliance.id}}/clubs">点击查看 >></a>
                 </div>
             </div>

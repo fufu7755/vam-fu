@@ -40,6 +40,18 @@ angular
               });
               return promise;
           },
+          getStars: function (clubId) {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'vgo/list',
+                  params: {clubId: clubId, star: 1}
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
+          },
           getPics: function (clubId) {
               promise = $http({
                   method: 'GET',
