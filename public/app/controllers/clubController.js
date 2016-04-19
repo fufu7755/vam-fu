@@ -15,7 +15,7 @@ angular
       $scope.ready = false;
       clubService.getDetail(clubId).then(function(data) {
         $scope.allianceName = $localStorage.vmaAllianceName;
-
+        console.log(data.data);
         $scope.clubDetail = data.data;
         $scope.clubDescription = $sce.trustAsHtml(data.data.description);
         if ($localStorage.vmaCity === undefined) {

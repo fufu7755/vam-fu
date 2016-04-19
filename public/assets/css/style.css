@@ -90,7 +90,7 @@
 /* Standar Styles --------------------------------------------------------*/
 
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Microsoft YaHei", 微软雅黑, Helvetica, sans-serif;
 	color: #727272;
 	font-size: 14px;
 	font-weight: normal;
@@ -101,10 +101,10 @@ body{
 }
 h1, h2, h3, h4, h5, h6 {	
 	padding: 5px 0 15px 0;	
-	margin: 0;	
-	color: #272727;
+	margin: 0;
+	color: #666;
 	font-weight: normal;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Microsoft YaHei", 微软雅黑, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 p{
@@ -262,6 +262,7 @@ iframe.video{
 .titles h4{
 	color: #222;
 	padding: 10px 10px;
+	color: #666;
 }
 .titles h4 i{
 	padding-right: 10px;
@@ -741,6 +742,14 @@ footer .social li:hover a.google-plus {
 footer .social li:hover a.vimeo {
     color:#1ab7ea;
 }
+
+footer .social li:hover a.weibo {
+	color: #d72928;
+}
+
+footer .social li:hover a.weixin {
+	color: #40cc2f;
+}
 footer .social li div {
     width:50px;
     height:50px;
@@ -893,7 +902,7 @@ footer .social li i {
   border-bottom: 5px solid #fc4242;
 }
 .ui-progress span.ui-label {
-  font-family: 'Open Sans', sans-serif;
+	font-family: "Microsoft YaHei", 微软雅黑, Helvetica, sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 18px;
