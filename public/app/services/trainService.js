@@ -38,6 +38,18 @@ angular
                     console.log(status);
                 });
                 return promise;
+            },
+            getFiles: function () {
+                promise = $http({
+                    method: 'GET',
+                    url: baseUrl + 'trainning/dataList',
+                    params: {pageSize: 10},
+                }).success(function (response) {
+                    return response.result;
+                }).error(function (data, status) {
+                    console.log(status);
+                });
+                return promise;
             }
         };
 

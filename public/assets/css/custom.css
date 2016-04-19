@@ -179,7 +179,7 @@ ul.nav-club li:first-child:before {
 }
 
 .new-item {
-    height: 240px;
+    height: 280px;
     overflow: hidden;
     margin-bottom: 20px;
 }
@@ -276,6 +276,7 @@ ul.nav-club li:first-child:before {
 .more-links {
     margin-top: 10px;
     padding-right: 20px;
+    color: #0c83c1;
 }
 
 .search-query {
@@ -557,4 +558,51 @@ hr {
 .info-vgo h4 a, .info-vgo h5 {
     color: #fff;
     font-weight: bold;
+}
+
+.scroes hr {
+    margin: 5px 0;
+}
+
+.scroes > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.equipment-item h5 {
+    color: rgb(12, 131, 193);
+}
+
+table.ranking thead {
+    color: rgb(12, 131, 193);
+}
+
+.fancy .img-hover {
+    margin-bottom: 20px;
+}
+
+.equipment h6 {
+    color: rgb(12, 131, 193);
+}
+
+.data-item h5 {
+    color: rgb(12, 131, 193);
+}
+
+.data-item p {
+    margin-bottom: 0;
+}
+
+.data-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(12, 131, 193);
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.data-link:hover {
+    color: #fff;
+    text-decoration: none;
+
 }

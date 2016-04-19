@@ -17,7 +17,7 @@ angular
             $scope.equipments = data.data.result;
         });
         vgoService.getScore(vgoId).then(function(data) {
-            console.log(data.data.result);
+
             $scope.scores = data.data.result;
         });
         vgoService.getVgohome().then(function(data) {

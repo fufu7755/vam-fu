@@ -7,21 +7,25 @@
         <p>联系方式：{{vgo.mobile}}</p>
     </div>
 
-    <div class="panel-box">
+    <div class="panel-box padding-bottom">
         <div class="titles">
-            <h4>装备</h4>
+            <h4>装备储蓄</h4>
         </div>
+
         <div class="row">
-            <div class="col-md-2 col-sm-4" dir-paginate="equipment in equipments | itemsPerPage: 6">
+            <div class="col-md-2 col-sm-4" dir-paginate="equipment in equipments | itemsPerPage: 12">
                 <div class="equipment-item">
                     <img class="img-responsive" src="http://222.240.208.174:8083/vma/download/img?url={{equipment.image}}" alt="">
                     <h5>{{equipment.name}}</h5>
+
+                    <p>数量:{{equipment.amount}}</p>
                 </div>
             </div>
         </div>
         <dir-pagination-controls template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
         </dir-pagination-controls>
-        
+
+
     </div>
 </div>
 

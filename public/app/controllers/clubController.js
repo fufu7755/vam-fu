@@ -38,12 +38,12 @@ angular
         $scope.Scores = data.data.result;
       });
       clubService.getNews(clubId).then(function(data) {
-        
+        console.log(data.data.result);
         $scope.News = data.data.result;
         
       });
       clubService.getNewsdetail(newsId).then(function(data) {
-        console.log(data.data);
+
         $scope.Newsdeatil = data.data;
         $scope.newsDescription = $sce.trustAsHtml(data.data.content);
       });

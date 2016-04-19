@@ -17,17 +17,17 @@
 </div>
 <div class="panel-box padding-bottom">
     <div class="titles">
-        <h4>最近赛事讯息更新</h4>
+        <h4>相关资料下载</h4>
     </div>
     <div class="row">
         <div class="col-md-12">
             <ul class="games-info">
-                <li dir-paginate="news in newsAll | itemsPerPage: 8">
-                    <div class="row">
-                        <div class="col-xs-6">{{news.createdAt}}</div>
-                        <div class="col-xs-6"><a href="#">进入 ></a></div>
-                    </div>
-                    <h6>{{news.title}}</h6>
+                <li class="data-item" dir-paginate="file in filesAll | itemsPerPage: 10">
+
+                    <h5><strong>{{file.title}}</strong></h5>
+
+                    <p>{{file.remark}}</p>
+                    <a class="data-link" href="{{file.link}}" download>点击下载</a>
                 </li>
             </ul>
         </div>

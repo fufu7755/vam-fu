@@ -28,11 +28,16 @@ angular
 
         });
 
+        trainService.getFiles().then(function (data) {
+            $scope.filesAll = data.data.result;
+            console.log(data.data.result);
+        });
+
         trainService.getTrain(trainId).then(function(data){
             $scope.Train = data.data;
             $scope.video = $sce.trustAsHtml(data.data.video);
             $scope.specification = $sce.trustAsHtml(data.data.specification);
-            console.log(data.data);
+
         });
 
     }]);

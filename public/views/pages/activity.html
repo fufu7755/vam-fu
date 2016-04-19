@@ -14,20 +14,25 @@
         <section class="container">
 
         <div class="container padding-top-mini">
-                <div class="panel-box">
+            <div class="panel-box padding-bottom">
+                <div class="titles">
+                    <h4>{{activity.title}}</h4>
+                </div>
                     <div class="">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2>{{activity.title}}</h2>
+
                                 <p>{{activity.createdAt}}</p>
                                 <img src="http://222.240.208.174:8083/vma/download/img?url={{activity.image}}" alt="" class="img-responsive">
                                 <div ng-bind-html="activityDescription"></div>
+                                <h4 class="text-center"><strong><a href="#">参加活动报名请点这里...</a></strong></h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div ng-include="'views/partials/sponsors.html'"></div>
     </section>
     <footer id="footer" ng-include="'views/partials/footer.html'"></footer>
     <div class="footer-down" ng-include="'views/partials/footer-down.html'"></div>
