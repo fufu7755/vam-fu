@@ -42,6 +42,18 @@ angular
           console.log(status);
         });
         return promise;
+      },
+      getBack: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'alliance/background',
+          params: {}
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
       }
 
     };

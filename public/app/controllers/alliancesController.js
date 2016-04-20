@@ -18,7 +18,12 @@ angular
             $scope.Allclubs = data.data.result;
         });
         clubService.getVgos().then(function(data) {
-            console.log(data.data.result);
+
             $scope.vgos = data.data.result;
+        });
+
+        allianceService.getBack().then(function (data) {
+            $scope.back = data.data;
+            console.log(data.data);
         });
     }]);

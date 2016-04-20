@@ -11,6 +11,7 @@ angular
 
     eventsService.getEvent(eventId).then(function(data) {
       $scope.event = data.data;
+      console.log(data.data);
       $scope.eventDescription = $sce.trustAsHtml(data.data.description);
       $scope.eventVideo = $sce.trustAsHtml(data.data.vedio);
 
@@ -28,7 +29,7 @@ angular
 
       eventsService.getEventnews(eventId).then(function (data) {
         $scope.eventNews = data.data.result;
-        console.log(data.data.result);
+
       });
 
     $scope.matchSearchSelected = {
