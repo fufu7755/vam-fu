@@ -11,8 +11,8 @@ angular
         console.log(menuItem);
         if (currentRoute[2] != '') {
           return menuItem == currentRoute[2] ? "active" : "";
-          console.log(menuItem);
-      }
+
+        }
       }
 
   }]);
