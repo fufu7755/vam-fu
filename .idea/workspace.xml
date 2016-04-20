@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a309a89-8faf-4fb0-bf2a-0f3aae565ace" name="Default" comment="4.19 外观修改 2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/coach-hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/coach.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/manager-hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/manager.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/volunteer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/volunter-hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/partials/coach-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pages/train-coach.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/pages/train-volunteer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/partials/volunteer-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/app.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/custom.css" afterPath="$PROJECT_DIR$/public/assets/css/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/headerController.js" afterPath="$PROJECT_DIR$/public/app/controllers/headerController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/train-detail.html" afterPath="$PROJECT_DIR$/public/views/pages/train-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/controllers/trainController.js" afterPath="$PROJECT_DIR$/public/app/controllers/trainController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/services/trainService.js" afterPath="$PROJECT_DIR$/public/app/services/trainService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/trains-list.html" afterPath="$PROJECT_DIR$/public/views/partials/trains-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/trains-right.html" afterPath="$PROJECT_DIR$/public/views/partials/trains-right.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alt-en.iws" />
@@ -88,8 +71,8 @@
       <file leaf-file-name="headerController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/app/controllers/headerController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43037975">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.3074141">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -129,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/public/views/partials/volunteer-list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -139,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/public/views/partials/coach-list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -2469,7 +2452,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461095456247</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="4.19 外观修改 2">
+      <created>1461126726115</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1461126726115</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2877,7 +2866,7 @@
     <entry file="file://$PROJECT_DIR$/public/views/partials/coach-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -2885,7 +2874,7 @@
     <entry file="file://$PROJECT_DIR$/public/views/partials/volunteer-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="26" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -2948,8 +2937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/controllers/headerController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43037975">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.3074141">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -8,14 +8,11 @@ angular
 
 
       $scope.setActive2 = function (menuItem) {
-
-        if (menuItem != 'null') {
+        console.log(menuItem);
+        if (currentRoute[2] != '') {
           return menuItem == currentRoute[2] ? "active" : "";
-          if (menuItem == 'manager') {
-            return "active";
-          }
-        }
-
+          console.log(menuItem);
+      }
       }
 
   }]);
