@@ -6,4 +6,16 @@ angular
       return menuItem == currentRoute[1] ? "active" : "";
     }
 
+
+      $scope.setActive2 = function (menuItem) {
+
+        if (menuItem != 'null') {
+          return menuItem == currentRoute[2] ? "active" : "";
+          if (menuItem == 'manager') {
+            return "active";
+          }
+        }
+
+      }
+
   }]);

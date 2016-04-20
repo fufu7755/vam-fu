@@ -30,6 +30,21 @@ angular
 
         trainService.getFiles().then(function (data) {
             $scope.filesAll = data.data.result;
+
+        });
+
+        trainService.getManagers().then(function (data) {
+            $scope.managers = data.data.result;
+
+        });
+
+        trainService.getCoaches().then(function (data) {
+            $scope.coaches = data.data.result;
+            console.log(data.data.result);
+        });
+
+        trainService.getVolunteers().then(function (data) {
+            $scope.volunteers = data.data.result;
             console.log(data.data.result);
         });
 

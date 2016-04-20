@@ -50,6 +50,42 @@ angular
                     console.log(status);
                 });
                 return promise;
+            },
+            getManagers: function (status) {
+                promise = $http({
+                    method: 'GET',
+                    url: baseUrl + 'trainning/newsList',
+                    params: {type: 1},
+                }).success(function (response) {
+                    return response;
+                }).error(function (data, status) {
+                    console.log(status);
+                });
+                return promise;
+            },
+            getCoaches: function (status) {
+                promise = $http({
+                    method: 'GET',
+                    url: baseUrl + 'trainning/newsList',
+                    params: {type: 2},
+                }).success(function (response) {
+                    return response;
+                }).error(function (data, status) {
+                    console.log(status);
+                });
+                return promise;
+            },
+            getVolunteers: function (status) {
+                promise = $http({
+                    method: 'GET',
+                    url: baseUrl + 'trainning/newsList',
+                    params: {type: 3},
+                }).success(function (response) {
+                    return response;
+                }).error(function (data, status) {
+                    console.log(status);
+                });
+                return promise;
             }
         };
 

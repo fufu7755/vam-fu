@@ -606,3 +606,52 @@ table.ranking thead {
     text-decoration: none;
 
 }
+
+.train-people {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.train-people a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: rgb(12, 131, 193);
+    text-decoration: none;
+    border-top: 1px solid #ccc;
+}
+
+.manager a {
+    background: url("../img/manager.png") no-repeat;
+    background-position: right+10px center;
+}
+
+.manager a:hover, .manager a.active {
+    background-image: url("../img/manager-hover.png");
+    background-color: rgb(12, 131, 193);
+    color: #fff;
+}
+
+.coach a {
+    background: url("../img/coach.png") no-repeat;
+    background-position: right+10px center;
+}
+
+.coach a:hover, .coach a.active {
+    background-image: url("../img/coach-hover.png");
+    background-color: rgb(12, 131, 193);
+    color: #fff;
+}
+
+.volunteer a {
+    background: url("../img/volunteer.png") no-repeat;
+    background-position: right+10px center;
+}
+
+.volunteer a:hover, .volunteer a.active {
+    background-image: url("../img/volunter-hover.png");
+    background-color: rgb(12, 131, 193);
+    color: #fff;
+}
