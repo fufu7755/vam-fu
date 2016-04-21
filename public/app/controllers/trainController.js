@@ -55,4 +55,9 @@ angular
 
         });
 
+        trainService.getBack().then(function (data) {
+            $scope.back = data.data;
+            console.log(data.data);
+        });
+
     }]);

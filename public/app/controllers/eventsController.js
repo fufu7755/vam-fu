@@ -9,6 +9,11 @@ angular
       
     });
 
+      eventsService.getBack().then(function (data) {
+        $scope.back = data.data;
+        console.log(data.data);
+      });
+
     eventsService.getEvent(eventId).then(function(data) {
       $scope.event = data.data;
       console.log(data.data);

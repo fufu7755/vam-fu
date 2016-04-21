@@ -13,7 +13,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div><label>用户名 *</label>
-                <input type="text" placeholder="用户名或手机号" name="loginAccount" ng-model="user.account"
+                <input type="text" placeholder="用户名" name="loginAccount" ng-model="user.account"
                        ng-required="true"/>
               </div>
 
@@ -65,19 +65,21 @@
                   <label>性别</label>
 
                   <div>
-                    <ui-select name="" id="">
+                    <select selectpicker name="" id="">
+                      <optin value="">请选择</optin>
                       <option value="1">男</option>
                       <option value="2">女</option>
-                    </ui-select>
+                    </select>
                   </div>
                 </div>
                 <div>
                   <label>城市</label>
 
                   <div>
-                    <select selectbox name="" id="">
-                      <option value="1">男</option>
-                      <option value="2">女</option>
+                    <select selectpicker name="" id="">
+                      <optin value="">请选择</optin>
+                      <option value="1">长沙</option>
+                      <option value="2">北京</option>
                     </select>
                   </div>
                 </div>
@@ -91,11 +93,11 @@
                 </div>
                 <div>
                   <label>裤子尺寸</label>
-
                   <div>
-                    <select selectbox name="" id="">
-                      <option value="1">男</option>
-                      <option value="2">女</option>
+                    <select selectpicker name="" id="">
+                      <optin value="">请选择</optin>
+                      <option value="1">L</option>
+                      <option value="2">M</option>
                     </select>
                   </div>
                 </div>
@@ -105,26 +107,27 @@
                 </div>
               </div>
               <div class="col-xs-6">
+                <div>
+                  <label>头像</label>
+                  <dvi class="row">
+                    <div class="col-xs-6">
+                      <img src="/assets/img/players/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-xs-6">
+                      <button class="btn">点击从电脑上传</button>
+                    </div>
+                  </dvi>
 
+                </div>
                 <div>
                   <label>证件号码</label>
                   <input type="text" name="userName" placeholder="请填写..." ng-model="user.name" ng-required="true"/>
                 </div>
                 <div>
-                  <label>性别</label>
-
-                  <div>
-                    <select selectbox name="" id="">
-                      <option value="1">男</option>
-                      <option value="2">女</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
                   <label>所属俱乐部</label>
-
                   <div>
-                    <select selectbox name="" id="">
+                    <select selectpicker name="" id="">
+                      <option value="">请选择</option>
                       <option value="1">男</option>
                       <option value="2">女</option>
                     </select>
@@ -134,7 +137,8 @@
                   <label>出生日期</label>
 
                   <div>
-                    <select selectbox name="" id="">
+                    <select selectpicker name="" id="">
+                      <options value="">请选择</options>
                       <option value="1">男</option>
                       <option value="2">女</option>
                     </select>
@@ -145,18 +149,20 @@
                   <label>上衣尺寸</label>
 
                   <div>
-                    <select selectbox name="" id="">
-                      <option value="1">男</option>
-                      <option value="2">女</option>
+                    <select selectpicker name="" id="">
+                      <option value="">请选择</option>
+                      <option value="1">L</option>
+                      <option value="2">M</option>
                     </select>
                   </div>
                   <div>
                     <label>鞋子尺寸</label>
 
                     <div>
-                      <select selectbox name="" id="">
-                        <option value="1">男</option>
-                        <option value="2">女</option>
+                      <select selectpicker name="" id="">
+                        <option value="">请选择</option>
+                        <option value="1">26</option>
+                        <option value="2">27</option>
                       </select>
                     </div>
                   </div>
@@ -171,6 +177,11 @@
           </form>
           <div class="row">
             <div class="col-xs-12">
+              <textarea name="" id="" cols="30" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
               <label>疾病史</label>
 
               <div>
@@ -182,6 +193,7 @@
 
             </div>
           </div>
+
         </div>
       </div>
     </div>

@@ -679,3 +679,34 @@ table.ranking thead {
     width: auto;
     margin: 0 10px;
 }
+
+.bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.bootstrap-select .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #ccc;
+}
+
+.bootstrap-select .btn:focus, .bootstrap-select .btn:active:focus, .bootstrap-select .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-default {
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    background: transparent;
+}
+
+.btn-default:active, .btn-default.active {
+    background: transparent;
+    box-shadow: none;
+}

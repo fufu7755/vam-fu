@@ -7,4 +7,10 @@ angular
             console.log(data.data);
         });
 
+        aboutService.getBack().then(function (data) {
+            $scope.Back = data.data;
+
+            console.log(data.data);
+        });
+
     }]);

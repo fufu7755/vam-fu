@@ -6,8 +6,7 @@ angular.module('hshs', [
     'ngStorage',
     'toaster',
     'angularUtils.directives.dirPagination',
-    'ui.mask',
-    'ui.select'
+    'ui.mask'
 ]).
     constant(
     'baseUrl', 'http://222.240.208.174:8083/vma/api/'

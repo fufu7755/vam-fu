@@ -46,15 +46,27 @@ angular
       getBack: function () {
         promise = $http({
           method: 'GET',
-          url: baseUrl + 'alliance/background',
-          params: {}
+          url: baseUrl + 'ad/background',
+          params: {'type': 'alliance'}
         }).success(function (response) {
           return response.result;
         }).error(function (data, status) {
           console.log(status);
         });
         return promise;
-      }
+      },
+      getDetail: function (allianceId) {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'alliance/detail',
+          params: {id: allianceId},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
 
     };
 

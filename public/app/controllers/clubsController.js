@@ -27,4 +27,9 @@ angular
             $scope.vgos = data.data.result;
         });
 
+        allianceService.getDetail(allianceId).then(function (data) {
+            console.log(data.data);
+            $scope.allianceDetail = data.data;
+        });
+
     }]);

@@ -12,9 +12,11 @@ angular
         });
         clubService.getDetail(clubId).then(function(data) {
             $scope.clubDetail = data.data;
+            console.log(data.data);
         });
         clubService.getStars(clubId).then(function (data) {
-            console.log(data.data.result);
+
             $scope.stars = data.data.result;
         });
+
     }]);

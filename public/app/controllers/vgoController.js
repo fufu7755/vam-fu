@@ -27,5 +27,9 @@ angular
         vgoService.getStars().then(function(data) {
             $scope.Stars = data.data;
 
+        })
+        vgoService.getBack().then(function (data) {
+            $scope.back = data.data;
+            console.log(data.data);
         });
     }]);

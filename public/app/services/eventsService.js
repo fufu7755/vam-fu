@@ -62,6 +62,18 @@ angular
           console.log(status);
         });
         return promise;
+      },
+      getBack: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'ad/background',
+          params: {'type': 'event'}
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
       }
     };
 
