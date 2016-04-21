@@ -4,6 +4,9 @@ jQuery(document).ready(function($) {
   $('.form-theme .form-select').selectpicker({
     'class':'btn-primary'
   });
+    $(window).bind("load", function () {
+        return $('.form-theme .form-select').selectpicker();
+    });
 });
 
 $(document).ready(function($) {
@@ -276,3 +279,4 @@ $(document).ready(function($) {
    });
  
 });	
+
