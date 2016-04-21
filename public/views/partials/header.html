@@ -48,9 +48,11 @@
             </div>
             <div class="col-md-2 col-sm-12">
                 <ul class="ot-menu">
-                    <li><a href="#">登录</a></li>
+                    <li ng-show="!currentUser" class="hidden-xs"><a href="#" data-toggle="modal"
+                                                                    data-target="#ModalLogin" class="pop-up">登录</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#">注册</a></li>
+                    <li ng-show="!currentUser"><a href="#" data-toggle="modal" data-target="#ModalSignup"
+                                                  class="pop-up"><span class="hidden-xs">注册</span></a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-12">
@@ -68,4 +70,5 @@
         <!-- End Menu-->
     </div>
 </nav>
+<div ng-include="'views/partials/login_register.html'"></div>
 <!-- End mainmenu-->

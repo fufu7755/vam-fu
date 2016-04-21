@@ -1,33 +1,40 @@
 <div id="ModalLogin" tabindex="-1" role="dialog" class="modal signUpContent fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
-      <div id="login-form" ng-controller="loginController">
-        <h2>登录</h2>
-        <form name="userLogin" novalidate="">
-          <div><i class="glyphicon glyphicon-user"></i>
-            <input type="text" placeholder="用户名或手机号" name="loginAccount" ng-model="user.account" ng-required="true"/>
-          </div>
-          <p class="error validation" ng-show="userLogin.loginAccount.$invalid && userLogin.loginAccount.$touched">
-            请输入用户名或手机号
-          </p>
-          <div><i class="glyphicon glyphicon-lock"></i>
-            <input type="password" placeholder="密码" name="loginPassword" ng-model="user.password" ng-required="true"/>
-          </div>
-          <p class="error validation" ng-show="userLogin.loginPassword.$invalid && userLogin.loginPassword.$touched">
-            请输入密码
-          </p>
-          <input type="button" value="登录" ng-click="login()" class="login btn btn-dark" ng-disabled="userLogin.$invalid"/>
-          <a href="#" data-dismiss="modal" aria-label="Close">
-            <input type="button" value="取消" style="margin-top:10px;" class="login btn btn-grey"/>
-          </a>
-        </form>
-        <div class="clearfix addon">
-          <a href="" class="pull-left">忘记密码</a>
-          <a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal" aria-label="Close" class="pull-right">还没有账号？
-            <button type="button" class="btn btn-transparent">免费注册</button>
-          </a>
+
+      <div id="login-form" ng-controller="loginController" class="panel-box">
+        <div class="titles">
+          <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                  class="fa fa-times"></i></button>
+          <h4>登录</h4>
         </div>
+
+        <form name="userLogin" novalidate="" class="form-theme">
+          <div class="row">
+            <div class="col-xs-12">
+              <div><label>用户名 *</label>
+                <input type="text" placeholder="用户名或手机号" name="loginAccount" ng-model="user.account"
+                       ng-required="true"/>
+              </div>
+
+              <div><label>密码 *</label>
+                <input type="password" placeholder="密码" name="loginPassword" ng-model="user.password"
+                       ng-required="true"/>
+              </div>
+
+              <input type="button" value="登录" ng-click="login()" class="login btn btn-dark"
+                     ng-disabled="userLogin.$invalid"/>
+
+              <div class="">
+                <a href="#" class="">忘记密码</a>
+                <a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal" aria-label="Close"
+                   class="pull-right">还没有账号?</a>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
       </div>
     </div>
   </div>
