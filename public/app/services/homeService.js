@@ -55,7 +55,19 @@ angular
         promise = $http({
           method: 'GET',
           url: baseUrl + 'ad/latestlist',
-          params: {pageSize: 6, metaAdPositionId: 2},
+          params: {pageSize: 5, metaAdPositionId: 2},
+        }).success(function (response) {
+          return response.result;
+        }).error(function (data, status) {
+          console.log(status);
+        });
+        return promise;
+      },
+      getAd: function () {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'ad/rightBottom',
+          params: {},
         }).success(function (response) {
           return response.result;
         }).error(function (data, status) {
