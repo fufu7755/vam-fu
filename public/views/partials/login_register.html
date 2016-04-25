@@ -117,6 +117,12 @@
                 </div>
               </div>
               <div class="col-xs-6">
+                <div>
+                  <label>头像</label>
+                  <input type="file" name="userAvatar" image-with-preview accept="image/jpeg,image/png"
+                         ng-model="user.avatar">
+                  <img ng-show="user.avatar.src" ng-src="{{user.avatar.src}}"/>
+                </div>
                 <div class="club">
                   <label><strong>所属俱乐部：</strong><span class="form-required" title="">*</span></label>
                   <select name="userClub" ng-model="user.club">

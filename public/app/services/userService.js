@@ -47,8 +47,12 @@
                 if (user.diseasemore != undefined) {
                     user.diseaseHistory = diseaseHistory + ',' + user.diseasemore;
                 }
-                ;
-                user.birthday = user.year + '-' + user.month + '-' + user.day;
+                if (user.year != undefined || user.month != undefined || user.day != undefined) {
+                    user.birthday = user.year + '-' + user.month + '-' + user.day;
+                } else {
+                    user.birthday = ''
+                }
+
                 console.log(user);
                 promise = $http({
                     method: 'POST',
