@@ -669,6 +669,18 @@ table.ranking thead {
     margin-bottom: 15px;
 }
 
+.modal-content .form-theme input[type="text"] {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+.modal-content .form-theme input[type="password"] {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: italic;
+}
+
 .close-btn {
     margin-right: 10px;
     margin-top: 6px;
@@ -709,4 +721,52 @@ table.ranking thead {
 .btn-default:active, .btn-default.active {
     background: transparent;
     box-shadow: none;
+}
+
+.modal-content .logo {
+    display: inline-block;
+}
+
+.modal-content {
+    border-bottom: 3px solid #0088C8;
+}
+
+input.login {
+    background-color: #0088C8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.verify input {
+    width: 160px;
+}
+
+.verify .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#year, #month, #day {
+    display: inline-block;
+}
+
+#year select {
+    width: 100px;
+}
+
+#month select {
+    width: 60px;
+}
+
+#day select {
+    width: 60px;
+}
+
+#userRegister select {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    border: 1px #ccc solid;
+    border-radius: 0;
 }
