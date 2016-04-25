@@ -117,15 +117,13 @@
                 </div>
               </div>
               <div class="col-xs-6">
-                <div>
+                <div class="club">
                   <label><strong>所属俱乐部：</strong><span class="form-required" title="">*</span></label>
-
-                  <select name="clubId" ng-model="user.clubId">
-                    <option value="">请选择</option>
+                  <select name="userClub" ng-model="user.club">
+                    <option value="">选择俱乐部</option>
                     <option ng-repeat="club in clubs" value="{{club.id}}">
                       {{club.name}}
                     </option>
-
                   </select>
                 </div>
                 <div>
@@ -134,10 +132,7 @@
                     <div id="year">
                       <select  name="year" ng-model="user.year">
                         <option value="">年</option>
-                        <option value="1980">1980</option>
-                        <option value="1981">1981</option>
-                        <option value="1982">1982</option>
-                        <option value="1983">1983</option>
+                        <option ng-repeat="year in years" value="{{year}}">{{year}}</option>
                       </select>
                     </div>
                     <div id="month">
@@ -172,16 +167,35 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label><strong>城市：</strong></label>
-                    <select name="" ng-model="user.city">
+                    <select name="city" ng-model="user.city">
                       <option value="">请选择</option>
-                      <option value="长沙">长沙</option>
-                      <option value="上海">上海</option>
+                      <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>
+
                     </select>
                   </div>
                   <div>
@@ -200,24 +214,36 @@
                     <label><strong>上衣尺寸：</strong></label>
                     <select  name="jacketSize" ng-model="user.jacketSize">
                       <option value="">请选择</option>
-                      <option value="l">L</option>
                       <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">XXL</option>
                     </select>
                   </div>
                   <div>
                     <label><strong>裤子尺寸：</strong></label>
                     <select name="trousersSize" ng-model="user.trousersSize">
                       <option value="">请选择</option>
-                      <option value="l">L</option>
                       <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">XXL</option>
                     </select>
                   </div>
                   <div>
                     <label><strong>鞋子尺寸：</strong></label>
                     <select name="shoesSize" ng-model="user.shoesSize">
                       <option value="">请选择</option>
-                      <option value="l">L</option>
-                      <option value="s">S</option>
+                      <option value="38">38</option>
+                      <option value="39">39</option>
+                      <option value="40">40</option>
+                      <option value="41">41</option>
+                      <option value="42">42</option>
+                      <option value="43">43</option>
+                      <option value="44">44</option>
+                      <option value="45">45</option>
                     </select>
                   </div>
 
@@ -227,8 +253,27 @@
             </div>
             <div class="row">
               <div class="col-xs-12">
+                <div class="disease">
+                  <div>
+                    <label><strong>疾病史</strong></label>
 
-                <input type="button" ng-click="register()" value="确认提交" class="register btn btn-dark"
+                    <div>
+                      <label ng-repeat="disease in diseases">
+                        <input type="checkbox" checklist-model="user.diseases" checklist-value="disease"> {{disease}}
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    <label><strong>其他不适合运动的疾病患</strong></label>
+                    <textarea name="diseasemore" id="" cols="30" rows="10" ng-model="user.diseasemore"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+
+                <input type="button" ng-click="register()" value="确认提交" class="register btn"
                        ng-disabled="userRegister.$invalid"/>
 
               </div>

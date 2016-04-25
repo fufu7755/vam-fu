@@ -7,12 +7,5 @@
         $scope.logout = function () {
             userService.logout($rootScope.currentUser.id);
         };
-        userService.getClubs().then(function (data) {
-            $scope.clubs = data.data.result;
-            console.log($scope.clubs);
-            $scope.register = function () {
-                userService.register($scope.user);
-                console.log($scope.user);
-            };
-        });
+
     }]);
