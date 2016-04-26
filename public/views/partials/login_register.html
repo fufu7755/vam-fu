@@ -59,13 +59,22 @@
                   class="fa fa-times"></i></button>
           <h4>注册</h4>
         </div>
-        <div class="form-wrapper"><img src="/assets/images/u486.png" class="img-responsive"/>
+        <div class="form-wrapper">
+          <div class="row">
 
-          <form method="post" name="upForm" id="upForm" enctype="multipart/form-data">
-            <input type="file" name="upAvatar" id="upAvatar" ng-model="upAvatar" accept="image/*" ng-required="true"
-                   onchange="angular.element(this).scope().upAvatar()"/>
-            <input type="hidden" name="fileId" value="upAvatar"/>
-          </form>
+            <div class="col-xs-6 col-xs-offset-6">
+              <div class="avatarform">
+                <form method="post" name="upForm" id="upForm" enctype="multipart/form-data">
+                  <input type="file" name="upAvatar" id="upAvatar" ng-model="upAvatar" accept="image/*"
+                         ng-required="true"
+                         onchange="angular.element(this).scope().upAvatar()"/>
+                  <input type="hidden" name="fileId" value="upAvatar"/>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
         </div>
         <div class="form-wrapper">
           <form name="userRegister" id="userRegister" class="form-theme">
@@ -127,7 +136,13 @@
               <div class="col-xs-6">
                 <div class="headshot">
                   <label>头像</label>
-                  <img id="avatar" style="display:none;"/>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <img id="avatar" style="display:none;"/>
+                    </div>
+                  </div>
+
                 </div>
                 <div class="club">
                   <label><strong>所属俱乐部：</strong><span class="form-required" title="">*</span></label>
