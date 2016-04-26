@@ -17,6 +17,9 @@
                         $localStorage.currentUser = response.data;
                         console.log($localStorage.currentUser);
                         $('#ModalLogin').modal('hide');
+                        if (user.keep == true) {
+                            $localStorage.keep = true;
+                        }
                     } else {
                         toaster.pop('warning', response.message);
                     }
@@ -35,6 +38,7 @@
                         toaster.pop('success', '您已成功登出');
                         $location.path('/');
                         $localStorage.currentUser = '';
+                        $localStorage.keep = false;
                     } else {
                         toaster.pop('warning', response.message);
                     }
