@@ -242,7 +242,6 @@
                 <div class="disease">
                   <div>
                     <label><strong>疾病史</strong></label>
-
                     <div>
                       <label ng-repeat="disease in diseases">
                         <input type="checkbox" checklist-model="user.diseases" checklist-value="disease"> {{disease}}
@@ -258,16 +257,11 @@
             </div>
             <div class="row">
               <div class="col-xs-12">
-
                 <input type="button" ng-click="register()" value="确认提交" class="register btn"
                        ng-disabled="userRegister.$invalid"/>
-
               </div>
             </div>
-
           </form>
-
-
         </div>
       </div>
     </div>

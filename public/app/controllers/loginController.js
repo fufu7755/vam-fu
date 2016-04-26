@@ -1,12 +1,20 @@
 ﻿angular
-    .module('hshs').controller('loginController', ['$rootScope', '$scope', 'userService', function ($rootScope, $scope, userService) {
+    .module('hshs').controller('loginController', ['$rootScope', '$localStorage', '$scope', 'userService', function ($rootScope, $localStorage, $scope, userService) {
         $scope.login = function () {
             userService.login($scope.user);
         };
 
-        $scope.logout = function () {
-            //userService.logout($rootScope.currentUser.id);
-            $rootscope.currentuser = [];
+        $scope.isUserLoggedIn = function () {
+            if ($localStorage.currentUser) {
+                return true;
+            } else {
+                return false;
+            }
         };
+
+        $scope.logout = function () {
+            userService.logout($localStorage.currentUser);
+        };
+
 
     }]);

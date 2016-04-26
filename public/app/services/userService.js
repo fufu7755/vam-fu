@@ -1,5 +1,5 @@
 ﻿angular
-    .module('hshs').factory('userService', ['$rootScope', '$http', '$location', 'toaster', 'baseUrl', function ($rootScope, $http, $location, toaster, baseUrl) {
+    .module('hshs').factory('userService', ['$rootScope', '$localStorage', '$http', '$location', '$route', 'toaster', 'baseUrl', function ($rootScope, $localStorage, $http, $location, $route, toaster, baseUrl) {
 
         var userService = {};
 
@@ -13,8 +13,9 @@
                     if (response.statusCode === 0) {
                         toaster.pop('success', '您已成功登录');
                         $location.path('/');
-                        $rootScope.currentUser = response.data;
-                        console.log($rootScope.currentUser);
+                        $route.reload();
+                        $localStorage.currentUser = response.data;
+                        console.log($localStorage.currentUser);
                         $('#ModalLogin').modal('hide');
                     } else {
                         toaster.pop('warning', response.message);
@@ -24,18 +25,18 @@
                 });
                 return promise;
             },
-            logout: function (userId) {
+            logout: function (token) {
                 promise = $http({
                     method: 'POST',
-                    url: baseUrl + 'logout',
-                    params: {userId: userId},
+                    url: 'http://222.240.208.174:8083/vma/api/vgo/logout',
+                    params: {token: token},
                 }).success(function (response) {
-                    if (response.code === 0) {
+                    if (response.statusCode === 0) {
                         toaster.pop('success', '您已成功登出');
                         $location.path('/');
-                        $rootScope.currentUser = '';
+                        $localStorage.currentUser = '';
                     } else {
-                        toaster.pop('warning', response.msg);
+                        toaster.pop('warning', response.message);
                     }
                 }).error(function (data, status) {
                     toaster.pop('warning', '请稍后再试');
