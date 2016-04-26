@@ -9,6 +9,9 @@
             userService.register($scope.user);
         };
 
+        $scope.user = {
+            diseases: []
+        };
 
         clubService.getAll().then(function (data) {
             $scope.clubs = data.data.result;
@@ -19,6 +22,21 @@
             $scope.cities = data.data;
 
         });
+
+        $scope.upAvatar = function () {
+            $('#upForm').ajaxSubmit({
+                type: 'post',
+                url: 'http://222.240.208.174:8083/vma/upload/uploadfile',
+                success: function (data) {
+                    console.log(data);
+                    $scope.user.avatar = data.path;
+                    console.log($scope.user);
+                    var host = 'http://222.240.208.174:8083';
+                    var imgPrefix = host + '/vma/download/img?url=';
+                    $("#avatar").attr("src", imgPrefix + data.path).show();
+                }
+            });
+        }
 
         $scope.diseases = [
             '无疾病史',

@@ -5,7 +5,8 @@
         };
 
         $scope.logout = function () {
-            userService.logout($rootScope.currentUser.id);
+            //userService.logout($rootScope.currentUser.id);
+            $rootscope.currentuser = [];
         };
 
     }]);
