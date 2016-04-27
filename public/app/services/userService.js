@@ -128,6 +128,18 @@
                     console.log(status);
                 });
                 return promise;
+            },
+            getUser: function (token) {
+                promise = $http({
+                    method: 'GET',
+                    url: baseUrl + 'vgo/private',
+                    params: {token: token}
+                }).success(function (response) {
+                    return response.result;
+                }).error(function (data, status) {
+                    console.log(status);
+                });
+                return promise;
             }
         };
 

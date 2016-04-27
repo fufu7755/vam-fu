@@ -13,6 +13,11 @@ angular
                 }, 1800000);
             }
         }
-
+        if ($localStorage.currentUser) {
+            userService.getUser($localStorage.currentUser).then(function (data) {
+                $rootScope.rootcurrentUser = data.data;
+                console.log(data.data);
+            });
+        }
 
     }]);

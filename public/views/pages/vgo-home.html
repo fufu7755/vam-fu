@@ -33,7 +33,9 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-6 stars-item" dir-paginate="star in Stars | itemsPerPage: 6">
-                                <a target="_blank" href="/alliances/{{star.allianceId}}/clubs/{{star.clubId}}/vgos/{{star.id}}"><img src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt="" class="img-responsive"></a>
+                                <a target="_blank" href="/vgo/{{star.id}}"><img
+                                        src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt=""
+                                        class="img-responsive"></a>
                             </div>
                         </div>
                     </div>

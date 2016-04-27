@@ -49,10 +49,11 @@
             </div>
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <ul class="ot-menu" ng-controller="loginController">
-                    <li ng-show="isUserLoggedIn() == true"><a href="#"><span class=""> 我的账户</span><i
-                            class="glyphicon glyphicon-user hide visible-xs"></i></a></li>
+                    <li ng-show="isUserLoggedIn() == true"><a target="_blank" href="/vgo/{{rootcurrentUser.id}}"><span
+                            class=""> 我的账户</span></i></a></li>
                     <li ng-show="isUserLoggedIn() == false" class=""><a href="#" data-toggle="modal"
-                                                                    data-target="#ModalLogin" class="pop-up">登录</a></li>
+                                                                        data-target="#ModalLogin" class="pop-up">登录</a>
+                    </li>
                     <li class="separator">|</li>
                     <li ng-show="isUserLoggedIn() == false"><a href="#" data-toggle="modal" data-target="#ModalSignup"
                                                                class="pop-up"><span class="">注册</span></a></li>

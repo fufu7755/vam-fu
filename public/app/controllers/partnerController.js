@@ -3,7 +3,7 @@ angular
 
         partnerService.getAll().then(function(data) {
             $scope.Partners = data.data.result;
-            console.log(data.data.result);
+
         });
 
     }]);
