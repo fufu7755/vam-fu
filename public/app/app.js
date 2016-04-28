@@ -42,7 +42,7 @@ angular.module('hshs', [
             .when('/train/volunteer', {templateUrl: 'views/pages/train-volunteer.html'})
             .when('/train/volunteer/:trainId', {templateUrl: 'views/pages/train-detail.html'})
             .when('/events', {templateUrl: 'views/pages/events.html'})
-            .when('/events/:eventId/event', {templateUrl: 'views/pages/event.html'})
+            .when('/events/:eventId', {templateUrl: 'views/pages/event.html'})
             .when('/news/:newsId', {templateUrl: 'views/pages/news-detail.html'})
             .otherwise({redirectTo: '/'});
     }]).run([

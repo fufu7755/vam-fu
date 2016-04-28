@@ -5,7 +5,7 @@ angular
         $scope.setActive = function (menuItem) {
             return menuItem == currentRoute[1] ? "active" : "";
         };
-        console.log($localStorage);
+
         if ($localStorage.keep != true) {
             if ($localStorage.currentUser) {
                 $timeout(function () {
@@ -16,7 +16,7 @@ angular
         if ($localStorage.currentUser) {
             userService.getUser($localStorage.currentUser).then(function (data) {
                 $rootScope.rootcurrentUser = data.data;
-                console.log(data.data);
+
             });
         }
 

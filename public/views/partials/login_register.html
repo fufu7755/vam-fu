@@ -1,483 +1,445 @@
 <div id="ModalLogin" tabindex="-1" role="dialog" class="modal signUpContent fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-dialog">
+        <div class="modal-content">
 
-      <div id="login-form" ng-controller="loginController" class="panel-box">
-        <div class="titles">
-          <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
-                  class="fa fa-times"></i></button>
-          <h4>VGO登录</h4>
-        </div>
-
-        <form name="userLogin" novalidate="" class="form-theme">
-          <div class="text-center">
-            <img src="/assets/img/logo.png" alt="" class="img-responsive logo">
-          </div>
-          <div class="row padding-top-mini">
-            <div class="col-xs-8 col-xs-offset-2">
-              <div><label><strong>手机号码/用户名</strong></label>
-                <input type="text" placeholder="用户名或手机号" name="loginAccount" ng-model="user.account" ng-required="true"/>
-              </div>
-              <p class="error validation" ng-show="userLogin.loginAccount.$invalid && userLogin.loginAccount.$touched">
-                请输入用户名或手机号
-              </p>
-              <div><label><strong>密码:</strong></label>
-                <input type="password" placeholder="密码" name="loginPassword" ng-model="user.password" ng-required="true"/>
-              </div>
-              <p class="error validation" ng-show="userLogin.loginPassword.$invalid && userLogin.loginPassword.$touched">
-                请输入密码
-              </p>
-              <div class="row">
-                <div class="col-xs-6 text-center">
-
-                  <label>
-                    <input type="checkbox" ng-model="user.keep">&nbsp;保持登录
-                  </label>
+            <div id="login-form" ng-controller="loginController" class="panel-box">
+                <div class="titles">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                            class="fa fa-times"></i></button>
+                    <h4>VGO登录</h4>
                 </div>
-                <div class="col-xs-6 text-center">
-                    <a href="#" class="">忘记密码</a> |
-                    <a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal" aria-label="Close"
-                       class="">注册</a>
-                </div>
-              </div>
-              <div class="text-center">
-                <input type="button" value="登录" ng-click="login()" class="login btn" ng-disabled="userLogin.$invalid"/>
-              </div>
+
+                <form name="userLogin" novalidate="" class="form-theme">
+                    <div class="text-center">
+                        <img src="/assets/img/logo.png" alt="" class="img-responsive logo">
+                    </div>
+                    <div class="row padding-top-mini">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div><label><strong>手机号码/用户名</strong></label>
+                                <input type="text" placeholder="用户名或手机号" name="loginAccount" ng-model="user.account"
+                                       ng-required="true"/>
+                            </div>
+                            <p class="error validation"
+                               ng-show="userLogin.loginAccount.$invalid && userLogin.loginAccount.$touched">
+                                请输入用户名或手机号
+                            </p>
+
+                            <div><label><strong>密码:</strong></label>
+                                <input type="password" placeholder="密码" name="loginPassword" ng-model="user.password"
+                                       ng-required="true"/>
+                            </div>
+                            <p class="error validation"
+                               ng-show="userLogin.loginPassword.$invalid && userLogin.loginPassword.$touched">
+                                请输入密码
+                            </p>
+
+                            <div class="row">
+                                <div class="col-xs-6 text-center">
+
+                                    <label>
+                                        <input type="checkbox" ng-model="user.keep">&nbsp;保持登录
+                                    </label>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <a href="#" class="">忘记密码</a> |
+                                    <a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal"
+                                       aria-label="Close"
+                                       class="">注册</a>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <input type="button" value="登录" ng-click="login()" class="login btn"
+                                       ng-disabled="userLogin.$invalid"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
             </div>
-          </div>
-
-        </form>
-
-      </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
 <div id="ModalSignup" tabindex="-1" role="dialog" class="modal signUpContent fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
-      <div id="register-form" ng-controller="registerController" class="panel-box">
-        <div class="titles">
-          <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
-                  class="fa fa-times"></i></button>
-          <h4>注册</h4>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+            <div id="register-form" ng-controller="registerController" class="panel-box">
+                <div class="titles">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                            class="fa fa-times"></i></button>
+                    <h4>注册</h4>
+                </div>
+                <div class="form-wrapper">
+                    <div class="row">
+
+                        <div class="col-xs-6 col-xs-offset-6">
+                            <div class="avatarform">
+                                <form method="post" name="upForm" id="upForm" enctype="multipart/form-data">
+                                    <input type="file" name="upAvatar" id="upAvatar" ng-model="upAvatar"
+                                           accept="image/*"
+                                           ng-required="true"
+                                           onchange="angular.element(this).scope().upAvatar()"/>
+                                    <input type="hidden" name="fileId" value="upAvatar"/>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-wrapper">
+                    <form name="userRegister" id="userRegister" class="form-theme">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div>
+                                    <label><strong>昵称/用户名</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="nickName" placeholder="请填写..." ng-model="user.nickName"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>真实姓名</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="userName" placeholder="请填写..." ng-model="user.name"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>性别</strong><span class="form-required" title="">*</span></label>
+                                    <select name="certificateType" ng-model="user.gender" ng-required="true">
+                                        <option value="">请选择</option>
+                                        <option value="1">男</option>
+                                        <option value="0">女</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label><strong>证件类型</strong><span class="form-required" title="">*</span></label>
+                                    <select name="certificateType" ng-model="user.certificateType" ng-required="true">
+                                        <option value="">请选择</option>
+                                        <option value="1">身份证</option>
+                                        <option value="2">护照</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label><strong>证件号</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="certificateNumber" placeholder="请填写..."
+                                           ng-model="user.certificateNumber" ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>手机号码</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" placeholder="请填写..." name="userPhone" ng-model="user.mobile"
+                                           ng-required="true"/>
+                                </div>
+
+                                <div class="verify">
+                                    <input class="captcha" type="text" name="userCaptcha" placeholder="请输入短信验证码"
+                                           ng-model="user.code" ng-required="true"/>
+                                    <button type="button" class="btn btn-transparent" ng-click="getCaptcha()">获取验证码
+                                    </button>
+                                </div>
+
+                                <div>
+                                    <label><strong>登录密码</strong><span class="form-required" title="">*</span></label>
+                                    <input type="password" name="userPassword" id="userPassword" placeholder="请输入密码"
+                                           ng-model="user.password" ng-required="true"/>
+                                </div>
+
+                                <div>
+                                    <label><strong>确认密码</strong><span class="form-required" title="">*</span></label>
+                                    <input type="password" name="userRePassword" id="confirmPassword"
+                                           placeholder="请重复输入您的密码" ng-model="user.repassword" ng-required="true"
+                                           password-check="userPassword"/>
+                                </div>
+
+                                <div>
+                                    <label><strong>邮箱</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" placeholder="请填写..." name="email" ng-model="user.email"
+                                           ng-required="true"/>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="headshot">
+                                    <label>头像</label>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <img id="avatar" style="display:none;"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="club">
+                                    <label><strong>所属俱乐部</strong><span class="form-required" title="">*</span></label>
+                                    <select name="userClub" ng-model="user.club" ng-required="true">
+                                        <option value="">选择俱乐部</option>
+                                        <option ng-repeat="club in clubs" value="{{club.id}}">
+                                            {{club.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label><strong>出生日期</strong></label>
+
+                                    <div>
+                                        <div id="year">
+                                            <select name="year" ng-model="user.year">
+                                                <option value="">年</option>
+                                                <option ng-repeat="year in years" value="{{year}}">{{year}}</option>
+                                            </select>
+                                        </div>
+                                        <div id="month">
+                                            <select name="month" ng-model="user.month">
+                                                <option value="">月</option>
+                                                <option ng-repeat="month in months" value="{{month}}">{{month}}月
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div id="day">
+                                            <select name="day" ng-model="user.day">
+                                                <option value="">日</option>
+                                                <option ng-repeat="day in days" value="{{day}}">{{day}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label><strong>城市</strong></label>
+                                        <select name="city" ng-model="user.city">
+                                            <option value="">请选择</option>
+                                            <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}
+                                            </option>
+
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label><strong>收件地址</strong></label>
+                                        <input type="text" name="address" placeholder="请填写..." ng-model="user.address"/>
+                                    </div>
+                                    <div>
+                                        <label><strong>邮编</strong></label>
+                                        <input type="text" name="postCode" placeholder="请填写..."
+                                               ng-model="user.postCode"/>
+                                    </div>
+                                    <div>
+                                        <label><strong>血型</strong></label>
+                                        <input type="text" name="bloodType" placeholder="请填写..."
+                                               ng-model="user.bloodType"/>
+                                    </div>
+                                    <div>
+                                        <label><strong>上衣尺寸</strong></label>
+                                        <select name="jacketSize" ng-model="user.jacketSize">
+                                            <option value="">请选择</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                            <option value="l">L</option>
+                                            <option value="xl">XL</option>
+                                            <option value="xxl">XXL</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label><strong>裤子尺寸</strong></label>
+                                        <select name="trousersSize" ng-model="user.trousersSize">
+                                            <option value="">请选择</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                            <option value="l">L</option>
+                                            <option value="xl">XL</option>
+                                            <option value="xxl">XXL</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label><strong>鞋子尺寸</strong></label>
+                                        <select name="shoesSize" ng-model="user.shoesSize">
+                                            <option value="">请选择</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="disease">
+                                    <div>
+                                        <label><strong>疾病史</strong></label>
+
+                                        <div>
+                                            <label ng-repeat="disease in diseases">
+                                                <input type="checkbox" checklist-model="user.diseases"
+                                                       checklist-value="disease"> {{disease}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label><strong>其他不适合运动的疾病患</strong></label>
+                                        <textarea name="diseasemore" id="" cols="30" rows="10"
+                                                  ng-model="user.diseasemore"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="button" ng-click="register()" value="确认提交" class="register btn"
+                                       ng-disabled="userRegister.$invalid"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-wrapper">
-          <div class="row">
-
-            <div class="col-xs-6 col-xs-offset-6">
-              <div class="avatarform">
-                <form method="post" name="upForm" id="upForm" enctype="multipart/form-data">
-                  <input type="file" name="upAvatar" id="upAvatar" ng-model="upAvatar" accept="image/*"
-                         ng-required="true"
-                         onchange="angular.element(this).scope().upAvatar()"/>
-                  <input type="hidden" name="fileId" value="upAvatar"/>
-                </form>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-        <div class="form-wrapper">
-          <form name="userRegister" id="userRegister" class="form-theme">
-            <div class="row">
-              <div class="col-xs-6">
-                <div>
-                  <label><strong>昵称/用户名</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" name="nickName" placeholder="请填写..." ng-model="user.nickName" ng-required="true"/>
-                </div>
-                <div>
-                  <label><strong>真实姓名</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" name="userName" placeholder="请填写..." ng-model="user.name" ng-required="true"/>
-                </div>
-                <div>
-                  <label><strong>性别</strong><span class="form-required" title="">*</span></label>
-                  <select name="certificateType" ng-model="user.gender" ng-required="true">
-                    <option value="">请选择</option>
-                    <option value="1">男</option>
-                    <option value="0">女</option>
-                  </select>
-                </div>
-                <div>
-                  <label><strong>证件类型</strong><span class="form-required" title="">*</span></label>
-                  <select  name="certificateType" ng-model="user.certificateType" ng-required="true">
-                    <option value="">请选择</option>
-                    <option value="1">身份证</option>
-                    <option value="2">护照</option>
-                  </select>
-                </div>
-                <div>
-                  <label><strong>证件号</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" name="certificateNumber" placeholder="请填写..." ng-model="user.certificateNumber" ng-required="true"/>
-                </div>
-                <div>
-                  <label><strong>手机号码</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" placeholder="请填写..." name="userPhone" ng-model="user.mobile" ng-required="true"/>
-                </div>
-
-                <div class="verify">
-                  <input class="captcha" type="text" name="userCaptcha" placeholder="请输入短信验证码" ng-model="user.code" ng-required="true"/>
-                  <button type="button" class="btn btn-transparent" ng-click="getCaptcha()">获取验证码</button>
-                </div>
-
-                <div>
-                  <label><strong>登录密码</strong><span class="form-required" title="">*</span></label>
-                  <input type="password" name="userPassword" id="userPassword" placeholder="请输入密码" ng-model="user.password" ng-required="true"/>
-                </div>
-
-                <div>
-                  <label><strong>确认密码</strong><span class="form-required" title="">*</span></label>
-                  <input type="password" name="userRePassword" id="confirmPassword" placeholder="请重复输入您的密码" ng-model="user.repassword" ng-required="true" password-check="userPassword"/>
-                </div>
-
-                <div>
-                  <label><strong>邮箱</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" placeholder="请填写..." name="email" ng-model="user.email" ng-required="true"/>
-                </div>
-              </div>
-              <div class="col-xs-6">
-                <div class="headshot">
-                  <label>头像</label>
-
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <img id="avatar" style="display:none;"/>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="club">
-                  <label><strong>所属俱乐部</strong><span class="form-required" title="">*</span></label>
-                  <select name="userClub" ng-model="user.club" ng-required="true">
-                    <option value="">选择俱乐部</option>
-                    <option ng-repeat="club in clubs" value="{{club.id}}">
-                      {{club.name}}
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  <label><strong>出生日期</strong></label>
-                  <div>
-                    <div id="year">
-                      <select  name="year" ng-model="user.year">
-                        <option value="">年</option>
-                        <option ng-repeat="year in years" value="{{year}}">{{year}}</option>
-                      </select>
-                    </div>
-                    <div id="month">
-                      <select  name="month" ng-model="user.month">
-                        <option value="">月</option>
-                        <option ng-repeat="month in months" value="{{month}}">{{month}}月</option>
-                      </select>
-                    </div>
-                    <div id="day">
-                      <select  name="day" ng-model="user.day">
-                        <option value="">日</option>
-                        <option ng-repeat="day in days" value="{{day}}">{{day}}</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label><strong>城市</strong></label>
-                    <select name="city" ng-model="user.city">
-                      <option value="">请选择</option>
-                      <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>
-
-                    </select>
-                  </div>
-                  <div>
-                    <label><strong>收件地址</strong></label>
-                    <input type="text" name="address" placeholder="请填写..." ng-model="user.address" />
-                  </div>
-                  <div>
-                    <label><strong>邮编</strong></label>
-                    <input type="text" name="postCode" placeholder="请填写..." ng-model="user.postCode" />
-                  </div>
-                  <div>
-                    <label><strong>血型</strong></label>
-                    <input type="text" name="bloodType" placeholder="请填写..." ng-model="user.bloodType" />
-                  </div>
-                  <div>
-                    <label><strong>上衣尺寸</strong></label>
-                    <select  name="jacketSize" ng-model="user.jacketSize">
-                      <option value="">请选择</option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                      <option value="xxl">XXL</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label><strong>裤子尺寸</strong></label>
-                    <select name="trousersSize" ng-model="user.trousersSize">
-                      <option value="">请选择</option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                      <option value="xxl">XXL</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label><strong>鞋子尺寸</strong></label>
-                    <select name="shoesSize" ng-model="user.shoesSize">
-                      <option value="">请选择</option>
-                      <option value="38">38</option>
-                      <option value="39">39</option>
-                      <option value="40">40</option>
-                      <option value="41">41</option>
-                      <option value="42">42</option>
-                      <option value="43">43</option>
-                      <option value="44">44</option>
-                      <option value="45">45</option>
-                    </select>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="disease">
-                  <div>
-                    <label><strong>疾病史</strong></label>
-                    <div>
-                      <label ng-repeat="disease in diseases">
-                        <input type="checkbox" checklist-model="user.diseases" checklist-value="disease"> {{disease}}
-                      </label>
-                    </div>
-                  </div>
-                  <div>
-                    <label><strong>其他不适合运动的疾病患</strong></label>
-                    <textarea name="diseasemore" id="" cols="30" rows="10" ng-model="user.diseasemore"></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <input type="button" ng-click="register()" value="确认提交" class="register btn"
-                       ng-disabled="userRegister.$invalid"/>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 
-<div id="ModalApply" tabindex="-1" role="dialog" class="modal applyContent fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
-      <div id="register-form" ng-controller="registerController" class="panel-box">
-        <div class="titles">
-          <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
-                  class="fa fa-times"></i></button>
-          <h4>赛事报名表格</h4>
+<div id="ModalApplyEvent" tabindex="-1" role="dialog" class="modal applyContent fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+            <div id="eventApply-form" ng-controller="applyController" class="panel-box">
+                <div class="titles">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                            class="fa fa-times"></i></button>
+                    <h4>赛事报名表格</h4>
+                </div>
+
+                <div class="form-wrapper">
+                    <form name="eventApply" id="eventApply" class="form-theme">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div>
+                                    <label><strong>VGO编号</strong></label>
+                                    <input type="text" name="vgoNo" value="{{rootcurrentUser.id}}" disabled/>
+                                </div>
+                                <div>
+                                    <label><strong>证件类型</strong></label>
+                                    <input type="text" name="certificateType"
+                                           value="{{rootcurrentUser.certificateTypeName}}" disabled/>
+
+                                </div>
+                                <div>
+                                    <label><strong>证件号</strong></label>
+                                    <input type="text" name="certificateNumber"
+                                           value="{{rootcurrentUser.certificateNumber}}" disabled/>
+                                </div>
+                                <div>
+                                    <label><strong>紧急联系人</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="contact" placeholder="请填写..." ng-model="vgoInfo.contact"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>收件地址</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="address" placeholder="请填写..." ng-model="vgoInfo.address"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>邮编</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="postCode" placeholder="请填写..." ng-model="vgoInfo.postCode"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>血型</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="bloodType" placeholder="请填写..."
+                                           ng-model="vgoInfo.bloodType" ng-required="true"/>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-6">
+                                <div>
+                                    <label><strong>真实姓名</strong></label>
+                                    <input type="text" name="userName" value="{{rootcurrentUser.name}}" disabled/>
+                                </div>
+                                <div class="genderStr">
+                                    <label><strong>性别</strong></label>
+                                    <input type="text" name="genderStr" value="{{rootcurrentUser.genderStr}}" disabled/>
+                                </div>
+                                <div class="club">
+                                    <label><strong>所属俱乐部</strong></label>
+                                    <input type="text" name="clubName" value="{{rootcurrentUser.clubName}}" disabled/>
+                                </div>
+                                <div>
+                                    <label><strong>紧急联系人电话</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="contactTel" placeholder="请填写..."
+                                           ng-model="vgoInfo.contactTel" ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>上衣尺寸</strong><span class="form-required" title="">*</span></label>
+                                    <select name="jacketSize" ng-model="vgoInfo.jacketSize" ng-required="true">
+                                        <option value="">请选择</option>
+                                        <option value="s">S</option>
+                                        <option value="m">M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                        <option value="xxl">XXL</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label><strong>裤子尺寸</strong><span class="form-required" title="">*</span></label>
+                                    <select name="trousersSize" ng-model="vgoInfo.trousersSize" ng-required="true">
+                                        <option value="">请选择</option>
+                                        <option value="s">S</option>
+                                        <option value="m">M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                        <option value="xxl">XXL</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label><strong>鞋子尺寸</strong><span class="form-required" title="">*</span></label>
+                                    <select name="shoesSize" ng-model="vgoInfo.shoesSize" ng-required="true">
+                                        <option value="">请选择</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="disease">
+                                    <div>
+                                        <label><strong>疾病史</strong></label>
+
+                                        <div>
+                                            <label ng-repeat="disease in diseases">
+                                                <input type="checkbox" checklist-model="vgoInfo.diseases"
+                                                       checklist-value="disease"> {{disease}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label><strong>其他不适合运动的疾病患</strong></label>
+                                        <textarea name="diseasemore" id="" cols="30" rows="10"
+                                                  ng-model="vgoInfo.diseasemore"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="button" ng-click="applyEvent()" value="确认提交" class="register btn"
+                                       ng-disabled="eventApply.$invalid"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="form-wrapper">
-          <form name="eventApply" id="eventApply" class="form-theme">
-            <div class="row">
-              <div class="col-xs-6">
-                <div>
-                  <label><strong>VGO编号</strong></label>
-                  <input type="text" name="vgoNo" value="{{rootcurrentUser.id}}" disabled/>
-                </div>
-                <div>
-                  <label><strong>真实姓名</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" name="userName" placeholder="请填写..." ng-model="user.name" ng-required="true"/>
-                </div>
-                <div>
-                  <label><strong>性别</strong><span class="form-required" title="">*</span></label>
-                  <select name="certificateType" ng-model="user.gender" ng-required="true">
-                    <option value="">请选择</option>
-                    <option value="1">男</option>
-                    <option value="0">女</option>
-                  </select>
-                </div>
-                <div>
-                  <label><strong>证件类型</strong><span class="form-required" title="">*</span></label>
-                  <select name="certificateType" ng-model="user.certificateType" ng-required="true">
-                    <option value="">请选择</option>
-                    <option value="1">身份证</option>
-                    <option value="2">护照</option>
-                  </select>
-                </div>
-                <div>
-                  <label><strong>证件号</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" name="certificateNumber" placeholder="请填写..." ng-model="user.certificateNumber"
-                         ng-required="true"/>
-                </div>
-                <div>
-                  <label><strong>手机号码</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" placeholder="请填写..." name="userPhone" ng-model="user.mobile" ng-required="true"/>
-                </div>
-
-                <div class="verify">
-                  <input class="captcha" type="text" name="userCaptcha" placeholder="请输入短信验证码" ng-model="user.code"
-                         ng-required="true"/>
-                  <button type="button" class="btn btn-transparent" ng-click="getCaptcha()">获取验证码</button>
-                </div>
-
-                <div>
-                  <label><strong>登录密码</strong><span class="form-required" title="">*</span></label>
-                  <input type="password" name="userPassword" id="userPassword" placeholder="请输入密码"
-                         ng-model="user.password" ng-required="true"/>
-                </div>
-
-                <div>
-                  <label><strong>确认密码</strong><span class="form-required" title="">*</span></label>
-                  <input type="password" name="userRePassword" id="confirmPassword" placeholder="请重复输入您的密码"
-                         ng-model="user.repassword" ng-required="true" password-check="userPassword"/>
-                </div>
-
-                <div>
-                  <label><strong>邮箱</strong><span class="form-required" title="">*</span></label>
-                  <input type="text" placeholder="请填写..." name="email" ng-model="user.email" ng-required="true"/>
-                </div>
-              </div>
-              <div class="col-xs-6">
-                <div class="headshot">
-                  <label>头像</label>
-
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <img id="avatar" style="display:none;"/>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="club">
-                  <label><strong>所属俱乐部</strong><span class="form-required" title="">*</span></label>
-                  <select name="userClub" ng-model="user.club" ng-required="true">
-                    <option value="">选择俱乐部</option>
-                    <option ng-repeat="club in clubs" value="{{club.id}}">
-                      {{club.name}}
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  <label><strong>出生日期</strong></label>
-
-                  <div>
-                    <div id="year">
-                      <select name="year" ng-model="user.year">
-                        <option value="">年</option>
-                        <option ng-repeat="year in years" value="{{year}}">{{year}}</option>
-                      </select>
-                    </div>
-                    <div id="month">
-                      <select name="month" ng-model="user.month">
-                        <option value="">月</option>
-                        <option ng-repeat="month in months" value="{{month}}">{{month}}月</option>
-                      </select>
-                    </div>
-                    <div id="day">
-                      <select name="day" ng-model="user.day">
-                        <option value="">日</option>
-                        <option ng-repeat="day in days" value="{{day}}">{{day}}</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label><strong>城市</strong></label>
-                    <select name="city" ng-model="user.city">
-                      <option value="">请选择</option>
-                      <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>
-
-                    </select>
-                  </div>
-                  <div>
-                    <label><strong>收件地址</strong></label>
-                    <input type="text" name="address" placeholder="请填写..." ng-model="user.address"/>
-                  </div>
-                  <div>
-                    <label><strong>邮编</strong></label>
-                    <input type="text" name="postCode" placeholder="请填写..." ng-model="user.postCode"/>
-                  </div>
-                  <div>
-                    <label><strong>血型</strong></label>
-                    <input type="text" name="bloodType" placeholder="请填写..." ng-model="user.bloodType"/>
-                  </div>
-                  <div>
-                    <label><strong>上衣尺寸</strong></label>
-                    <select name="jacketSize" ng-model="user.jacketSize">
-                      <option value="">请选择</option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                      <option value="xxl">XXL</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label><strong>裤子尺寸</strong></label>
-                    <select name="trousersSize" ng-model="user.trousersSize">
-                      <option value="">请选择</option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                      <option value="xxl">XXL</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label><strong>鞋子尺寸</strong></label>
-                    <select name="shoesSize" ng-model="user.shoesSize">
-                      <option value="">请选择</option>
-                      <option value="38">38</option>
-                      <option value="39">39</option>
-                      <option value="40">40</option>
-                      <option value="41">41</option>
-                      <option value="42">42</option>
-                      <option value="43">43</option>
-                      <option value="44">44</option>
-                      <option value="45">45</option>
-                    </select>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="disease">
-                  <div>
-                    <label><strong>疾病史</strong></label>
-
-                    <div>
-                      <label ng-repeat="disease in diseases">
-                        <input type="checkbox" checklist-model="user.diseases" checklist-value="disease"> {{disease}}
-                      </label>
-                    </div>
-                  </div>
-                  <div>
-                    <label><strong>其他不适合运动的疾病患</strong></label>
-                    <textarea name="diseasemore" id="" cols="30" rows="10" ng-model="user.diseasemore"></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <input type="button" ng-click="register()" value="确认提交" class="register btn"
-                       ng-disabled="userRegister.$invalid"/>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

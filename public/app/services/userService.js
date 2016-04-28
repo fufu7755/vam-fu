@@ -58,7 +58,6 @@
                     user.birthday = ''
                 }
 
-                console.log(user);
                 promise = $http({
                     method: 'POST',
                     url: baseUrl + 'vgo/apply',
@@ -141,6 +140,7 @@
                 });
                 return promise;
             }
+
         };
 
         return output;
