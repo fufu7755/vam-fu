@@ -16,13 +16,14 @@
                     <div class="date">
                         {{event.raceDate}}
                     </div>
-                    <a href="/events/{{event.id}}/event"><img src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt=""></a>
+                    <a href="/events/{{event.id}}"><img
+                            src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt=""></a>
                     <div class="meta-tag">
                         当前报名人数：{{event.registerNumber}}
                     </div>
                 </div>
                 <div class="info-post">
-                    <h4><a href="/events/{{event.id}}/event" target="_blank">{{event.name}}</a></h4>
+                    <h4><a href="/events/{{event.id}}" target="_blank">{{event.name}}</a></h4>
                     <p>{{event.description}}</p>
                 </div>
             </li>
