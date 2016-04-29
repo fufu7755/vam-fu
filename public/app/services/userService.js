@@ -11,12 +11,13 @@
                     params: {mobile: user.account, password: user.password},
                 }).success(function (response) {
                     if (response.statusCode === 0) {
+
                         toaster.pop('success', '您已成功登录');
+                        $localStorage.currentUser = response.data;
+                        $('#ModalLogin').modal('hide');
+
                         $location.path('/');
                         $route.reload();
-                        $localStorage.currentUser = response.data;
-                        console.log($localStorage.currentUser);
-                        $('#ModalLogin').modal('hide');
                         if (user.keep == true) {
                             $localStorage.keep = true;
                         }
@@ -50,7 +51,7 @@
             register: function (user) {
                 var diseaseHistory = _.map(user.diseases).join(',');
                 if (user.diseasemore != undefined) {
-                    user.diseaseHistory = diseaseHistory + ',' + user.diseasemore;
+                    diseaseHistory = diseaseHistory + ',' + user.diseasemore;
                 }
                 if (user.year != undefined || user.month != undefined || user.day != undefined) {
                     user.birthday = user.year + '-' + user.month + '-' + user.day;
@@ -81,7 +82,7 @@
                         shoesSize: user.shoesSize,
                         address: user.address,
                         postCode: user.postCode,
-                        diseaseHistory: user.diseaseHistory
+                        diseaseHistory: diseaseHistory
                     }
                 }).success(function (response) {
                     if (response.statusCode === 0) {
@@ -89,6 +90,7 @@
                         $location.path('/');
                         $('#ModalSignup').modal('hide');
                         $('#ModalLogin').modal('show');
+
                     } else {
                         toaster.pop('warning', response.message);
                     }

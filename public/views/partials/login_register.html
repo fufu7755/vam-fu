@@ -76,16 +76,30 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-xs-offset-6">
-                            <div class="avatarform">
-                                <form method="post" name="upForm" id="upForm" enctype="multipart/form-data">
-                                    <input type="file" name="upAvatar" id="upAvatar" ng-model="upAvatar"
-                                           accept="image/*"
-                                           ng-required="true"
-                                           onchange="angular.element(this).scope().upAvatar()"/>
-                                    <input type="hidden" name="fileId" value="upAvatar"/>
-                                </form>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="avatarform">
+                                        <form method="post" name="upForm" id="upForm" enctype="multipart/form-data">
+                                            <input type="file" name="upAvatar" id="upAvatar" ng-model="upAvatar"
+                                                   accept="image/*"
+                                                   ng-required="true"
+                                                   onchange="angular.element(this).scope().upAvatar()"/>
+                                            <input type="hidden" name="fileId" value="upAvatar"/>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="coolShowform">
+                                        <form method="post" name="upForm2" id="upForm2" enctype="multipart/form-data">
+                                            <input type="file" name="upcoolShow" id="upcoolShow" ng-model="upcoolShow"
+                                                   accept="image/*"
+                                                   ng-required="true"
+                                                   onchange="angular.element(this).scope().upcoolShow()"/>
+                                            <input type="hidden" name="fileId" value="upcoolShow"/>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -158,16 +172,33 @@
                                 </div>
                             </div>
                             <div class="col-xs-6">
-                                <div class="headshot">
-                                    <label>头像</label>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="headshot">
+                                            <label>头像</label>
 
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <img id="avatar" style="display:none;"/>
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <img id="avatar" style="display:none;"/>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
+                                    <div class="col-xs-6">
+                                        <div class="headshot">
+                                            <label>个人图片</label>
 
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <img id="coolShow" style="display:none;"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="club">
                                     <label><strong>所属俱乐部</strong><span class="form-required" title="">*</span></label>
                                     <select name="userClub" ng-model="user.club" ng-required="true">

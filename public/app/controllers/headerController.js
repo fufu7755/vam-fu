@@ -16,7 +16,7 @@ angular
         if ($localStorage.currentUser) {
             userService.getUser($localStorage.currentUser).then(function (data) {
                 $rootScope.rootcurrentUser = data.data;
-
+                console.log($localStorage);
             });
         }
 

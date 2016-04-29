@@ -36,13 +36,15 @@
     </div>
 </div>
 
-<div class="panel-box padding-bottom" ng-show="event.status == '1'">
+<div class="panel-box padding-bottom" ng-controller="loginController"
+     ng-show="event.status == '1' && isUserLoggedIn() == true">
     <div class="titles">
         <h4>赛事报名</h4>
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
-            <a href="#" data-toggle="modal" data-target="#ModalApplyEvent" class="pop-up btn btn-success">赛事报名</a>
+            <a href="#" data-toggle="modal" data-target="#ModalApplyEvent"
+               class="pop-up btn btn-lg btn-primary dis-radius">赛事报名</a>
         </div>
     </div>
 </div>

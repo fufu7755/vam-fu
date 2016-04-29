@@ -36,6 +36,21 @@
                     $("#avatar").attr("src", imgPrefix + data.path).show();
                 }
             });
+
+        }
+        $scope.upcoolShow = function () {
+            $('#upForm2').ajaxSubmit({
+                type: 'post',
+                url: 'http://222.240.208.174:8083/vma/upload/uploadfile',
+                success: function (data) {
+                    console.log(data);
+                    $scope.user.coolShow = data.path;
+                    console.log($scope.user);
+                    var host = 'http://222.240.208.174:8083';
+                    var imgPrefix = host + '/vma/download/img?url=';
+                    $("#coolShow").attr("src", imgPrefix + data.path).show();
+                }
+            });
         }
 
         $scope.diseases = [

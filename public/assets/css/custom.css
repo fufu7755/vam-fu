@@ -772,12 +772,12 @@ input.login {
     border-radius: 0;
 }
 
-.avatarform {
+.avatarform, .coolShowform {
     position: relative;
     width: 100%;
 }
 
-.avatarform form {
+.avatarform form, .coolShowform form {
     position: absolute;
     top: 150px;
     z-index: 10;
@@ -808,4 +808,11 @@ input.login {
         margin-bottom: 10px;
     }
 
+}
+
+@media (min-width: 768px) {
+    #ModalSignup .modal-dialog {
+        width: 900px;
+        margin: 30px auto;
+    }
 }
