@@ -141,8 +141,72 @@
                     console.log(status);
                 });
                 return promise;
-            }
+            },
+            getRandomPic: function (random) {
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'password/picCode',
+                    params: {
+                        random: random
+                    }
+                }).success(function (response) {
+                    if (response.statusCode === 0) {
+                        console.log(response);
+                    } else {
+                        toaster.pop('warning', response.message);
+                    }
+                }).error(function (data, status) {
+                    toaster.pop('warning', '请稍后再试');
+                });
+                return promise;
+            },
+            userVerify: function (user) {
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'password/verify',
+                    params: {
+                        mobile: user.mobile,
+                        code: user.code,
+                        random: $localStorage.randomNum
+                    },
+                }).success(function (response) {
+                    if (response.statusCode === 0) {
+                        var phone = user.mobile;
+                        var mphone = phone.substr(3, 4);
+                        $rootScope.mobile = phone.replace(mphone, "****");
+                        $rootScope.usermobile = user.mobile;
+                        $('#ModalPassword1').modal('hide');
+                        $('#ModalPassword2').modal('show');
 
+                    } else {
+                        toaster.pop('warning', response.message);
+                    }
+                }).error(function (data, status) {
+                    toaster.pop('warning', '请稍后再试');
+                });
+                return promise;
+            },
+            getCode: function () {
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'password/smsCode',
+                    params: {
+                        mobile: $rootScope.usermobile
+                    },
+                }).success(function (response) {
+                    if (response.statusCode === 0) {
+                        toaster.pop('success', '验证码已成功发送');
+                        $rootScope.codeButtonvalue = "重新发送";
+                        $rootScope.getSmscode = true;
+                    } else {
+                        toaster.pop('warning', response.message);
+                        console.log($rootScope.usermobile);
+                    }
+                }).error(function (data, status) {
+                    toaster.pop('warning', '请稍后再试');
+                });
+                return promise;
+            }
         };
 
         return output;

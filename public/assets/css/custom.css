@@ -798,6 +798,23 @@ input.login {
     font-style: normal;
 }
 
+#ModalPassword2 .smsCode {
+    width: 160px;
+}
+
+#ModalPassword2 .getsmsCode {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#footer p {
+    color: #fff;
+}
+
+#footer h5 {
+    color: #fff;
+}
+
 @media handheld, only screen and (max-width: 767px) {
 
     .search-form .form-theme .form-control {

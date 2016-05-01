@@ -1,14 +1,11 @@
-<div class="container">
+<div class="container" ng-controller="footerController">
     <!-- Wiguets Footer-->
     <div class="row">
         <!-- Twitter Wiguet-->
         <div class="col-xs-12 col-md-6">
             <div class="divisor-footer">
-                <i class="fa fa-weibo fa-3x"></i>
-                <h4>微博持续更新</h4>
                 <iframe width="100%" height="200" class="share_self" frameborder="0" scrolling="no"
                         src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=300&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=5821468727&verifier=a1d3fcf4&dpc=1"></iframe>
-
             </div>
         </div>
         <!-- End Twitter Wiguet-->
@@ -19,26 +16,38 @@
             <div class="row">
                 <div class="col-sm-4">
                     <ul class="links">
-                        <li><i class="fa fa-link"></i> <a href="#">世界杯</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">团队成员</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">大联盟</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">比赛</a></li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[0].link}}">{{exteriorLink[0].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[1].link}}">{{exteriorLink[1].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[2].link}}">{{exteriorLink[2].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[3].link}}">{{exteriorLink[3].title}}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
                     <ul class="links">
-                        <li><i class="fa fa-link"></i> <a href="#">世界杯</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">团队成员</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">大联盟</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">比赛</a></li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[4].link}}">{{exteriorLink[4].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[5].link}}">{{exteriorLink[5].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[6].link}}">{{exteriorLink[6].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[7].link}}">{{exteriorLink[7].title}}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
                     <ul class="links">
-                        <li><i class="fa fa-link"></i> <a href="#">世界杯</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">团队成员</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">大联盟</a></li>
-                        <li><i class="fa fa-link"></i> <a href="#">比赛</a></li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[8].link}}">{{exteriorLink[8].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a href="{{exteriorLink[9].link}}">{{exteriorLink[9].title}}</a>
+                        </li>
+                        <li><i class="fa fa-link"></i> <a
+                                href="{{exteriorLink[10].link}}">{{exteriorLink[10].title}}</a></li>
+                        <li><i class="fa fa-link"></i> <a
+                                href="{{exteriorLink[11].link}}">{{exteriorLink[11].title}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,39 +56,28 @@
         <!-- End Links Wiguet-->
 
     </div>
-    <!-- End Wiguets Footer-->
-    <!-- Social Icons-->
-    <div class="row">
-        <ul class="social">
-            <li>
-                <div>
-                    <a href="#" class="weibo">
-                        <i class="fa fa-weibo"></i>
-                    </a>
+    <div class="social">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <h4>联系我们</h4>
+
+                <p>电话：020-37266812、020-37266757；<br>
+                    邮箱：vma@vgosports.net；<br>
+                    地址：广州市越秀区广州大道中289号289艺术园区三楼酷窝社区。</p>
+
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-2 text-center">
+                        <h5>微信</h5>
+                        <img src="/assets/img/weixin1.jpg" class="img-responsive" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <h5>微信</h5>
+                        <img src="/assets/img/weixin2.png" class="img-responsive" alt="">
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#" class="weixin">
-                        <i class="fa fa-weixin"></i>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#" class="vimeo">
-                        <i class="fa fa-vimeo-square"></i>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#" class="facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
-    <!-- End Social Icons-->
+
+
 </div>

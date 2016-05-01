@@ -12,12 +12,7 @@
             }
         };
 
-        $scope.close = function (res) {
-            close(res, 200);
-        };
-
         $scope.logout = function () {
             userService.logout($localStorage.currentUser);
         };
-
     }]);

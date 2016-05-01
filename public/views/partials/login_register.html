@@ -41,7 +41,9 @@
                                     </label>
                                 </div>
                                 <div class="col-xs-6 text-center">
-                                    <a href="#" class="">忘记密码</a> |
+                                    <a href="#" data-toggle="modal" data-target="#ModalPassword1" data-dismiss="modal"
+                                       aria-label="Close"
+                                       class="">忘记密码</a> |
                                     <a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal"
                                        aria-label="Close"
                                        class="">注册</a>
@@ -473,4 +475,120 @@
             </div>
         </div>
     </div>
+</div>
+
+<div ng-controller="userverifyController">
+    <div id="ModalPassword1" tabindex="-1" role="dialog" class="modal passwordContent fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div id="password-step1-form" class="panel-box">
+                    <div class="titles">
+                        <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                                class="fa fa-times"></i></button>
+                        <h4>密码重置</h4>
+                    </div>
+
+                    <form name="userPassword" novalidate="" class="form-theme">
+
+                        <div class="row padding-top-mini">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <div class="row">
+                                    <div class="col-xs-6 first">
+                                        1 &nbsp; 确认帐号
+                                    </div>
+                                    <div class="col-xs-6 second">
+                                        2 &nbsp; 密码重置
+                                    </div>
+                                </div>
+
+                                <div class="padding-top-mini">
+                                    <label><strong>请填写您帐号的手机号码</strong><span class="form-required"
+                                                                             title="">*</span></label>
+                                    <input type="text" placeholder="请填写..." name="userPhone" ng-model="user.mobile"
+                                           ng-required="true"/>
+                                </div>
+
+                                <div class="verify">
+
+                                    <input class="captcha" type="text" name="userCaptcha" placeholder="请输入验证码"
+                                           ng-model="user.code" ng-required="true"/>
+                                    <img src="http://222.240.208.174:8083/vma/download/img?url={{randomPic.data}}"
+                                         alt="">
+                                    <a href="#" ng-click="newRandompic()">换一张</a>
+                                </div>
+
+                                <div class="text-center">
+                                    <input type="button" value="下一步" ng-click="userVerify()"
+                                           class="login btn btn-lg btn-primary dis-radius"
+                                           ng-disabled="userPassword.$invalid"/>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalPassword2" tabindex="-1" role="dialog" class="modal passwordContent fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div id="password-step2-form" class="panel-box">
+                    <div class="titles">
+                        <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                                class="fa fa-times"></i></button>
+                        <h4>密码重置</h4>
+                    </div>
+
+                    <form name="smsCode" novalidate="" class="form-theme">
+
+                        <div class="row padding-top-mini">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <div class="row">
+                                    <div class="col-xs-4 first">
+                                        1 &nbsp; 确认帐号
+                                    </div>
+                                    <div class="col-xs-4 second">
+                                        2 &nbsp; 密码重置
+                                    </div>
+                                    <div class="col-xs-4 second">
+                                        3 &nbsp; 密码重置
+                                    </div>
+                                </div>
+                                <div class="padding-top-mini">
+                                    <p><i>为了您的帐号安全，请完成身份验证。</i>
+
+                                    <p><i>手机号：{{mobile}}</i></p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label><strong>验证码</strong><span class="form-required" title="">*</span></label>
+                                    </div>
+
+                                    <input class="smsCode" type="text" name="smsCode" placeholder="请输入短信验证码"
+                                           ng-model="user.smsCode" ng-required="true"/>
+                                    <button type="button" class="getsmsCode btn btn-lg btn-primary dis-radius"
+                                            ng-click="getCode()">{{codeButtonvalue}}
+                                    </button>
+                                    <span ng-show="getSmscode == true"><i>验证码已发送</i></span>
+                                </div>
+                                <div class="text-center">
+                                    <input type="button" value="下一步" class="login btn btn-lg btn-primary dis-radius"
+                                           ng-disabled="smsCode.$invalid"/>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
