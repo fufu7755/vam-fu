@@ -27,3 +27,30 @@
         </tbody>
     </table>
 </div>
+
+
+<div class="panel-box">
+    <div class="titles">
+        <h4>抽签结果</h4>
+    </div>
+    <div class="box-info" ng-repeat="event in events">
+        <div class="row eventslist-title">
+            <div class="col-xs-6">
+                {{event.eventName}}
+            </div>
+            <div class="col-xs-6">
+                {{event.date}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                {{event.result}}
+            </div>
+            <div class="col-xs-6">
+                {{event.payLink}}
+            </div>
+        </div>
+
+    </div>
+
+</div>

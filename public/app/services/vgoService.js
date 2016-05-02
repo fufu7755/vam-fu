@@ -1,5 +1,5 @@
 angular
-  .module('hshs').factory('vgoService', ['$rootScope', '$http', 'toaster', 'baseUrl', function ($rootScope, $http, toaster, baseUrl) {
+    .module('hshs').factory('vgoService', ['$rootScope', '$localStorage', '$http', 'toaster', 'baseUrl', function ($rootScope, $localStorage, $http, toaster, baseUrl) {
       var promise = {};
 
       output = {
@@ -68,6 +68,17 @@ angular
                   method: 'GET',
                   url: baseUrl + 'ad/background',
                   params: {'type': 'vgo'}
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
+          }, getEvents: function () {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'vgo/eventList',
+                  params: {'token': $localStorage.currentUser}
               }).success(function (response) {
                   return response.result;
               }).error(function (data, status) {

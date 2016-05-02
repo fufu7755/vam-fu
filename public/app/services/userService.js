@@ -15,9 +15,10 @@
                         toaster.pop('success', '您已成功登录');
                         $localStorage.currentUser = response.data;
                         $('#ModalLogin').modal('hide');
-
+                        functionThatEndsUpDestroyingTheDOM();
                         $location.path('/');
                         $route.reload();
+
                         if (user.keep == true) {
                             $localStorage.keep = true;
                         }
