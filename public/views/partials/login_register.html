@@ -489,18 +489,26 @@
                         <h4>密码重置</h4>
                     </div>
 
+                    <div class="row padding-top-mini">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div class="row">
+                                <div class="col-xs-4 first">
+                                    1 &nbsp; 确认帐号
+                                </div>
+                                <div class="col-xs-4 second">
+                                    2 &nbsp; 密码重置
+                                </div>
+                                <div class="col-xs-4 third">
+                                    3 &nbsp; 密码重置
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <form name="userPassword" novalidate="" class="form-theme">
 
-                        <div class="row padding-top-mini">
+                        <div class="row">
                             <div class="col-xs-8 col-xs-offset-2">
-                                <div class="row">
-                                    <div class="col-xs-6 first">
-                                        1 &nbsp; 确认帐号
-                                    </div>
-                                    <div class="col-xs-6 second">
-                                        2 &nbsp; 密码重置
-                                    </div>
-                                </div>
 
                                 <div class="padding-top-mini">
                                     <label><strong>请填写您帐号的手机号码</strong><span class="form-required"
@@ -544,22 +552,25 @@
                                 class="fa fa-times"></i></button>
                         <h4>密码重置</h4>
                     </div>
-
+                    <div class="row padding-top-mini">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div class="row">
+                                <div class="col-xs-4 first">
+                                    1 &nbsp; 确认帐号
+                                </div>
+                                <div class="col-xs-4 second">
+                                    2 &nbsp; 密码重置
+                                </div>
+                                <div class="col-xs-4 third">
+                                    3 &nbsp; 密码重置
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <form name="smsCode" novalidate="" class="form-theme">
 
-                        <div class="row padding-top-mini">
+                        <div class="row">
                             <div class="col-xs-8 col-xs-offset-2">
-                                <div class="row">
-                                    <div class="col-xs-4 first">
-                                        1 &nbsp; 确认帐号
-                                    </div>
-                                    <div class="col-xs-4 second">
-                                        2 &nbsp; 密码重置
-                                    </div>
-                                    <div class="col-xs-4 second">
-                                        3 &nbsp; 密码重置
-                                    </div>
-                                </div>
                                 <div class="padding-top-mini">
                                     <p><i>为了您的帐号安全，请完成身份验证。</i>
 
@@ -578,8 +589,87 @@
                                     <span ng-show="getSmscode == true"><i>验证码已发送</i></span>
                                 </div>
                                 <div class="text-center">
-                                    <input type="button" value="下一步" class="login btn btn-lg btn-primary dis-radius"
+                                    <input type="button" value="下一步" ng-click="verifySmsCode()"
+                                           class="btn btn-lg btn-primary dis-radius"
                                            ng-disabled="smsCode.$invalid"/>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalPassword3" tabindex="-1" role="dialog" class="modal passwordContent fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div id="password-step3-form" class="panel-box">
+                    <div class="titles">
+                        <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                                class="fa fa-times"></i></button>
+                        <h4>密码重置</h4>
+                    </div>
+                    <div class="row padding-top-mini">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div class="row">
+                                <div class="col-xs-4 first">
+                                    1 &nbsp; 确认帐号
+                                </div>
+                                <div class="col-xs-4 second">
+                                    2 &nbsp; 密码重置
+                                </div>
+                                <div class="col-xs-4 third">
+                                    3 &nbsp; 密码重置
+                                </div>
+                            </div>
+                            <div class="padding-top-mini text-center padding-bottom" ng-show="paraSuccess == true">
+                                <h5>密码重置成功！</h5>
+                                <a href="#" data-toggle="modal" data-target="#ModalLogin" data-dismiss="modal"
+                                   aria-label="Close"
+                                   class="btn btn-lg btn-primary dis-radius">登录</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form name="resetPassword" novalidate="" class="form-theme" ng-hide="paraSuccess == true">
+
+                        <div class="row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <div>
+                                    <div>
+                                        <label><strong>新密码</strong><span class="form-required" title="">*</span></label>
+                                        <input type="password" name="userPassword" id="userPassword" placeholder="请输入密码"
+                                               ng-model="user.password" ng-required="true"/>
+
+                                        <p class="error validation"
+                                           ng-show="resetPassword.userPassword.$invalid && resetPassword.userPassword.$touched">
+                                            密码不能为空
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <label><strong>确认密码</strong><span class="form-required"
+                                                                          title="">*</span></label>
+                                        <input type="password" name="userRePassword" id="confirmPassword"
+                                               placeholder="请重复输入您的密码" ng-model="user.repassword" ng-required="true"
+                                               password-check="userPassword"/>
+
+                                        <p class="error validation"
+                                           ng-show="resetPassword.userRePassword.$invalid && resetPassword.userRePassword.$touched">
+                                            重输密码不能为空
+                                        </p>
+
+                                        <p class="error validation" ng-show="!passwordMatch">
+                                            密码不吻合
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <input type="button" value="下一步" ng-click="resetnewPassword()"
+                                           class="btn btn-lg btn-primary dis-radius"
+                                           ng-disabled="resetPassword.$invalid"/>
                                 </div>
 
                             </div>

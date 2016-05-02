@@ -34,7 +34,7 @@ angular
         });
         homeService.getAd().then(function (data) {
             $scope.Ad = data.data;
-            console.log(data.data);
+
         });
         homeService.getEventnews().then(function (data) {
             $scope.Eventnews = data.data;

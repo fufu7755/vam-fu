@@ -819,6 +819,21 @@ input.login {
     color: rgb(12, 131, 193);
 }
 
+#ModalPassword1 .first {
+    color: rgb(12, 131, 193);
+    font-weight: bold;
+}
+
+#ModalPassword2 .second {
+    color: rgb(12, 131, 193);
+    font-weight: bold;
+}
+
+#ModalPassword3 .third {
+    color: rgb(12, 131, 193);
+    font-weight: bold;
+}
+
 @media handheld, only screen and (max-width: 767px) {
 
     .search-form .form-theme .form-control {

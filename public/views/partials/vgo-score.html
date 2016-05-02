@@ -47,7 +47,8 @@
                 {{event.result}}
             </div>
             <div class="col-xs-6">
-                {{event.payLink}}
+                <a ng-show="event.payLink != null" class="" target="_blank" href="{{event.payLink}}">付款链接>></a>
+
             </div>
         </div>
 

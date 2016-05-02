@@ -1,5 +1,5 @@
 angular
-    .module('hshs').controller('userverifyController', ['$rootScope', '$localStorage', '$scope', 'userService', function ($rootScope, $localStorage, $scope, userService) {
+    .module('hshs').controller('userverifyController', ['$rootScope', '$localStorage', '$scope', '$interval', 'passwordService', function ($rootScope, $localStorage, $scope, $interval, passwordService) {
 
         $localStorage.randomNum = new Date().getTime() + random(7);
 
@@ -17,28 +17,63 @@ angular
         }
 
         if ($localStorage.randomNum != null) {
-            userService.getRandomPic($localStorage.randomNum).then(function (data) {
+            passwordService.getRandomPic($localStorage.randomNum).then(function (data) {
                 $scope.randomPic = data.data;
-                console.log(data);
 
             });
         }
 
         $scope.newRandompic = function () {
             $localStorage.randomNum = new Date().getTime() + random(7);
-            userService.getRandomPic($localStorage.randomNum).then(function (data) {
+            passwordService.getRandomPic($localStorage.randomNum).then(function (data) {
                 $scope.randomPic = data.data;
-                console.log(data);
+
             });
         };
 
         $scope.userVerify = function () {
-            userService.userVerify($scope.user);
+            passwordService.userVerify($scope.user);
         };
 
-        $rootScope.codeButtonvalue = "获取验证码";
-        $rootScope.getSmscode = false;
+        var second = 60;
+        var timePromise;
+        $scope.codeButtonvalue = "获取验证码";
+        $scope.getSmscode = false;
         $scope.getCode = function () {
-            userService.getCode();
-        }
+            passwordService.getCode().then(function (data) {
+
+                if (data.data.statusCode === 0) {
+
+                    timePromise = undefined;
+                    timePromise = $interval(function () {
+                        if (second <= 0) {
+                            $interval.cancel(timePromise);
+                            timePromise = undefined;
+                            second = 60;
+                            $scope.codeButtonvalue = "获取验证码";
+                            $scope.getSmscode = false;
+                        } else {
+                            $scope.codeButtonvalue = "重新发送" + second + "秒";
+                            $scope.getSmscode = true;
+                            second--;
+                        }
+                    }, 1000, 100);
+                }
+            });
+        };
+
+        $scope.verifySmsCode = function () {
+
+            passwordService.verifySmsCode($scope.user);
+        };
+        $scope.paraSuccess = false;
+        $scope.resetnewPassword = function () {
+
+            passwordService.newPassword($scope.user).then(function (data) {
+
+                if (data.data.statusCode === 0) {
+                    $scope.paraSuccess = true;
+                }
+            });
+        };
     }]);

@@ -1,7 +1,9 @@
 ﻿angular
     .module('hshs').controller('loginController', ['$rootScope', '$localStorage', '$scope', 'userService', function ($rootScope, $localStorage, $scope, userService) {
         $scope.login = function () {
-            userService.login($scope.user);
+            userService.login($scope.user).then(function (data) {
+
+            });
         };
 
         $scope.isUserLoggedIn = function () {
