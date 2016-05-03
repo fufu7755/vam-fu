@@ -11,14 +11,12 @@
                     params: {mobile: user.account, password: user.password},
                 }).success(function (response) {
                     if (response.statusCode === 0) {
-
-                        toaster.pop('success', '您已成功登录');
                         $localStorage.currentUser = response.data;
+                        console.log($localStorage.currentUser);
+                        toaster.pop('success', '您已成功登录');
                         $('#ModalLogin').modal('hide');
-
                         //$location.path('/');
                         //$route.reload();
-
                         if (user.keep == true) {
                             $localStorage.keep = true;
                         }

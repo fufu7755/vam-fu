@@ -8,7 +8,9 @@
                 <!-- Carousel -->
                 <ul data-owl-carousel id="sponsors" class="tooltip-hover" data-options="{items: 6}">
                     <li owl-carousel-item data-toggle="tooltip" title data-original-title="" ng-repeat="partner in Partners">
-                        <img src="http://222.240.208.174:8083/vma/download/img?url={{partner.image}}" alt="Image">
+                        <a href="{{partner.url}}" target="_blank">
+                            <img src="http://222.240.208.174:8083/vma/download/img?url={{partner.image}}" alt="">
+                        </a>
                     </li>
                     
                 </ul>

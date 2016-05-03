@@ -6,7 +6,11 @@
         };
 
         $scope.register = function () {
-            userService.register($scope.user);
+            userService.register($scope.user).then(function (data) {
+                if (data.data.statusCode === 0) {
+                    userService.login
+                }
+            });
         };
 
         $scope.user = {

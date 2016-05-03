@@ -3,8 +3,9 @@
         <div class="titles">
             <h4>{{vgo.name}}</h4>
         </div>
-        <img src="http://222.240.208.174:8083/vma/download/img?url={{vgo.image}}" alt="">
-        <p>联系方式：{{vgo.mobile}}</p>
+        <img src="http://222.240.208.174:8083/vma/download/img?url={{vgo.coolShow}}" alt="" class="img-responsive">
+
+        <div ng-bind-html="description"></div>
     </div>
 
     <div class="panel-box padding-bottom">

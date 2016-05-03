@@ -14,12 +14,26 @@ angular
 
         });
 
+        function get_unix_time(dateStr) {
+            var newstr = dateStr.replace(/-/g, '/');
+            var date = new Date(newstr);
+            var time_str = date.getTime().toString();
+            return time_str;
+        }
+
         eventsService.getEvent(eventId).then(function (data) {
             $scope.event = data.data;
             console.log(data.data);
             $scope.eventDescription = $sce.trustAsHtml(data.data.description);
             $scope.eventVideo = $sce.trustAsHtml(data.data.vedio);
+            var endTime = get_unix_time(data.data.signUpEndTime);
+            var startTime = get_unix_time(data.data.signUpStartTime);
+            var timestamp = (new Date()).valueOf();
 
+            $scope.signTime = false;
+            if (timestamp < endTime && timestamp > startTime) {
+                $scope.signTime = true;
+            }
         });
 
         eventsService.getAlbum().then(function (data) {

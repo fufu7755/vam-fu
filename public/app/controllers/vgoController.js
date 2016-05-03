@@ -6,7 +6,8 @@ angular
         $scope.vgoId = vgoId;
         vgoService.getVgo(vgoId).then(function(data) {
             $scope.vgo = data.data;
-
+            $scope.description = $sce.trustAsHtml(data.data.description);
+            console.log(data.data);
         });
         vgoService.getEquipment(vgoId).then(function(data) {
 
@@ -31,7 +32,7 @@ angular
         if ($localStorage.currentUser != null) {
             vgoService.getEvents().then(function (data) {
                 $scope.events = data.data.data;
-                console.log(data.data.data);
+
             });
         }
     }]);
