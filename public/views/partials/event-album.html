@@ -9,22 +9,13 @@
             <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
         </ol>
         <div class="carousel-inner">
-            <div class="item active">
-                <a target="_blank" href="{{album[0].url}}">
-                    <img src="http://222.240.208.174:8083/vma/download/img?url={{album[0].image}}">
+            <div class="item" ng-class="$first ? 'active' : ''" ng-repeat="albumitem in album">
+                <a target="_blank" href="{{albumitem.url}}">
+                    <img src="http://222.240.208.174:8083/vma/download/img?url={{albumitem.image}}">
                 </a>
 
             </div>
-            <div class="item">
-                <a target="_blank" href="{{album[1].url}}">
-                    <img src="http://222.240.208.174:8083/vma/download/img?url={{album[1].image}}">
-                </a>
-            </div>
-            <div class="item">
-                <a target="_blank" href="{{album[2].url}}">
-                    <img src="http://222.240.208.174:8083/vma/download/img?url={{album[2].image}}">
-                </a>
-            </div>
+
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
