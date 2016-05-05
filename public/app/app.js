@@ -44,6 +44,7 @@ angular.module('hshs', [
             .when('/events', {templateUrl: 'views/pages/events.html'})
             .when('/events/:eventId', {templateUrl: 'views/pages/event.html'})
             .when('/news/:newsId', {templateUrl: 'views/pages/news-detail.html'})
+            .when('/shop', {templateUrl: 'views/pages/shop.html'})
             .otherwise({redirectTo: '/'});
     }]).run([
         '$rootScope',

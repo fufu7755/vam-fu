@@ -673,13 +673,13 @@ table.ranking thead {
 .modal-content .form-theme input[type="text"] {
     padding-left: 10px;
     padding-right: 10px;
-    font-style: italic;
+
 }
 
 .modal-content .form-theme input[type="password"] {
     padding-left: 10px;
     padding-right: 10px;
-    font-style: italic;
+
 }
 
 .close-btn {
@@ -855,6 +855,10 @@ input.login {
 
 .clubpic {
     height: 200px;
+}
+
+.form-required {
+    color: red;
 }
 
 @media handheld, only screen and (max-width: 767px) {
