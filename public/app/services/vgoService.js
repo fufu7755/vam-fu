@@ -19,7 +19,7 @@ angular
               promise = $http({
                   method: 'GET',
                   url: baseUrl + 'equipment/list',
-                  params: { id: vgoId }
+                  params: {vgoId: vgoId}
               }).success(function (response) {                
                   return response.result;
               }).error(function (data, status) {
@@ -31,7 +31,7 @@ angular
               promise = $http({
                   method: 'GET',
                   url: baseUrl + 'score/vgo',
-                  params: { id: vgoId }
+                  params: {vgoId: vgoId}
               }).success(function (response) {                
                   return response.result;
               }).error(function (data, status) {
@@ -79,6 +79,17 @@ angular
                   method: 'GET',
                   url: baseUrl + 'vgo/eventList',
                   params: {'token': $localStorage.currentUser}
+              }).success(function (response) {
+                  return response.result;
+              }).error(function (data, status) {
+                  console.log(status);
+              });
+              return promise;
+          }, getBanner: function () {
+              promise = $http({
+                  method: 'GET',
+                  url: baseUrl + 'ad/vgoBanner',
+                  params: {pageSize: 1}
               }).success(function (response) {
                   return response.result;
               }).error(function (data, status) {

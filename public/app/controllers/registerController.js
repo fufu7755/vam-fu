@@ -1,5 +1,5 @@
 ﻿angular
-    .module('hshs').controller('registerController', ['$scope', 'userService', 'clubService', function ($scope, userService, clubService) {
+    .module('hshs').controller('registerController', ['$rootScope', '$localStorage', '$scope', 'userService', 'clubService', function ($rootScope, $localStorage, $scope, userService, clubService) {
 
         $scope.getCaptcha = function () {
             userService.getCaptcha($scope.user);
@@ -8,7 +8,16 @@
         $scope.register = function () {
             userService.register($scope.user).then(function (data) {
                 if (data.data.statusCode === 0) {
-                    userService.login
+                    userService.afterRegiter($scope.user).then(function (data) {
+                        if (data.data.statusCode === 0) {
+                            delete $scope.user;
+                            console.log($scope.user);
+                            userService.getUser($localStorage.currentUser).then(function (data) {
+                                $rootScope.rootcurrentUser = data.data;
+
+                            })
+                        }
+                    });
                 }
             });
         };

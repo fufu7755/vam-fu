@@ -1,14 +1,14 @@
 <ul class="nav nav-tabs" id="myTab">
-    <li class="active">
+    <li class="active hide">
         <a showtab href="#feature-news" data-toggle="tab">
             <i class="fa fa-star"></i>&nbsp;最新比赛
         </a>
     </li>
-    <li><a showtab href="#players-staff" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;明星VGO</a></li>
-    <li><a showtab href="#club-news" data-toggle="tab"><i class="fa fa-thumbs-up"></i>&nbsp;优秀小联盟</a></li>
+    <li class="active"><a showtab href="#players-staff" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;明星VGO</a></li>
+    <li class=""><a showtab href="#club-news" data-toggle="tab"><i class="fa fa-thumbs-up"></i>&nbsp;优秀小联盟</a></li>
 </ul>
 <div class="tab-content">
-    <div class="tab-pane active" id="feature-news">
+    <div class="tab-pane hide" id="feature-news">
         <!-- Carousel -->
         <ul data-owl-carousel id="events-carousel" class="events-carousel padding-top" data-options="{items : 3}">
             <li owl-carousel-item ng-repeat="event in newEvents">
@@ -18,27 +18,32 @@
                     </div>
                     <a href="/events/{{event.id}}"><img
                             src="http://222.240.208.174:8083/vma/download/img?url={{event.cover}}" alt=""></a>
+
                     <div class="meta-tag">
                         当前报名人数：{{event.registerNumber}}
                     </div>
                 </div>
                 <div class="info-post">
                     <h4><a href="/events/{{event.id}}" target="_blank">{{event.name}}</a></h4>
+
                     <p>{{event.description}}</p>
                 </div>
             </li>
         </ul>
         <!-- Carousel -->
     </div>
-    <div class="tab-pane" id="players-staff">
+    <div class="tab-pane active" id="players-staff">
         <h3>明星</h3>
         <!-- Carousel -->
         <ul data-owl-carousel id="players-carousel" class="players" data-options="{items : 4}">
             <li owl-carousel-item class="item-player" ng-repeat="star in Stars">
-                <img src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt="" class="img-responsive">
+                <img src="http://222.240.208.174:8083/vma/download/img?url={{star.avatar}}" alt=""
+                     class="img-responsive">
+
                 <div class="info-player">
                     <h4><a target="_blank" href="/vgo/{{star.id}}">{{star.name}}</a></h4>
                     <h5><span>{{star.clubName}}</span></h5>
+
                     <div class="overlay-player">
                         <p>{{star.address}}</p>
                     </div>
@@ -49,18 +54,83 @@
     </div>
     <div class="tab-pane" id="club-news">
         <h3>联盟</h3>
-        <div class="row">
-            <div class="col-sx-12 col-sm-6 col-md-6" ng-repeat="alliance in Alliances">
-                <div class="item-clubs">
-                    <div class="img-clubs">
-                        <a href="/alliances/{{alliance.id}}/clubs"><img src="http://222.240.208.174:8083/vma/download/img?url={{alliance.logo}}" alt="" class="img-responsive"></a>
-                    </div>
-                    <div class="info-clubs">
-                        <h4><a target="_blank" href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
-                        <p>{{alliance.description}}</p>
+        <ul data-owl-carousel id="clubs-carousel" class="clubs-teams" data-options="{singleItem : true}">
+            <!-- Item carousel club -->
+            <li owl-carousel-item class="row" ng-repeat="i in [0, 1]">
+                <!-- Item clubs -->
+                <div class="col-sx-12 col-sm-6 col-md-6">
+                    <div class="item-clubs">
+                        <div class="img-clubs">
+                            <a target="_blank" href="/alliances/{{Alliances[i *4 + 0].id}}/clubs"><img
+                                    src="http://222.240.208.174:8083/vma/download/img?url={{Alliances[i *4 + 0].logo}}"
+                                    alt=""
+                                    class="img-responsive"></a>
+                        </div>
+                        <div class="info-clubs">
+                            <h4>{{Alliances[i *4 + 0].name}}</h4>
+
+                            <p>{{Alliances[i *4 + 0].description}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <!-- End Item clubs -->
+
+                <!-- Item clubs -->
+                <div class="col-sx-12 col-sm-6 col-md-6">
+                    <div class="item-clubs">
+                        <div class="img-clubs">
+                            <a target="_blank" href="/alliances/{{Alliances[i *4 + 1].id}}/clubs"><img
+                                    src="http://222.240.208.174:8083/vma/download/img?url={{Alliances[i *4 + 1].logo}}"
+                                    alt=""
+                                    class="img-responsive"></a>
+                        </div>
+                        <div class="info-clubs">
+                            <h4>{{Alliances[i *4 + 1].name}}</h4>
+
+                            <p>{{Alliances[i *4 + 1].description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Item clubs -->
+
+                <!-- Item clubs -->
+                <div class="col-sx-12 col-sm-6 col-md-6">
+                    <div class="item-clubs">
+                        <div class="img-clubs">
+                            <a target="_blank" href="/alliances/{{Alliances[i *4 + 2].id}}/clubs"><img
+                                    src="http://222.240.208.174:8083/vma/download/img?url={{Alliances[i *4 + 2].logo}}"
+                                    alt=""
+                                    class="img-responsive"></a>
+                        </div>
+                        <div class="info-clubs">
+                            <h4>{{Alliances[i *4 + 2].name}}</h4>
+
+                            <p>{{Alliances[i *4 + 2].description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Item clubs -->
+
+                <!-- Item clubs -->
+                <div class="col-sx-12 col-sm-6 col-md-6">
+                    <div class="item-clubs">
+                        <div class="img-clubs">
+                            <a target="_blank" href="/alliances/{{Alliances[i *4 + 3].id}}/clubs"><img
+                                    src="http://222.240.208.174:8083/vma/download/img?url={{Alliances[i *4 + 3].logo}}"
+                                    alt=""
+                                    class="img-responsive"></a>
+                        </div>
+                        <div class="info-clubs">
+                            <h4>{{Alliances[i *4 + 3].name}}</h4>
+
+                            <p>{{Alliances[i *4 + 3].description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Item clubs -->
+            </li>
+            <!-- End Item carousel club -->
+
+        </ul>
     </div>
 </div>

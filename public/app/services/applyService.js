@@ -40,7 +40,72 @@ angular
                     toaster.pop('warning', '请稍后再试');
                 });
                 return promise;
+            },
+            allCities: function () {
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'regions/list',
+                    params: {
+                        level: 1
+                    }
+                }).success(function (response) {
+                    return response.result;
+                }).error(function (data, status) {
+                    console.log(status);
+                });
+                return promise;
+            },
+            allianceApply: function (apply) {
+                console.log(apply);
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'alliance/apply',
+                    params: {
+                        cityId: apply.city,
+                        contact: apply.contact,
+                        mobile: apply.mobile,
+                        remark: apply.remark
+                    }
+                }).success(function (response) {
+                    if (response.statusCode === 0) {
+                        toaster.pop('success', response.message);
+                        $('#ModalAlliance').modal('hide');
+                    } else {
+                        toaster.pop('warning', response.message);
+                    }
+                }).error(function (data, status) {
+                    toaster.pop('warning', '请稍后再试');
+                });
+                return promise;
+            },
+            clubApply: function (club) {
+                console.log(club);
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'club/apply',
+                    params: {
+                        name: club.name,
+                        contact: club.contact,
+                        mobile: club.mobile,
+                        cityId: club.city,
+                        slogan: club.slogan,
+                        address: club.address,
+                        description: club.description,
+                        logo: club.upClublogo
+                    }
+                }).success(function (response) {
+                    if (response.statusCode === 0) {
+                        toaster.pop('success', response.message);
+                        $('#ModalClub').modal('hide');
+                    } else {
+                        toaster.pop('warning', response.message);
+                    }
+                }).error(function (data, status) {
+                    toaster.pop('warning', '请稍后再试');
+                });
+                return promise;
             }
+
         };
         return output;
     }]);

@@ -1,7 +1,12 @@
 angular
-    .module('hshs').controller('applyController', ['$rootScope', '$localStorage', '$scope', '$routeParams', 'applyService', function ($rootScope, $localStorage, $scope, $routeParams, applyService) {
+    .module('hshs').controller('applyController', ['$rootScope', '$localStorage', '$scope', '$routeParams', 'userService', 'applyService', function ($rootScope, $localStorage, $scope, $routeParams, userService, applyService) {
         var eventId;
         eventId = parseInt($routeParams.eventId);
+
+        userService.getCities().then(function (data) {
+            $scope.allcities = data.data;
+
+        });
 
         $scope.vgoInfo = {
             diseases: [],
@@ -21,5 +26,30 @@ angular
         $scope.applyEvent = function () {
             applyService.applyEvent($scope.vgoInfo);
         };
+
+        $scope.applyAlliance = function () {
+            applyService.allianceApply($scope.apply);
+        };
+
+        $scope.club = {};
+        $scope.upClublogo = function () {
+            $('#upForm3').ajaxSubmit({
+                type: 'post',
+                url: 'http://222.240.208.174:8083/vma/upload/uploadfile',
+                success: function (data) {
+                    console.log(data);
+                    $scope.club.upClublogo = data.path;
+
+                    var host = 'http://222.240.208.174:8083';
+                    var imgPrefix = host + '/vma/download/img?url=';
+                    $("#clublogo").attr("src", imgPrefix + data.path).show();
+                }
+            });
+
+        }
+
+        $scope.applyclub = function () {
+            applyService.clubApply($scope.club);
+        }
 
     }]);

@@ -10,7 +10,7 @@ angular
         });
         homeService.getAlliances().then(function(data) {
             $scope.Alliances = data.data;
-            
+
         });
         homeService.getImport().then(function(data) {
             $scope.Import = data.data;
@@ -40,4 +40,9 @@ angular
             $scope.Eventnews = data.data;
             $scope.newsDescription = $sce.trustAsHtml(data.data.content);
         });
+
+        $scope.subscriber = function () {
+
+            homeService.subscriber($scope.newletter);
+        };
     }]);

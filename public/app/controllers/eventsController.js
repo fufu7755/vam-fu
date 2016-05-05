@@ -1,5 +1,5 @@
 angular
-    .module('hshs').controller('eventsController', ['$rootScope', '$scope', '$routeParams', '$sce', 'eventsService', 'matchService', 'cityService', function ($rootScope, $scope, $routeParams, $sce, eventsService, matchService, cityService) {
+    .module('hshs').controller('eventsController', ['$rootScope', '$localStorage', '$scope', '$routeParams', '$sce', 'eventsService', 'matchService', 'cityService', function ($rootScope, $localStorage, $scope, $routeParams, $sce, eventsService, matchService, cityService) {
         var eventId;
         eventId = parseInt($routeParams.eventId);
         $scope.ready = false;
@@ -8,6 +8,14 @@ angular
             $scope.ready = true;
 
         });
+
+        $scope.isUserLoggedIn = function () {
+            if ($localStorage.currentUser) {
+                return true;
+            } else {
+                return false;
+            }
+        };
 
         eventsService.getBack().then(function (data) {
             $scope.back = data.data;
@@ -23,7 +31,7 @@ angular
 
         eventsService.getEvent(eventId).then(function (data) {
             $scope.event = data.data;
-            console.log(data.data);
+
             $scope.eventDescription = $sce.trustAsHtml(data.data.description);
             $scope.eventVideo = $sce.trustAsHtml(data.data.vedio);
             var endTime = get_unix_time(data.data.signUpEndTime);

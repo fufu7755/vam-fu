@@ -12,7 +12,6 @@
                 }).success(function (response) {
                     if (response.statusCode === 0) {
                         $localStorage.currentUser = response.data;
-                        console.log($localStorage.currentUser);
                         toaster.pop('success', '您已成功登录');
                         $('#ModalLogin').modal('hide');
                         //$location.path('/');
@@ -20,6 +19,25 @@
                         if (user.keep == true) {
                             $localStorage.keep = true;
                         }
+                    } else {
+                        toaster.pop('warning', response.message);
+                    }
+                }).error(function (data, status) {
+                    toaster.pop('warning', '请稍后再试');
+                });
+                return promise;
+            },
+            afterRegiter: function (user) {
+                promise = $http({
+                    method: 'POST',
+                    url: baseUrl + 'vgo/login',
+                    params: {mobile: user.mobile, password: user.password},
+                }).success(function (response) {
+                    if (response.statusCode === 0) {
+                        $localStorage.currentUser = response.data;
+                        toaster.pop('success', '您已成功登录');
+                        //$location.path('/');
+                        //$route.reload();
                     } else {
                         toaster.pop('warning', response.message);
                     }
@@ -88,7 +106,7 @@
                         toaster.pop('success', '您已成功注册');
                         $location.path('/');
                         $('#ModalSignup').modal('hide');
-                        $('#ModalLogin').modal('show');
+                        //$('#ModalLogin').modal('show');
 
                     } else {
                         toaster.pop('warning', response.message);

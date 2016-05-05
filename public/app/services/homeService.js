@@ -31,7 +31,7 @@ angular
         promise = $http({
           method: 'GET',
           url: baseUrl + 'alliance/goodlist',
-          params: {pageSize: 4},
+          params: {pageSize: 8},
         }).success(function (response) {
           return response.result;
         }).error(function (data, status) {
@@ -120,6 +120,22 @@ angular
           return response.result;
         }).error(function (data, status) {
           console.log(status);
+        });
+        return promise;
+      },
+      subscriber: function (newletter) {
+        promise = $http({
+          method: 'GET',
+          url: baseUrl + 'subscriber/apply',
+          params: {name: newletter.name, email: newletter.email},
+        }).success(function (response) {
+          if (response.statusCode === 0) {
+            toaster.pop('success', '订阅成功');
+          } else {
+            toaster.pop('warning', response.message);
+          }
+        }).error(function (data, status) {
+          toaster.pop('warning', '请稍后再试');
         });
         return promise;
       }

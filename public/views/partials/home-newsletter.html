@@ -4,28 +4,22 @@
 
     <p>您的邮箱联系方式，将有助于与我们VMA垂马大联盟保持紧密的联系，让您更及时的了解我们的最新资讯。</p>
 </div>
-<form id="newsletterForm" action="#">
+<form id="newsletterForm" name="newsletterForm" ng-controller="homeController">
     <div class="row">
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-addon">
-                                                    <i class="fa fa-user"></i>
-                                                </span>
-                <input class="form-control" placeholder="姓名" name="name" type="text" required="required">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input class="form-control" placeholder="姓名" name="name" type="text" required="required"
+                       ng-model="newletter.name">
             </div>
         </div>
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-addon">
-                                                    <i class="fa fa-envelope"></i>
-                                                </span>
-                <input class="form-control" placeholder="Email" name="email" type="email" required="required">
-                <span class="input-group-btn">
-                                                    <button class="btn btn-primary" type="submit" name="subscribe">提交
-                                                    </button>
-                                                 </span>
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input class="form-control" placeholder="Email" name="email" type="email" required="required"
+                       ng-model="newletter.email">
+                <span class="input-group-btn"><button class="btn btn-primary" ng-click="subscriber()">提交</button></span>
             </div>
         </div>
     </div>
 </form>
-<div id="result-newsletter"></div>

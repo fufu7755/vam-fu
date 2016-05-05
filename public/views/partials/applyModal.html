@@ -1,0 +1,172 @@
+<div id="ModalAlliance" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="panel-box">
+                <div class="titles">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                            class="fa fa-times"></i></button>
+                    <h4>请填写此表格申请成为VMA小联盟</h4>
+                </div>
+
+                <form name="allianceApply" novalidate="" class="form-theme" ng-controller="applyController">
+
+                    <div class="row padding-top-mini">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="contact">
+                                        <label><strong>申请人</strong></label>
+                                        <input type="text" placeholder="请填写..." name="applyContact"
+                                               ng-model="apply.contact"
+                                               ng-required="true"/>
+                                    </div>
+
+                                    <div class="club">
+                                        <label><strong>联盟城市</strong><span class="form-required"
+                                                                          title="">*</span></label>
+                                        <select name="" ng-model="apply.city" ng-required="true">
+                                            <option value="">选择城市</option>
+                                            <option ng-repeat="city in allcities" value="{{city.id}}">
+                                                {{city.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="contact">
+                                        <label><strong>联系电话</strong></label>
+                                        <input type="text" placeholder="请填写..." name="applyMobile"
+                                               ng-model="apply.mobile"
+                                               ng-required="true"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div>
+                                        <label><strong>备注</strong></label>
+                                        <textarea name="" id="" cols="30" rows="10"
+                                                  ng-model="apply.remark"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div>
+                                        <input type="button" ng-click="applyAlliance()" value="确认提交"
+                                               class="register btn"
+                                               ng-disabled="allianceApply.$invalid"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalClub" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+            <div ng-controller="applyController" class="panel-box">
+                <div class="titles">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="pull-right close-btn"><i
+                            class="fa fa-times"></i></button>
+                    <h4>申请俱乐部表格</h4>
+                </div>
+                <div class="form-wrapper">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="avatarform">
+                                <form method="post" name="upForm" id="upForm3" enctype="multipart/form-data">
+                                    <input type="file" name="upClublogo" id="upClublogo" ng-model="club.upClublogo"
+                                           accept="image/*"
+                                           ng-required="true"
+                                           onchange="angular.element(this).scope().upClublogo()"/>
+                                    <input type="hidden" name="fileId" value="upClublogo"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <form name="applyClub" id="applyClub" class="form-theme">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="headshot">
+                                    <label>俱乐部标志</label>
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <img id="clublogo" style="display:none;"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <label><strong>俱乐部名称</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="clubname" placeholder="请填写..." ng-model="club.name"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>俱乐部口号</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="clubslogan" placeholder="请填写..." ng-model="club.slogan"
+                                           ng-required="true"/>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div>
+                                    <label><strong>城市</strong></label>
+                                    <select name="city" ng-model="club.city">
+                                        <option value="">请选择</option>
+                                        <option ng-repeat="city in allcities" value="{{city.id}}">{{city.name}}
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label><strong>联系人</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="contact" placeholder="请填写..." ng-model="club.contact"
+                                           ng-required="true"/>
+                                </div>
+                                <div>
+                                    <label><strong>联系电话</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="mobile" placeholder="请填写..." ng-model="club.mobile"
+                                           ng-required="true"/>
+                                </div>
+
+                                <div>
+                                    <label><strong>联系地址</strong><span class="form-required" title="">*</span></label>
+                                    <input type="text" name="address" placeholder="请填写..." ng-model="club.address"/>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <div>
+                                    <label><strong>俱乐部介绍</strong><span class="form-required" title="">*</span></label>
+                                    <textarea name="description" id="" cols="30" rows="10"
+                                              ng-model="club.description"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="button" ng-click="applyclub()" value="确认提交" class="register btn"
+                                       ng-disabled="applyClub.$invalid"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

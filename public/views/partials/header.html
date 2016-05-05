@@ -12,7 +12,7 @@
             <!-- Adds Header-->
             <div class="col-md-9 adds hidden-sm hidden-xs">
                 <a href="#" target="_blank">
-                    <img src="/assets/img/adds/ads2.jpg" alt="" class="img-responsive">
+                    <img src="/assets/img/top.png" alt="" class="img-responsive">
                 </a>
             </div>
             <!-- End Adds Header-->
@@ -48,7 +48,8 @@
 
             </div>
             <div class="col-md-2 col-sm-6 col-xs-12">
-                <ul class="ot-menu" ng-controller="loginController">
+
+                <ul class="ot-menu">
                     <li ng-show="isUserLoggedIn() == true"><a target="_blank" href="/vgo/{{rootcurrentUser.id}}"><span
                             class="">{{rootcurrentUser.name}}</span></i></a></li>
                     <li ng-show="isUserLoggedIn() == false" class=""><a href="#" data-toggle="modal"
@@ -77,4 +78,5 @@
     </div>
 </nav>
 <div ng-include="'views/partials/login_register.html'"></div>
+<div ng-include="'views/partials/applyModal.html'"></div>
 <!-- End mainmenu-->

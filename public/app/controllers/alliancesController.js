@@ -20,7 +20,7 @@ angular
         clubService.getVgos().then(function(data) {
 
             $scope.vgos = data.data.result;
-            console.log($scope.vgos);
+
         });
 
         allianceService.getBack().then(function (data) {

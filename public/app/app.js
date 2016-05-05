@@ -34,7 +34,7 @@ angular.module('hshs', [
             .when('/about', {templateUrl: 'views/pages/about.html'})
             .when('/vgo', {templateUrl: 'views/pages/vgo-home.html'})
             .when('/vgo/:vgoId', {templateUrl: 'views/pages/vgo.html'})
-            .when('/vgo/allstars', {templateUrl: 'views/pages/vgo-allstars.html'})
+            .when('/vgos/allstars', {templateUrl: 'views/pages/vgo-allstars.html'})
             .when('/train', {templateUrl: 'views/pages/train.html'})
             .when('/train/manager/:trainId', {templateUrl: 'views/pages/train-detail.html'})
             .when('/train/coach', {templateUrl: 'views/pages/train-coach.html'})

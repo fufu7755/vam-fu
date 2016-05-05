@@ -14,12 +14,12 @@ angular
             $scope.equipments = data.data.result;
         });
         vgoService.getScore(vgoId).then(function(data) {
-
             $scope.scores = data.data.result;
+
         });
         vgoService.getVgohome().then(function(data) {
 
-            $scope.scores = data.data;
+            //$scope.scores = data.data;
         });
         vgoService.getStars().then(function(data) {
             $scope.Stars = data.data;
@@ -27,6 +27,10 @@ angular
         })
         vgoService.getBack().then(function (data) {
             $scope.back = data.data;
+        });
+        vgoService.getBanner().then(function (data) {
+            $scope.banner = data.data;
+            console.log(data.data);
         });
 
         if ($localStorage.currentUser != null) {

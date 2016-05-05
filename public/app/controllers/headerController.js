@@ -13,11 +13,21 @@ angular
                 }, 1800000);
             }
         }
+        $scope.isUserLoggedIn = function () {
+            if ($localStorage.currentUser) {
+                return true;
+            } else {
+                return false;
+            }
+        };
         if ($localStorage.currentUser) {
             userService.getUser($localStorage.currentUser).then(function (data) {
-                $scope.rootcurrentUser = data.data;
-
+                $rootScope.rootcurrentUser = data.data;
+                console.log($rootScope.rootcurrentUser);
             });
         }
 
+        $scope.logout = function () {
+            userService.logout($localStorage.currentUser);
+        };
     }]);
