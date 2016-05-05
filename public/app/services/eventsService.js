@@ -30,7 +30,7 @@ angular
       getAlbum: function () {
         promise = $http({
           method: 'GET',
-          url: baseUrl + 'club/album',
+          url: baseUrl + 'ad/eventBanner',
           params: {},
         }).success(function (response) {
           return response.result;

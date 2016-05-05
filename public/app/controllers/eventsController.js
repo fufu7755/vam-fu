@@ -31,7 +31,7 @@ angular
 
         eventsService.getEvent(eventId).then(function (data) {
             $scope.event = data.data;
-
+            console.log(data.data);
             $scope.eventDescription = $sce.trustAsHtml(data.data.description);
             $scope.eventVideo = $sce.trustAsHtml(data.data.vedio);
             var endTime = get_unix_time(data.data.signUpEndTime);
@@ -45,8 +45,8 @@ angular
         });
 
         eventsService.getAlbum().then(function (data) {
-            $scope.album = data.data.result;
-
+            $scope.album = data.data;
+            console.log(data.data);
         });
 
         eventsService.getNews().then(function (data) {

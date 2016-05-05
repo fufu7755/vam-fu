@@ -1,14 +1,14 @@
 <ul class="nav nav-tabs" id="myTab">
-    <li class="active hide">
+    <li class="active">
         <a showtab href="#feature-news" data-toggle="tab">
             <i class="fa fa-star"></i>&nbsp;最新比赛
         </a>
     </li>
-    <li class="active"><a showtab href="#players-staff" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;明星VGO</a></li>
+    <li class=""><a showtab href="#players-staff" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;明星VGO</a></li>
     <li class=""><a showtab href="#club-news" data-toggle="tab"><i class="fa fa-thumbs-up"></i>&nbsp;优秀小联盟</a></li>
 </ul>
 <div class="tab-content">
-    <div class="tab-pane hide" id="feature-news">
+    <div class="tab-pane active" id="feature-news">
         <!-- Carousel -->
         <ul data-owl-carousel id="events-carousel" class="events-carousel padding-top" data-options="{items : 3}">
             <li owl-carousel-item ng-repeat="event in newEvents">
@@ -29,10 +29,27 @@
                     <p>{{event.description}}</p>
                 </div>
             </li>
+
+            <li ng-repeat="i in [1, 2]">
+                <div class="header-post">
+
+                    <img src="/assets/img/blog/1.jpg" alt="">
+
+                    <div class="meta-tag">
+                        敬请期待
+                    </div>
+                </div>
+                <div class="info-post">
+                    <h4>即将推出</h4>
+
+                    <p></p>
+
+                </div>
+            </li>
         </ul>
         <!-- Carousel -->
     </div>
-    <div class="tab-pane active" id="players-staff">
+    <div class="tab-pane" id="players-staff">
         <h3>明星</h3>
         <!-- Carousel -->
         <ul data-owl-carousel id="players-carousel" class="players" data-options="{items : 4}">
@@ -56,7 +73,7 @@
         <h3>联盟</h3>
         <ul data-owl-carousel id="clubs-carousel" class="clubs-teams" data-options="{singleItem : true}">
             <!-- Item carousel club -->
-            <li owl-carousel-item class="row" ng-repeat="i in [0, 1]">
+            <li owl-carousel-item class="row" ng-repeat="i in [0]">
                 <!-- Item clubs -->
                 <div class="col-sx-12 col-sm-6 col-md-6">
                     <div class="item-clubs">
@@ -97,15 +114,14 @@
                 <div class="col-sx-12 col-sm-6 col-md-6">
                     <div class="item-clubs">
                         <div class="img-clubs">
-                            <a target="_blank" href="/alliances/{{Alliances[i *4 + 2].id}}/clubs"><img
-                                    src="http://222.240.208.174:8083/vma/download/img?url={{Alliances[i *4 + 2].logo}}"
+                            <img src="/assets/img/blog/1.jpg"
                                     alt=""
-                                    class="img-responsive"></a>
+                                 class="img-responsive">
                         </div>
                         <div class="info-clubs">
-                            <h4>{{Alliances[i *4 + 2].name}}</h4>
+                            <h4>即将推出</h4>
 
-                            <p>{{Alliances[i *4 + 2].description}}</p>
+                            <p>敬请期待</p>
                         </div>
                     </div>
                 </div>
@@ -115,15 +131,14 @@
                 <div class="col-sx-12 col-sm-6 col-md-6">
                     <div class="item-clubs">
                         <div class="img-clubs">
-                            <a target="_blank" href="/alliances/{{Alliances[i *4 + 3].id}}/clubs"><img
-                                    src="http://222.240.208.174:8083/vma/download/img?url={{Alliances[i *4 + 3].logo}}"
-                                    alt=""
-                                    class="img-responsive"></a>
+                            <img src="/assets/img/blog/1.jpg"
+                                 alt=""
+                                 class="img-responsive">
                         </div>
                         <div class="info-clubs">
-                            <h4>{{Alliances[i *4 + 3].name}}</h4>
+                            <h4>即将推出</h4>
 
-                            <p>{{Alliances[i *4 + 3].description}}</p>
+                            <p>敬请期待</p>
                         </div>
                     </div>
                 </div>

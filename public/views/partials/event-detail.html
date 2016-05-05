@@ -20,7 +20,10 @@
                     </div>
                     <div class="row equipment">
                     	<div class="col-sm-2 col-xs-3" ng-repeat="equipment in event.equipments">
-                    		<img src="http://222.240.208.174:8083/vma/download/img?url={{equipment.image}}" alt="" class="img-responsive">
+                            <a target="_blank" href="{{equipment.url}}">
+                                <img src="http://222.240.208.174:8083/vma/download/img?url={{equipment.image}}" alt=""
+                                     class="img-responsive">
+                            </a>
                     		<h6>{{equipment.name}}</h6>
                     		<p>数量:{{equipment.count}}</p>
                     	</div>
@@ -35,7 +38,10 @@
                     </div>
                     <div class="row">
                     	<div class="col-sm-3" ng-repeat="sponsor in event.sponsors">
-                    		<img src="http://222.240.208.174:8083/vma/download/img?url={{sponsor.logo}}" alt="" class="img-responsive">
+                            <a target="_blank" href="{{sponsor.link}}">
+                                <img src="http://222.240.208.174:8083/vma/download/img?url={{sponsor.logo}}" alt=""
+                                     class="img-responsive">
+                            </a>
                     		<p>{{sponsor.name}}</p>
                     	</div>
                     </div>

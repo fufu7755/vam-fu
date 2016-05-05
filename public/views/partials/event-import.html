@@ -7,11 +7,14 @@
         <p class="text-center">
             <i class="fa fa-clock-o"></i> 比赛倒计时
         </p>
-        <div class="counter"><span countdown='' date='Jun 1, 2016 12:00:00'>&nbsp;</span></div>
-        
+
+        <div class="counter">
+            <div ng-bind-html="returnDate"></div>
+        </div>
+        <p>{{Import.timestamp | date:'MMM d, yyyy H:mm:ss'}}</p>
         <ul class="post-options">
             <li><i class="fa fa-calendar"></i>{{Import.raceDate}}</li>
-            <li><i class="fa fa-clock-o"></i>开场时间: 12:00 PM</li>
+            <li><i class="fa fa-clock-o"></i>开场时间: {{Import.raceTime}}</li>
         </ul>
         <p>{{Import.description}}</p>
         <a target="_blank" class="btn btn-primary" href="/events/{{Import.id}}">查看本场比赛细节<i class="fa fa-trophy"></i></a>

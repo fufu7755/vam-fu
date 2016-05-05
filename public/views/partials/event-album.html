@@ -10,13 +10,20 @@
         </ol>
         <div class="carousel-inner">
             <div class="item active">
-                <img src="http://222.240.208.174:8083/vma/download/img?url={{album[0].original}}">
+                <a target="_blank" href="{{album[0].url}}">
+                    <img src="http://222.240.208.174:8083/vma/download/img?url={{album[0].image}}">
+                </a>
+
             </div>
             <div class="item">
-                <img src="http://222.240.208.174:8083/vma/download/img?url={{album[1].original}}">
+                <a target="_blank" href="{{album[1].url}}">
+                    <img src="http://222.240.208.174:8083/vma/download/img?url={{album[1].image}}">
+                </a>
             </div>
             <div class="item">
-                <img src="http://222.240.208.174:8083/vma/download/img?url={{album[2].original}}">
+                <a target="_blank" href="{{album[2].url}}">
+                    <img src="http://222.240.208.174:8083/vma/download/img?url={{album[2].image}}">
+                </a>
             </div>
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
